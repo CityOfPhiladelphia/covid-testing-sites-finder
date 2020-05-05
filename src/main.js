@@ -197,8 +197,8 @@ pinboard({
       messages: {
         'en-US': {
           language: 'English',
-          title: 'Food distribution sites',
-          subtitle: 'Find free food and meals during COVID-19',
+          title: 'Covid testing sites',
+          subtitle: 'Find covid testing sites',
           refine: 'Refine',
           clearAll: 'Clear all',
           about: 'About this finder',
