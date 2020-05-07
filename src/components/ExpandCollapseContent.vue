@@ -2,44 +2,90 @@
   <div class="grid-x grid-padding-x">
     <div class="cell medium-12">
       <div
-        v-if="item.attributes.address"
+        v-if="item.attributes.testing_location_address"
         class="grid-x detail"
       >
         <div class="small-2">
           <font-awesome-icon icon="map-marker-alt" />
         </div>
         <div class="small-22">
-          {{ item.attributes.address }}<br>
-          Philadelphila, PA {{ item.attributes.ZIP2 }}
+          {{ item.attributes.testing_location_address }}<br>
+          {{ item.attributes.City }}, PA {{ item.attributes.zipcode }}<br>
+          {{ item.attributes.TestingLocation2 }}
         </div>
       </div>
-    </div>
 
-    <div class="cell medium-12">
       <div
-        v-if="item.attributes.CATEGORY"
+        v-if="item.attributes.ProviderURL"
         class="grid-x detail"
       >
         <div class="small-2">
-          <font-awesome-icon icon="hand-holding-heart" />
+          <font-awesome-icon icon="globe" />
         </div>
-        <div
-          class="small-22"
-          v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')"
-        />
+        <div class="small-22">
+          <a
+            target="_blank"
+            :href="item.attributes.ProviderURL"
+            v-html="item.attributes.ProviderURL"
+          />
+        </div>
       </div>
 
       <div
-        v-if="item.attributes.phone_number"
+        v-if="item.attributes.contact_phone_number"
         class="grid-x detail"
       >
         <div class="small-2">
           <font-awesome-icon icon="phone" />
         </div>
         <div class="small-22">
-          {{ item.attributes.phone_number }}
+          {{ item.attributes.contact_phone_number }}
         </div>
       </div>
+
+    </div>
+
+    <div class="cell medium-12">
+      <div
+        v-if="item.attributes.facility_type"
+        class="grid-x detail"
+      >
+        <div class="small-2">
+          <font-awesome-icon icon="building" />
+        </div>
+        <div
+          class="small-22"
+        >
+          <div
+            v-html="item.attributes.facility_type"
+          />
+          <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
+          <div
+            v-html="item.attributes.drive_thruwalk_up"
+          />
+          <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
+        </div>
+      </div>
+
+      <div
+        v-if="item.attributes.Referral"
+        class="grid-x detail"
+      >
+        <div class="small-2">
+          <font-awesome-icon icon="user-md" />
+        </div>
+        <div
+          class="small-22"
+        >
+          Referral:
+          <span
+            v-html="item.attributes.Referral"
+          />
+          <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
+        </div>
+      </div>
+
+
     </div>
 
     <!-- <div
@@ -87,34 +133,24 @@
       v-if="subsection === 'PHA'"
       :item="item"
     />
+  -->
 
-    <outdoor-site-card
-      v-if="section === 'outdoorMealSites'"
+  <!-- v-if="section === 'outdoorMealSites'" -->
+    <data-card
       :item="item"
-    /> -->
+    />
+
   </div>
 </template>
 
 <script>
 
-// import SeniorMealSiteCard from './SeniorMealSiteCard.vue';
-// import FoodSiteCard from './FoodSiteCard.vue';
-// import CharterSchoolCard from './CharterSchoolCard.vue';
-// import PprSchoolCard from './PprSchoolCard.vue';
-// import PsdSchoolCard from './PsdSchoolCard.vue';
-// import PhaSchoolCard from './PhaSchoolCard.vue';
-// import OutdoorSiteCard from './OutdoorSiteCard.vue';
+import DataCard from './DataCard.vue';
 
 export default {
   name: 'ExpandCollapseContent',
   components: {
-    // SeniorMealSiteCard,
-    // FoodSiteCard,
-    // CharterSchoolCard,
-    // PprSchoolCard,
-    // PsdSchoolCard,
-    // PhaSchoolCard,
-    // OutdoorSiteCard,
+    DataCard,
   },
   props: {
     item: {

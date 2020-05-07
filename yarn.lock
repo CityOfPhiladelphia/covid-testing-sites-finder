@@ -963,12 +963,12 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@phila/pinboard@https://github.com/CityOfPhiladelphia/pinboard#331a1d0121445890aef9bd31c260ce6e4243b769":
+"@phila/pinboard@https://github.com/CityOfPhiladelphia/pinboard#5016e17fd68878e8c1d9680a5b20f1e384a590bf":
   version "0.2.0"
-  resolved "https://github.com/CityOfPhiladelphia/pinboard#331a1d0121445890aef9bd31c260ce6e4243b769"
+  resolved "https://github.com/CityOfPhiladelphia/pinboard#5016e17fd68878e8c1d9680a5b20f1e384a590bf"
   dependencies:
     "@fortawesome/free-brands-svg-icons" "^5.11.2"
-    "@phila/vue-comps" "2.1.1"
+    "@phila/vue-comps" "https://github.com/CityOfPhiladelphia/phila-vue-comps#70087494385f0560ebcbc96ab46d02d639d1eff4"
     "@phila/vue-datafetch" "1.2.0"
     "@phila/vue-mapping" "2.1.1"
     axios "^0.19.0"
@@ -979,10 +979,9 @@
     vue-router "^3.0.6"
     vuex "^3.1.2"
 
-"@phila/vue-comps@2.1.1":
+"@phila/vue-comps@https://github.com/CityOfPhiladelphia/phila-vue-comps#70087494385f0560ebcbc96ab46d02d639d1eff4":
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@phila/vue-comps/-/vue-comps-2.1.1.tgz#68656e5d992bcbea7e2055dd01a68330b77123d7"
-  integrity sha512-1cxVwO2DEyumX0bPikynM9mEHtGnwuqanvX63vOsnq1jBnQGD+pKUmEdlpnHmfmeGQBtJfmL+C3Mn4ANEeybtg==
+  resolved "https://github.com/CityOfPhiladelphia/phila-vue-comps#70087494385f0560ebcbc96ab46d02d639d1eff4"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.15"
     "@fortawesome/free-regular-svg-icons" "^5.7.2"

@@ -8,8 +8,9 @@
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
-import { faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons/faHandHoldingHeart';
-library.add(faExclamationTriangle, faHandHoldingHeart);
+import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
+import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
+library.add(faExclamationTriangle, faBuilding, faUserMd);
 
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
@@ -53,10 +54,16 @@ pinboard({
   // },
   customComps,
   refine: {
+    type: 'multipleFields',
     categoryField: ['attributes','facility_type'],
     multipleFields: {
       'Monday': ['attributes','Monday'],
       'Tuesday': ['attributes','Tuesday'],
+      'Wednesday': ['attributes','Wednesday'],
+      'Thursday': ['attributes','Thursday'],
+      'Friday': ['attributes','Friday'],
+      'Saturday': ['attributes','Saturday'],
+      'Sunday': ['attributes','Sunday'],
     }
   },
   // refineCategories: [ 'tagFood', 'tagOutdoor', 'tagSenior', 'tagStudent'],
@@ -126,12 +133,7 @@ pinboard({
     },
   },
   circleMarkers:{
-    circleColors: {
-      'Food Site': '#0F4D90',
-      'Senior Meal Site': '#D67D00',
-      'Student Meal Site': '#721817',
-      'Outdoor Meal Site': '#506D0A',
-    },
+    color: '#FF9D14',
     weight: 0,
     radius: 8,
     mobileRadius: 12,
