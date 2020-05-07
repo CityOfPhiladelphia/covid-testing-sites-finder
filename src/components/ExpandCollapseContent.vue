@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <div
+    <!-- <div
       v-if="item.attributes.TEMPCLOSE !== null"
       class="grid-x temp-close-section"
     >
@@ -56,9 +56,9 @@
         <div><b>{{ $t('randomWords.change') }}:</b></div>
         <div>{{ $t('randomWords.closure') }}: {{ item.attributes.TEMPCLOSE }}</div>
       </div>
-    </div>
+    </div> -->
 
-    <senior-meal-site-card
+    <!-- <senior-meal-site-card
       v-if="section === 'seniorMealSites'"
       :item="item"
     />
@@ -91,30 +91,30 @@
     <outdoor-site-card
       v-if="section === 'outdoorMealSites'"
       :item="item"
-    />
+    /> -->
   </div>
 </template>
 
 <script>
 
-import SeniorMealSiteCard from './SeniorMealSiteCard.vue';
-import FoodSiteCard from './FoodSiteCard.vue';
-import CharterSchoolCard from './CharterSchoolCard.vue';
-import PprSchoolCard from './PprSchoolCard.vue';
-import PsdSchoolCard from './PsdSchoolCard.vue';
-import PhaSchoolCard from './PhaSchoolCard.vue';
-import OutdoorSiteCard from './OutdoorSiteCard.vue';
+// import SeniorMealSiteCard from './SeniorMealSiteCard.vue';
+// import FoodSiteCard from './FoodSiteCard.vue';
+// import CharterSchoolCard from './CharterSchoolCard.vue';
+// import PprSchoolCard from './PprSchoolCard.vue';
+// import PsdSchoolCard from './PsdSchoolCard.vue';
+// import PhaSchoolCard from './PhaSchoolCard.vue';
+// import OutdoorSiteCard from './OutdoorSiteCard.vue';
 
 export default {
   name: 'ExpandCollapseContent',
   components: {
-    SeniorMealSiteCard,
-    FoodSiteCard,
-    CharterSchoolCard,
-    PprSchoolCard,
-    PsdSchoolCard,
-    PhaSchoolCard,
-    OutdoorSiteCard,
+    // SeniorMealSiteCard,
+    // FoodSiteCard,
+    // CharterSchoolCard,
+    // PprSchoolCard,
+    // PsdSchoolCard,
+    // PhaSchoolCard,
+    // OutdoorSiteCard,
   },
   props: {
     item: {

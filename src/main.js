@@ -18,12 +18,12 @@ import pinboard from '@phila/pinboard/src/main.js';
 import legendControls from './general/legendControls';
 
 // data-sources
-import seniorSites from './data-sources/senior-sites';
-import distributionSites from './data-sources/distribution-sites';
-import schoolMealSites from './data-sources/school-meal-sites';
-import youthActivitySites from './data-sources/youth-activity-sites';
-import covidFreeMealSites from './data-sources/covid-free-meal-sites';
-import compiled from './data-sources/compiled';
+// import seniorSites from './data-sources/senior-sites';
+// import distributionSites from './data-sources/distribution-sites';
+// import schoolMealSites from './data-sources/school-meal-sites';
+// import youthActivitySites from './data-sources/youth-activity-sites';
+import covidTestingSites from './data-sources/covid-testing-sites';
+// import compiled from './data-sources/compiled';
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
 
 import expandCollapseContent from './components/ExpandCollapseContent.vue';
@@ -54,21 +54,10 @@ pinboard({
   customComps,
   // refineCategories: [ 'tagFood', 'tagOutdoor', 'tagSenior', 'tagStudent'],
   markerType: 'circle-marker',
-  legendControls,
+  // legendControls,
   locationSlots: {
     title: function(state, item) {
-      // let indexVal = item._featureId.indexOf('-', item._featureId.indexOf('-') + 1);
-      // if (item._featureId.slice(0, indexVal) === 'feat-seniorSites') {
-      //   return item.site_name;
-      // } else if (item._featureId.slice(0, indexVal) === 'feat-distributionSites') {
-      //   return item.Location;
-      // } else if (item._featureId.slice(0, indexVal) === 'feat-schoolMealSites') {
-      //   return item.SCHOOL_NAME;
-      // } else if (item._featureId.slice(0, indexVal) === 'feat-youthActivitySites') {
-      //   return item.ASSET_NAME;
-      // } else if (item._featureId.slice(0, indexVal) === 'feat-covidFreeMealSites') {
-      return item.attributes.site_name;
-      // }
+      return item.attributes.testing_location_nameoperator;
     },
   },
   baseConfig: BASE_CONFIG_URL,
@@ -83,19 +72,19 @@ pinboard({
   },
   // greeting,
   dataSources: {
-    covidFreeMealSites,
+    covidTestingSites,
   },
   router: {
     enabled: false,
   },
   app: {
-    title: 'Free meals resource finder',
-    tagLine: 'Find free meals in the City',
+    // title: 'Free meals resource finder',
+    // tagLine: 'Find free meals in the City',
     logoAlt: 'City of Philadelphia',
-    type: 'covidFreeMealSites',
+    type: 'covidTestingSites',
     // type: 'compiled',
   },
-  projection: '3857',
+  projection: '4326',
   geocoder: {
     url(input) {
       const inputEncoded = encodeURIComponent(input);
@@ -143,47 +132,47 @@ pinboard({
     mobileRadius: 12,
   },
   sections: {
-    foodSites: {
-      title: 'Food sites',
-      titleSingular: 'Food Site',
-      color: '#0F4D90',
-      subsections: [ 'none' ],
-    },
-    studentMealSites: {
-      title: 'Student meal sites',
-      titleSingular: 'Student Meal Site',
-      color: '#721817',
-      subsections: [ 'PSD', 'PHA', 'CHARTER', 'PPR_StudentMeals' ],
-    },
-    seniorMealSites: {
-      title: 'Senior meal sites',
-      titleSingular: 'Senior Meal Site',
-      color: '#D67D00',
-      subsections: [ 'PCA', 'PPR_Senior' ],
-    },
-    outdoorMealSites: {
-      title: 'Outdoor meal sites',
-      titleSingular: 'Outdoor Meal Site',
-      color: '#506D0A',
-      subsections: [[ 'Broad Street Ministry', 'Muslims Serve', 'Kensington Meal Partners' ]],
-    },
+    // foodSites: {
+    //   title: 'Food sites',
+    //   titleSingular: 'Food Site',
+    //   color: '#0F4D90',
+    //   subsections: [ 'none' ],
+    // },
+    // studentMealSites: {
+    //   title: 'Student meal sites',
+    //   titleSingular: 'Student Meal Site',
+    //   color: '#721817',
+    //   subsections: [ 'PSD', 'PHA', 'CHARTER', 'PPR_StudentMeals' ],
+    // },
+    // seniorMealSites: {
+    //   title: 'Senior meal sites',
+    //   titleSingular: 'Senior Meal Site',
+    //   color: '#D67D00',
+    //   subsections: [ 'PCA', 'PPR_Senior' ],
+    // },
+    // outdoorMealSites: {
+    //   title: 'Outdoor meal sites',
+    //   titleSingular: 'Outdoor Meal Site',
+    //   color: '#506D0A',
+    //   subsections: [[ 'Broad Street Ministry', 'Muslims Serve', 'Kensington Meal Partners' ]],
+    // },
   },
   subsections: {
-    '': 'foodSites',
-    'Broad Street Ministry': 'outdoorMealSites',
-    'CHARTER': 'studentMealSites',
-    'Kensington Meal Partners': 'outdoorMealSites',
-    'Muslims Serve': 'outdoorMealSites',
-    'PHA': 'studentMealSites',
-    'PHILABUNDANCE': 'foodSites',
-    'PHILABUNDANCE/SHARE FOOD PROGRAM': 'foodSites',
-    'PPR': 'foodSites',
-    'PSD': 'studentMealSites',
-    'SENIOR SITE': 'seniorMealSites',
-    'SHARE FOOD PROGRAM': 'foodSites',
-    'PCA': 'seniorMealSites',
-    'PPR_Senior': 'seniorMealSites',
-    'PPR_StudentMeals': 'studentMealSites',
+  //   '': 'foodSites',
+  //   'Broad Street Ministry': 'outdoorMealSites',
+  //   'CHARTER': 'studentMealSites',
+  //   'Kensington Meal Partners': 'outdoorMealSites',
+  //   'Muslims Serve': 'outdoorMealSites',
+  //   'PHA': 'studentMealSites',
+  //   'PHILABUNDANCE': 'foodSites',
+  //   'PHILABUNDANCE/SHARE FOOD PROGRAM': 'foodSites',
+  //   'PPR': 'foodSites',
+  //   'PSD': 'studentMealSites',
+  //   'SENIOR SITE': 'seniorMealSites',
+  //   'SHARE FOOD PROGRAM': 'foodSites',
+  //   'PCA': 'seniorMealSites',
+  //   'PPR_Senior': 'seniorMealSites',
+  //   'PPR_StudentMeals': 'studentMealSites',
   },
   i18n: {
     header: 'i18nBanner',
