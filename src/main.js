@@ -41,17 +41,77 @@ pinboard({
   refine: {
     // type: 'categoryField',
     // categoryField: function(item) { return item.attributes.facility_type; },
-    type: 'multipleFields',
-    multipleFields: {
-      'Monday': function(state, item) { return item.attributes.Monday !== null; },
-      'Tuesday': function(state, item) { return item.attributes.Tuesday !== null; },
-      'Wednesday': function(state, item) { return item.attributes.Wednesday !== null; },
-      'Thursday': function(state, item) { return item.attributes.Thursday !== null; },
-      'Friday': function(state, item) { return item.attributes.Friday !== null; },
-      'Saturday': function(state, item) { return item.attributes.Saturday !== null; },
-      'Sunday': function(state, item) { return item.attributes.Sunday !== null; },
-      'public': function(state, item) { return item.attributes.private_public === 'Public'; },
-    }
+    // type: 'multipleFields',
+    type: 'multipleFieldGroups',
+    multipleFieldGroups: {
+      daysOfOperation: {
+        'Mon.': function(state, item) { return item.attributes.Monday !== null;},
+        'Tues.': function(state, item) { return item.attributes.Tuesday !== null; },
+        'Wed.': function(state, item) { return item.attributes.Wednesday !== null; },
+        'Thurs.': function(state, item) { return item.attributes.Thursday !== null; },
+        'Fri.': function(state, item) { return item.attributes.Friday !== null; },
+        'Sat.': function(state, item) { return item.attributes.Saturday !== null; },
+        'Sun.': function(state, item) { return item.attributes.Sunday !== null; },
+        // 'Mon.': {
+        //   name: 'Monday',
+        //   value: function(state, item) { return item.attributes.Monday !== null;},
+        // },
+        // 'Tues.': {
+        //   name: 'Tuesday',
+        //   value: function(state, item) { return item.attributes.Tuesday !== null; },
+        // },
+        // 'Wed.': {
+        //   name: 'Wednesday',
+        //   value: function(state, item) { return item.attributes.Wednesday !== null; },
+        // },
+        // 'Thurs.': {
+        //   name: 'Thursday',
+        //   value: function(state, item) { return item.attributes.Thursday !== null; },
+        // },
+        // 'Fri.': {
+        //   name: 'Friday',
+        //   value: function(state, item) { return item.attributes.Friday !== null; },
+        // },
+        // 'Sat.': {
+        //   name: 'Saturday',
+        //   value: function(state, item) { return item.attributes.Saturday !== null; },
+        // },
+        // 'Sun.': {
+        //   name: 'Sunday',
+        //   value: function(state, item) { return item.attributes.Sunday !== null; },
+        // },
+      },
+      referralRequired: {
+        'Yes': function(state, item) { return item.attributes.Referral === 'Yes'; },
+        'No': function(state, item) { return item.attributes.Referral === 'No'; },
+        'Unknown': function(state, item) { return item.attributes.Referral == null; },
+        // 'Yes': {
+        //   name: 'Referral',
+        //   value: function(state, item) { return item.attributes.Referral !== null; },
+        // },
+        // 'No': {
+        //   name: 'Referral',
+        //   value: function(state, item) { return item.attributes.Referral !== null; },
+        // },
+        // 'Unknown': {
+        //   name: 'Referral',
+        //   value: function(state, item) { return item.attributes.Referral !== null; },
+        // },
+      },
+      access: {
+        'Drive thru': function(state, item) { return ['Drive Thru', 'Drive Thru/Walk-Up'].includes(item.attributes.drive_thruwalk_up); },
+        'Walk up': function(state, item) { return ['Walk', 'Drive Thru/Walk-Up'].includes(item.attributes.drive_thruwalk_up); },
+        // 'Drive thru': {
+        //   name: 'drive_thruwalk_up',
+        //   value: function(state, item) { return item.attributes.drive_thruwalk_up !== null; },
+        // },
+        // 'Walk up': {
+        //   name: 'drive_thruwalk_up',
+        //   value: function(state, item) { return item.attributes.drive_thruwalk_up !== null; },
+        // },
+      },
+      // 'public': function(state, item) { return item.attributes.private_public === 'Public'; },
+    },
   },
   markerType: 'circle-marker',
   locationSlots: {
@@ -153,14 +213,20 @@ pinboard({
             closure: 'Temporary closure',
             checkSite: 'Check the specific site information. Hours are subject to change.',
             hoursVary: 'Hours and availability varies.',
-            Monday: 'Monday',
-            Tuesday: 'Tuesday',
-            Wednesday: 'Wednesday',
-            Thursday: 'Thursday',
-            Friday: 'Friday',
-            Saturday: 'Saturday',
-            Sunday: 'Sunday',
-            public: 'Public',
+            'Mon.': 'Mon.',
+            'Tues.': 'Tues.',
+            'Wed.': 'Wed.',
+            'Thurs.': 'Thurs.',
+            'Fri.': 'Fri.',
+            'Sat.': 'Sat.',
+            'Sun.': 'Sun.',
+            referralRequired: 'Referral required?',
+            access: 'Access',
+            'Yes': 'Yes',
+            'No': 'No',
+            'Unknown': 'Unknown',
+            'Drive thru': 'Drive thru',
+            'Walk up': 'Walk up',
           },
           sections: {
             foodSites: {
