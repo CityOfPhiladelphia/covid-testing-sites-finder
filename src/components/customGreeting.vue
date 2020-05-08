@@ -34,7 +34,7 @@
     />
 
     <!-- food pantries section -->
-    <div
+    <!-- <div
       class="section-header"
       :style="{ 'background-color': '#F0F0F0', 'color': 'black' }"
     >
@@ -47,7 +47,7 @@
         <li v-html="$t('sections.foodPantries.li2')" />
         <li v-html="$t('sections.foodPantries.li3')" />
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -77,15 +77,6 @@ export default {
       sections: {},
       subsections: {},
     };
-    // if (this.$props.options) {
-    //   data = {
-    //     greetingStyle: this.$props.options.style || {},
-    //   };
-    // } else {
-    //   data = {
-    //     greetingStyle: {},
-    //   };
-    // }
     return data;
   },
   computed: {
@@ -135,7 +126,6 @@ export default {
   },
   mounted() {
     this.sections = this.$config.sections;
-    // this.subsections = this.getCounts();
   },
   methods: {
     getCounts() {

@@ -15,14 +15,7 @@ library.add(faExclamationTriangle, faBuilding, faUserMd);
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
 
-// import greeting from './general/greeting';
-import legendControls from './general/legendControls';
-
 // data-sources
-// import seniorSites from './data-sources/senior-sites';
-// import distributionSites from './data-sources/distribution-sites';
-// import schoolMealSites from './data-sources/school-meal-sites';
-// import youthActivitySites from './data-sources/youth-activity-sites';
 import covidTestingSites from './data-sources/covid-testing-sites';
 // import compiled from './data-sources/compiled';
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
@@ -44,31 +37,22 @@ pinboard({
   footer: {
     'HowToUse': false,
   },
-  // addressInput: {
-  //   type: 'address',
-  //   width: 465,
-  //   position: 'right',
-  //   autocompleteEnabled: false,
-  //   autocompleteMax: 15,
-  //   placeholder: ' ',
-  // },
   customComps,
   refine: {
     type: 'multipleFields',
     categoryField: ['attributes','facility_type'],
     multipleFields: {
-      'Monday': ['attributes','Monday'],
-      'Tuesday': ['attributes','Tuesday'],
-      'Wednesday': ['attributes','Wednesday'],
-      'Thursday': ['attributes','Thursday'],
-      'Friday': ['attributes','Friday'],
-      'Saturday': ['attributes','Saturday'],
-      'Sunday': ['attributes','Sunday'],
+      'Monday': function(state, item) { return item.attributes.Monday !== null; },
+      'Tuesday': function(state, item) { return item.attributes.Tuesday !== null; },
+      'Wednesday': function(state, item) { return item.attributes.Wednesday !== null; },
+      'Thursday': function(state, item) { return item.attributes.Thursday !== null; },
+      'Friday': function(state, item) { return item.attributes.Friday !== null; },
+      'Saturday': function(state, item) { return item.attributes.Saturday !== null; },
+      'Sunday': function(state, item) { return item.attributes.Sunday !== null; },
+      'public': function(state, item) { return item.attributes.private_public === 'Public'; },
     }
   },
-  // refineCategories: [ 'tagFood', 'tagOutdoor', 'tagSenior', 'tagStudent'],
   markerType: 'circle-marker',
-  // legendControls,
   locationSlots: {
     title: function(state, item) {
       return item.attributes.testing_location_nameoperator;
@@ -84,7 +68,6 @@ pinboard({
     password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
     apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
   },
-  // greeting,
   dataSources: {
     covidTestingSites,
   },
@@ -94,7 +77,6 @@ pinboard({
   app: {
     logoAlt: 'City of Philadelphia',
     type: 'covidTestingSites',
-    // type: 'compiled',
   },
   projection: '4326',
   geocoder: {
@@ -138,49 +120,8 @@ pinboard({
     radius: 8,
     mobileRadius: 12,
   },
-  sections: {
-    // foodSites: {
-    //   title: 'Food sites',
-    //   titleSingular: 'Food Site',
-    //   color: '#0F4D90',
-    //   subsections: [ 'none' ],
-    // },
-    // studentMealSites: {
-    //   title: 'Student meal sites',
-    //   titleSingular: 'Student Meal Site',
-    //   color: '#721817',
-    //   subsections: [ 'PSD', 'PHA', 'CHARTER', 'PPR_StudentMeals' ],
-    // },
-    // seniorMealSites: {
-    //   title: 'Senior meal sites',
-    //   titleSingular: 'Senior Meal Site',
-    //   color: '#D67D00',
-    //   subsections: [ 'PCA', 'PPR_Senior' ],
-    // },
-    // outdoorMealSites: {
-    //   title: 'Outdoor meal sites',
-    //   titleSingular: 'Outdoor Meal Site',
-    //   color: '#506D0A',
-    //   subsections: [[ 'Broad Street Ministry', 'Muslims Serve', 'Kensington Meal Partners' ]],
-    // },
-  },
-  subsections: {
-  //   '': 'foodSites',
-  //   'Broad Street Ministry': 'outdoorMealSites',
-  //   'CHARTER': 'studentMealSites',
-  //   'Kensington Meal Partners': 'outdoorMealSites',
-  //   'Muslims Serve': 'outdoorMealSites',
-  //   'PHA': 'studentMealSites',
-  //   'PHILABUNDANCE': 'foodSites',
-  //   'PHILABUNDANCE/SHARE FOOD PROGRAM': 'foodSites',
-  //   'PPR': 'foodSites',
-  //   'PSD': 'studentMealSites',
-  //   'SENIOR SITE': 'seniorMealSites',
-  //   'SHARE FOOD PROGRAM': 'foodSites',
-  //   'PCA': 'seniorMealSites',
-  //   'PPR_Senior': 'seniorMealSites',
-  //   'PPR_StudentMeals': 'studentMealSites',
-  },
+  sections: {},
+  subsections: {},
   i18n: {
     header: 'i18nBanner',
     app: true,
@@ -218,15 +159,7 @@ pinboard({
             Friday: 'Friday',
             Saturday: 'Saturday',
             Sunday: 'Sunday',
-            nonPerish: 'non-perishable items only',
-            freshOnly: 'fresh produce only',
-            breakfastLunch: 'Breakfast and lunch',
-            tenMeals: '10 meals per child',
-            oneMeal: '1 meal per resident',
-            'Clinic': 'Clinic',
-            'Drug Store': 'Drug Store',
-            'Field Site': 'Field Site',
-            'Senior Meal Site': 'Senior meal site',
+            public: 'Public',
           },
           sections: {
             foodSites: {
@@ -373,15 +306,7 @@ pinboard({
             FRIDAY: 'Viernes',
             SATURDAY: 'Sábado',
             SUNDAY: 'Domingo',
-            nonPerish: 'únicamente alimentos no perecederos',
-            freshOnly: 'únicamente productos frescos',
-            breakfastLunch: 'desayuno y almuerzo',
-            tenMeals: '10 comidas por niño',
-            'oneMeal': 'comida por residente',
-            'Outdoor Meal Site': 'Lugar de comidas al aire libre',
-            'Food Site': 'Lugar de alimentos',
-            'Student Meal Site': 'Lugar de comidas para estudiantes',
-            'Senior Meal Site': 'Lugar de comidas para adultos mayores',
+            public: 'Public',
           },
           sections: {
             foodSites: {
