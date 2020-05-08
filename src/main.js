@@ -39,8 +39,9 @@ pinboard({
   },
   customComps,
   refine: {
+    // type: 'categoryField',
+    // categoryField: function(item) { return item.attributes.facility_type; },
     type: 'multipleFields',
-    categoryField: ['attributes','facility_type'],
     multipleFields: {
       'Monday': function(state, item) { return item.attributes.Monday !== null; },
       'Tuesday': function(state, item) { return item.attributes.Tuesday !== null; },
