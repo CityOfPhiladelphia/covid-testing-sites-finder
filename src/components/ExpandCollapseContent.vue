@@ -42,7 +42,6 @@
           {{ item.attributes.contact_phone_number }}
         </div>
       </div>
-
     </div>
 
     <div class="cell medium-12">
@@ -84,8 +83,6 @@
           <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
         </div>
       </div>
-
-
     </div>
 
     <!-- <div
@@ -99,8 +96,8 @@
         />
       </div>
       <div class="grid-y card-exclamation-details small-19">
-        <div><b>{{ $t('randomWords.change') }}:</b></div>
-        <div>{{ $t('randomWords.closure') }}: {{ item.attributes.TEMPCLOSE }}</div>
+        <div><b>{{ $t('change') }}:</b></div>
+        <div>{{ $t('closure') }}: {{ item.attributes.TEMPCLOSE }}</div>
       </div>
     </div> -->
 
@@ -135,11 +132,10 @@
     />
   -->
 
-  <!-- v-if="section === 'outdoorMealSites'" -->
+    <!-- v-if="section === 'outdoorMealSites'" -->
     <data-card
       :item="item"
     />
-
   </div>
 </template>
 

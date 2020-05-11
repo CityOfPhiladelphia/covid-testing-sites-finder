@@ -28,7 +28,6 @@
             :options="component1VerticalTableOptions"
           />
         </template>
-
       </vertical-table-light>
     </div>
   </section>
@@ -94,7 +93,6 @@ export default {
           {
             label: 'Time',
             // labelType: 'i18n',
-            // value: 'randomWords.hoursVary',
             valueType: 'component2',
           },
         ],
@@ -125,12 +123,10 @@ export default {
       for (let day of allDays) {
         if (this.item.attributes[day] != null){
           let dayObject = {
-            label: 'randomWords.' + day,
+            label: day,
             labelType: 'i18n',
             value: this.item.attributes[day],
             // valueType: 'i18n',
-            // value1: 'randomWords.breakfastLunch',
-            // value1Type: 'i18n',
           };
           theFields.push(dayObject);
         }
@@ -166,12 +162,10 @@ export default {
       for (let day of allDays) {
         if (this.item.attributes[day] != null){
           let dayObject = {
-            label: 'randomWords.' + day,
+            label: day,
             labelType: 'i18n',
             value: this.item.attributes[day],
             // valueType: 'i18n',
-            // value1: 'randomWords.breakfastLunch',
-            // value1Type: 'i18n',
           };
           theFields.push(dayObject);
         }

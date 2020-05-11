@@ -156,7 +156,7 @@ export default {
         id: 'mainTable',
         fields: [
           {
-            label: 'randomWords.eligibility',
+            label: 'eligibility',
             labelType: 'i18n',
             value: 'sections.' + this.$props.header + '.eligibility',
             valueType: 'i18n',
@@ -164,7 +164,7 @@ export default {
             // value: 'component value',
           },
           {
-            label: 'randomWords.pickupDetails',
+            label: 'pickupDetails',
             labelType: 'i18n',
             valueType: 'component',
             value: 'component value',
