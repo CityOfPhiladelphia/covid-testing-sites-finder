@@ -45,94 +45,98 @@ pinboard({
     type: 'multipleFieldGroups',
     multipleFieldGroups: {
       daysOfOperation: {
-        'Monday': function(state, item) {
-          return item.attributes.Monday !== null;
-        },
-        'Tuesday': function(state, item) {
-          return item.attributes.Tuesday !== null; 
-        },
-        'Wednesday': function(state, item) {
-          return item.attributes.Wednesday !== null; 
-        },
-        'Thursday': function(state, item) {
-          return item.attributes.Thursday !== null; 
-        },
-        'Friday': function(state, item) {
-          return item.attributes.Friday !== null; 
-        },
-        'Saturday': function(state, item) {
-          return item.attributes.Saturday !== null; 
-        },
-        'Sunday': function(state, item) {
-          return item.attributes.Sunday !== null; 
-        },
-        // 'Mon.': {
-        //   name: 'Monday',
-        //   value: function(state, item) { return item.attributes.Monday !== null;},
+        // 'Monday': function(state, item) {
+        //   return item.attributes.Monday !== null;
         // },
-        // 'Tues.': {
-        //   name: 'Tuesday',
-        //   value: function(state, item) { return item.attributes.Tuesday !== null; },
+        // 'Tuesday': function(state, item) {
+        //   return item.attributes.Tuesday !== null;
         // },
-        // 'Wed.': {
-        //   name: 'Wednesday',
-        //   value: function(state, item) { return item.attributes.Wednesday !== null; },
+        // 'Wednesday': function(state, item) {
+        //   return item.attributes.Wednesday !== null;
         // },
-        // 'Thurs.': {
-        //   name: 'Thursday',
-        //   value: function(state, item) { return item.attributes.Thursday !== null; },
+        // 'Thursday': function(state, item) {
+        //   return item.attributes.Thursday !== null;
         // },
-        // 'Fri.': {
-        //   name: 'Friday',
-        //   value: function(state, item) { return item.attributes.Friday !== null; },
+        // 'Friday': function(state, item) {
+        //   return item.attributes.Friday !== null;
         // },
-        // 'Sat.': {
-        //   name: 'Saturday',
-        //   value: function(state, item) { return item.attributes.Saturday !== null; },
+        // 'Saturday': function(state, item) {
+        //   return item.attributes.Saturday !== null;
         // },
-        // 'Sun.': {
-        //   name: 'Sunday',
-        //   value: function(state, item) { return item.attributes.Sunday !== null; },
+        // 'Sunday': function(state, item) {
+        //   return item.attributes.Sunday !== null;
         // },
+        'Monday': {
+          name: 'day_Monday',
+          value: function(state, item) { return item.attributes.Monday !== null;},
+        },
+        'Tuesday': {
+          name: 'day_Tuesday',
+          value: function(state, item) { return item.attributes.Tuesday !== null; },
+        },
+        'Wednesday': {
+          name: 'day_Wednesday',
+          value: function(state, item) { return item.attributes.Wednesday !== null; },
+        },
+        'Thursday': {
+          name: 'day_Thursday',
+          value: function(state, item) { return item.attributes.Thursday !== null; },
+        },
+        'Friday': {
+          name: 'day_Friday',
+          value: function(state, item) { return item.attributes.Friday !== null; },
+        },
+        'Saturday': {
+          name: 'day_Saturday',
+          value: function(state, item) { return item.attributes.Saturday !== null; },
+        },
+        'Sunday': {
+          name: 'day_Sunday',
+          value: function(state, item) { return item.attributes.Sunday !== null; },
+        },
       },
       referralRequired: {
-        'Yes': function(state, item) {
-          return item.attributes.Referral === 'Yes'; 
-        },
-        'No': function(state, item) {
-          return item.attributes.Referral === 'No'; 
-        },
-        'Unknown': function(state, item) {
-          return item.attributes.Referral == null; 
-        },
-        // 'Yes': {
-        //   name: 'Referral',
-        //   value: function(state, item) { return item.attributes.Referral !== null; },
+        // 'Yes': function(state, item) {
+        //   return item.attributes.Referral === 'Yes';
         // },
-        // 'No': {
-        //   name: 'Referral',
-        //   value: function(state, item) { return item.attributes.Referral !== null; },
+        // 'No': function(state, item) {
+        //   return item.attributes.Referral === 'No';
         // },
-        // 'Unknown': {
-        //   name: 'Referral',
-        //   value: function(state, item) { return item.attributes.Referral !== null; },
+        // 'Unknown': function(state, item) {
+        //   return item.attributes.Referral == null;
         // },
+        'Yes': {
+          name: 'Referral_yes',
+          value: function(state, item) { return item.attributes.Referral === 'Yes'; },
+        },
+        'No': {
+          name: 'Referral_no',
+          value: function(state, item) { return item.attributes.Referral === 'No'; },
+        },
+        'Unknown': {
+          name: 'Referral_unknown',
+          value: function(state, item) { return item.attributes.Referral == null; },
+        },
       },
       access: {
-        'Drive thru': function(state, item) {
-          return [ 'Drive Thru', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up); 
-        },
-        'Walk up': function(state, item) {
-          return [ 'Walk', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up); 
-        },
-        // 'Drive thru': {
-        //   name: 'drive_thruwalk_up',
-        //   value: function(state, item) { return item.attributes.drive_thruwalk_up !== null; },
+        // 'Drive thru': function(state, item) {
+        //   return [ 'Drive Thru', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up);
         // },
-        // 'Walk up': {
-        //   name: 'drive_thruwalk_up',
-        //   value: function(state, item) { return item.attributes.drive_thruwalk_up !== null; },
+        // 'Walk up': function(state, item) {
+        //   return [ 'Walk', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up);
         // },
+        // "Yes": {
+        //   name: 'drive_thruwalk_up_Yes',
+        //   value: function(state, item) { return item.attributes.drive_thruwalk_up === "Walk"; },
+        // },
+        'Drive thru': {
+          name: 'drive_thruwalk_up_driveThru',
+          value: function(state, item) { return [ 'Walk', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up); },
+        },
+        'Walk up': {
+          name: 'drive_thruwalk_up_walkUp',
+          value: function(state, item) { return [ 'Walk', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up); },
+        },
       },
       // 'public': function(state, item) { return item.attributes.private_public === 'Public'; },
     },
