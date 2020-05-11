@@ -26,8 +26,7 @@
           <a
             target="_blank"
             :href="item.attributes.ProviderURL"
-            v-html="item.attributes.ProviderURL"
-          />
+          >{{ $t('website') }}</a>
         </div>
       </div>
 
@@ -76,7 +75,7 @@
         <div
           class="small-22"
         >
-          Referral:
+          {{ $t('referral') }}
           <span
             v-html="item.attributes.Referral"
           />

@@ -83,16 +83,16 @@ export default {
         id: 'mainTable',
         fields: [
           {
-            label: 'Details',
-            // labelType: 'i18n',
+            label: 'eligibility',
+            labelType: 'i18n',
             // value: this.$props.item.attributes.facility_type,
             valueType: 'component1',
-            // value: 'sections.' + this.section + '.eligibility',
+            //value: 'sections.' + this.section + '.eligibility',
             // valueType: 'i18n',
           },
           {
-            label: 'Time',
-            // labelType: 'i18n',
+            label: 'testingHours',
+            labelType: 'i18n',
             valueType: 'component2',
           },
         ],
