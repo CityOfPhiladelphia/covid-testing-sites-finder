@@ -26,8 +26,7 @@
           <a
             target="_blank"
             :href="item.attributes.ProviderURL"
-            v-html="item.attributes.ProviderURL"
-          />
+          >{{ $t('website') }}</a>
         </div>
       </div>
 
