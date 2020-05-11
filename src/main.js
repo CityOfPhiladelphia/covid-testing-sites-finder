@@ -254,7 +254,7 @@ pinboard({
           No: 'No',
           referral: 'Referral needed?',
           Unknown: 'Unknown',
-          website: 'website',
+          website: 'Website',
           driveThrough: {
             'Drive thru': 'Drive thru',
             'Walk up': 'Walk up',
