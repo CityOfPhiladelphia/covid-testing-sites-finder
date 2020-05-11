@@ -252,6 +252,7 @@ pinboard({
           access: 'Access',
           Yes: 'Yes',
           No: 'No',
+          referral: 'Referral needed?',
           Unknown: 'Unknown',
           website: 'website',
           driveThrough: {

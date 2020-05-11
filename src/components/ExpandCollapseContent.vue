@@ -75,7 +75,7 @@
         <div
           class="small-22"
         >
-          Referral:
+          {{ $t('referral') }}
           <span
             v-html="item.attributes.Referral"
           />
