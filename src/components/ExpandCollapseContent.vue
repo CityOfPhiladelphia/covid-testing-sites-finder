@@ -54,14 +54,15 @@
         <div
           class="small-22"
         >
+          <div>
+            {{ $t( 'facilityType[\'' + item.attributes.facility_type + '\']') }}
+          </div>
+
           <div
-            v-html="item.attributes.facility_type"
-          />
-          <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
-          <div
-            v-html="item.attributes.drive_thruwalk_up"
-          />
-          <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
+            v-if="item.attributes.drive_thruwalk_up !== null"
+          >
+            {{ $t( 'driveThrough[\'' + item.attributes.drive_thruwalk_up + '\']') }}
+          </div>
         </div>
       </div>
 
@@ -75,66 +76,21 @@
         <div
           class="small-22"
         >
-          {{ $t('referral') }}
-          <span
-            v-html="item.attributes.Referral"
-          />
+          {{ $t('referralRequired') }}
+
+          <!-- v-html="item.attributes.Referral" -->
+          <span>
+            {{ $t(item.attributes.Referral) }}
+          </span>
           <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
         </div>
       </div>
     </div>
 
-    <!-- <div
-      v-if="item.attributes.TEMPCLOSE !== null"
-      class="grid-x temp-close-section"
-    >
-      <div class="card-exclamation-holder small-5">
-        <font-awesome-icon
-          icon="exclamation-triangle"
-          class="fa-2x fa-icon-class"
-        />
-      </div>
-      <div class="grid-y card-exclamation-details small-19">
-        <div><b>{{ $t('change') }}:</b></div>
-        <div>{{ $t('closure') }}: {{ item.attributes.TEMPCLOSE }}</div>
-      </div>
-    </div> -->
-
-    <!-- <senior-meal-site-card
-      v-if="section === 'seniorMealSites'"
-      :item="item"
-    />
-
-    <food-site-card
-      v-if="section === 'foodSites'"
-      :item="item"
-    />
-
-    <charter-school-card
-      v-if="subsection === 'CHARTER'"
-      :item="item"
-    />
-
-    <ppr-school-card
-      v-if="section === 'studentMealSites' && subsection === 'PPR_StudentMeals'"
-      :item="item"
-    />
-
-    <psd-school-card
-      v-if="subsection === 'PSD'"
-      :item="item"
-    />
-
-    <pha-school-card
-      v-if="subsection === 'PHA'"
-      :item="item"
-    />
-  -->
-
-    <!-- v-if="section === 'outdoorMealSites'" -->
     <data-card
       :item="item"
     />
+
   </div>
 </template>
 
