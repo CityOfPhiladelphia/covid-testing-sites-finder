@@ -10,8 +10,12 @@
           v-slot:component1
           class="table-slot"
         >
-          {{ $t('restrictions[\'' + item.attributes.testing_restrictions + '\']') }}
-          {{ $t('notes[\'' + item.attributes.Notes + '\']') }}
+          <span v-show="item.attributes.testing_restrictions != null">
+            {{ $t('restrictions[\'' + item.attributes.testing_restrictions + '\']') }}
+          </span>
+          <span v-show="item.attributes.Notes != null">
+            {{ $t('notes[\'' + item.attributes.Notes + '\']') }}
+          </span>
           <!-- <div>{{ item.attributes.testing_restrictions }}</div>
           <div>{{ item.attributes.Notes }}</div>
           <div>{{ item.attributes.private_public }}</div> -->
