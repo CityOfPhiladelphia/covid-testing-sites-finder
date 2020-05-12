@@ -45,27 +45,6 @@ pinboard({
     type: 'multipleFieldGroups',
     multipleFieldGroups: {
       daysOfOperation: {
-        // 'Monday': function(state, item) {
-        //   return item.attributes.Monday !== null;
-        // },
-        // 'Tuesday': function(state, item) {
-        //   return item.attributes.Tuesday !== null;
-        // },
-        // 'Wednesday': function(state, item) {
-        //   return item.attributes.Wednesday !== null;
-        // },
-        // 'Thursday': function(state, item) {
-        //   return item.attributes.Thursday !== null;
-        // },
-        // 'Friday': function(state, item) {
-        //   return item.attributes.Friday !== null;
-        // },
-        // 'Saturday': function(state, item) {
-        //   return item.attributes.Saturday !== null;
-        // },
-        // 'Sunday': function(state, item) {
-        //   return item.attributes.Sunday !== null;
-        // },
         'Monday': {
           name: 'day_Monday',
           value: function(state, item) { return item.attributes.Monday !== null;},
@@ -96,15 +75,6 @@ pinboard({
         },
       },
       referralRequired: {
-        // 'Yes': function(state, item) {
-        //   return item.attributes.Referral === 'Yes';
-        // },
-        // 'No': function(state, item) {
-        //   return item.attributes.Referral === 'No';
-        // },
-        // 'Unknown': function(state, item) {
-        //   return item.attributes.Referral == null;
-        // },
         'Yes': {
           name: 'Referral_yes',
           value: function(state, item) { return item.attributes.Referral === 'Yes'; },
@@ -119,16 +89,6 @@ pinboard({
         },
       },
       access: {
-        // 'Drive thru': function(state, item) {
-        //   return [ 'Drive Thru', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up);
-        // },
-        // 'Walk up': function(state, item) {
-        //   return [ 'Walk', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up);
-        // },
-        // "Yes": {
-        //   name: 'drive_thruwalk_up_Yes',
-        //   value: function(state, item) { return item.attributes.drive_thruwalk_up === "Walk"; },
-        // },
         'Drive thru': {
           name: 'drive_thruwalk_up_driveThru',
           value: function(state, item) { return [ 'Walk', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up); },
@@ -138,7 +98,6 @@ pinboard({
           value: function(state, item) { return [ 'Walk', 'Drive Thru/Walk-Up' ].includes(item.attributes.drive_thruwalk_up); },
         },
       },
-      // 'public': function(state, item) { return item.attributes.private_public === 'Public'; },
     },
   },
   markerType: 'circle-marker',
@@ -277,7 +236,7 @@ pinboard({
           notes:{
             'Call ahead for an appointment.': 'Call ahead for an appointment.',
             'Call 10 minutes before arrival. Schedule appointment through JeffConnect and JeffNow.' : 'Call 10 minutes before arrival. Schedule appointment through JeffConnect and JeffNow.',
-            'Closed Call ahead for an appointment. Referrals from Mercy physician required.': 'Closed Call ahead for an appointment. Referrals from Mercy physician required.', 
+            'Closed Call ahead for an appointment. Referrals from Mercy physician required.': 'Closed Call ahead for an appointment. Referrals from Mercy physician required.',
             'Appointments/referrals through JeffConnect.' : 'Appointments/referrals through JeffConnect.',
             'Closed Appointments/referral through JeffConnect': 'Closed Appointments/referral through JeffConnect',
             'Referral from Mercy physician required.': 'Referral from Mercy physician required.',
@@ -291,12 +250,12 @@ pinboard({
             'Hospital' : 'Hospital',
             'Health Center' : 'Health Center',
             'Drug Store': 'Drug Store',
-            'Health center (PHMC)': 'Health center (PHMC)', 
+            'Health center (PHMC)': 'Health center (PHMC)',
             'Field Site': 'Field Site',
             'Medical': 'Medical',
             'Other': 'Other',
           },
-          
+
         },
         'es': {
           language: 'Español',
@@ -338,7 +297,7 @@ pinboard({
         },
         'ch': {
           language: '中文',
-          app: {          
+          app: {
             title: '食品分发地点',
             subtitle: '在冠状病毒-19期间查找免费食物和餐点',
             refine: '细化',
