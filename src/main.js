@@ -54,37 +54,37 @@ pinboard({
         'Tuesday': {
           name: 'day_Tuesday',
           value: function(state, item) {
-            return item.attributes.Tuesday !== null; 
+            return item.attributes.Tuesday !== null;
           },
         },
         'Wednesday': {
           name: 'day_Wednesday',
           value: function(state, item) {
-            return item.attributes.Wednesday !== null; 
+            return item.attributes.Wednesday !== null;
           },
         },
         'Thursday': {
           name: 'day_Thursday',
           value: function(state, item) {
-            return item.attributes.Thursday !== null; 
+            return item.attributes.Thursday !== null;
           },
         },
         'Friday': {
           name: 'day_Friday',
           value: function(state, item) {
-            return item.attributes.Friday !== null; 
+            return item.attributes.Friday !== null;
           },
         },
         'Saturday': {
           name: 'day_Saturday',
           value: function(state, item) {
-            return item.attributes.Saturday !== null; 
+            return item.attributes.Saturday !== null;
           },
         },
         'Sunday': {
           name: 'day_Sunday',
           value: function(state, item) {
-            return item.attributes.Sunday !== null; 
+            return item.attributes.Sunday !== null;
           },
         },
       },
@@ -107,14 +107,14 @@ pinboard({
           name: 'drive_thruwalk_up_driveThru',
           key: 'driveThrough.dt',
           value: function(state, item) {
-            return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up); 
+            return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
         },
         'Walk up': {
           name: 'drive_thruwalk_up_walkUp',
           key: 'driveThrough.wu',
           value: function(state, item) {
-            return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up); 
+            return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
         },
       },
@@ -219,7 +219,7 @@ pinboard({
           },
           introPage: {
             introTitle: 'About this finder',
-            p1: 'This tool can help you find a free COVID-19 test in Philadelphia. (See our FAQs for more information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">who should get tested</a>.) You can:',
+            p1: 'This tool can help you find a free COVID-19 test in Philadelphia. (See our FAQ for more information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">who should get tested</a>.) You can:',
             ul1: {
               li1: 'Search for a testing site by address.',
               li2: 'Click on a map location for specific site information.',
@@ -312,7 +312,7 @@ pinboard({
           },
           introPage: {
             introTitle: 'Spanish About this finder',
-            p1: 'Spanish This tool can help you find a free COVID-19 test in Philadelphia. (See our FAQs for more information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">who should get tested</a>.) You can:',
+            p1: 'Spanish This tool can help you find a free COVID-19 test in Philadelphia. (See our FAQ for more information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">who should get tested</a>.) You can:',
             ul1: {
               li1: 'Spanish Search for a testing site by address.',
               li2: 'Spanish Click on a map location for specific site information.',
