@@ -65,43 +65,57 @@
           </div>
         </div>
       </div>
-
-      <div
-        v-if="item.attributes.Referral"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="user-md" />
-        </div>
-        <div
-          class="small-22"
-        >
-          {{ $t('referralRequired') }}
-
-          <!-- v-html="item.attributes.Referral" -->
-          <span>
-            {{ $t(item.attributes.Referral) }}
-          </span>
-          <!-- v-html="$t('sections.' + section + '.subsections[\'' + item.attributes.CATEGORY + '\'].name')" -->
-        </div>
-      </div>
     </div>
 
-    <data-card
-      :item="item"
-    />
+    <div class="small-24">
+
+      <vertical-table-light
+        class="print-padding"
+        :slots="mainVerticalTableSlots"
+        :options="mainVerticalTableOptions"
+      >
+
+        <template
+          v-slot:component1
+          class="table-slot"
+        >
+          <span
+            v-show="item.attributes.testing_restrictions != null"
+            class="td-style"
+          >
+            {{ $t('restrictions[\'' + item.attributes.testing_restrictions + '\']') }}
+          </span>
+          <span
+            v-show="item.attributes.Notes != null"
+            class="td-style"
+          >
+            {{ $t('notes[\'' + item.attributes.Notes + '\']') }}
+          </span>
+        </template>
+
+        <template
+          v-slot:component2
+          class="table-slot"
+        >
+          <vertical-table-light
+            class="print-padding"
+            :slots="component1VerticalTableSlots"
+            :options="component1VerticalTableOptions"
+          />
+        </template>
+
+      </vertical-table-light>
+    </div>
 
   </div>
 </template>
 
 <script>
 
-import DataCard from './DataCard.vue';
-
 export default {
   name: 'ExpandCollapseContent',
   components: {
-    DataCard,
+    VerticalTableLight: () => import(/* webpackChunkName: "pvc_VerticalTable3CellsLight" */'@phila/vue-comps/src/components/VerticalTableLight.vue'),
   },
   props: {
     item: {
@@ -112,15 +126,84 @@ export default {
     },
   },
   computed: {
-    subsections() {
-      return this.$config.subsections;
+    mainVerticalTableSlots() {
+      let slots = {
+        id: 'mainTable',
+        fields: [
+          {
+            label: 'eligibility',
+            labelType: 'i18n',
+            valueType: 'component1',
+          },
+        ],
+      };
+      if (this.days.length > 0) {
+        let newField = {
+          label: 'testingHours',
+          labelType: 'i18n',
+          valueType: 'component2',
+        };
+        slots.fields.push(newField)
+      }
+
+      return slots;
     },
-    section() {
-      return this.subsections[this.$props.item.attributes['CATEGORY']];
+    mainVerticalTableOptions() {
+      return {
+        styles: {
+          th: {
+            'vertical-align': 'top',
+            'font-size': '14px',
+            'min-width': '40px !important',
+            'max-width': '50px !important',
+            'width': '10% !important',
+          },
+          td: {
+            'font-size': '14px !important',
+          },
+        },
+      };
     },
-    subsection() {
-      return this.$props.item.attributes.CATEGORY;
+
+    days() {
+      let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
+      let theFields = [];
+      let days = {};
+      for (let day of allDays) {
+        if (this.item.attributes[day] != null){
+          let dayObject = {
+            label: day,
+            labelType: 'i18n',
+            value: this.item.attributes[day],
+            // valueType: 'i18n',
+          };
+          theFields.push(dayObject);
+        }
+      }
+      return theFields;
     },
+    component1VerticalTableSlots() {
+      return {
+        id: 'compTable1',
+        fields: this.days,
+      };
+    },
+    component1VerticalTableOptions() {
+      return {
+        styles: {
+          th: {
+            'font-size': '14px',
+            'min-width': '45px !important',
+            'max-width': '50px !important',
+            'width': '25% !important',
+          },
+          td: {
+            'font-size': '14px !important',
+          },
+        },
+      };
+    },
+
   },
   methods: {
     parseAddress(address) {
@@ -133,6 +216,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+.td-style {
+  font-size: 14px !important;
+}
+
 .location-item {
   position: relative;
   border-bottom: 1px solid black;
