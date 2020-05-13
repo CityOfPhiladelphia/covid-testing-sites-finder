@@ -47,31 +47,45 @@ pinboard({
       daysOfOperation: {
         'Monday': {
           name: 'day_Monday',
-          value: function(state, item) { return item.attributes.Monday !== null;},
+          value: function(state, item) {
+            return item.attributes.Monday !== null;
+          },
         },
         'Tuesday': {
           name: 'day_Tuesday',
-          value: function(state, item) { return item.attributes.Tuesday !== null; },
+          value: function(state, item) {
+            return item.attributes.Tuesday !== null; 
+          },
         },
         'Wednesday': {
           name: 'day_Wednesday',
-          value: function(state, item) { return item.attributes.Wednesday !== null; },
+          value: function(state, item) {
+            return item.attributes.Wednesday !== null; 
+          },
         },
         'Thursday': {
           name: 'day_Thursday',
-          value: function(state, item) { return item.attributes.Thursday !== null; },
+          value: function(state, item) {
+            return item.attributes.Thursday !== null; 
+          },
         },
         'Friday': {
           name: 'day_Friday',
-          value: function(state, item) { return item.attributes.Friday !== null; },
+          value: function(state, item) {
+            return item.attributes.Friday !== null; 
+          },
         },
         'Saturday': {
           name: 'day_Saturday',
-          value: function(state, item) { return item.attributes.Saturday !== null; },
+          value: function(state, item) {
+            return item.attributes.Saturday !== null; 
+          },
         },
         'Sunday': {
           name: 'day_Sunday',
-          value: function(state, item) { return item.attributes.Sunday !== null; },
+          value: function(state, item) {
+            return item.attributes.Sunday !== null; 
+          },
         },
       },
       // referralRequired: {
@@ -92,12 +106,16 @@ pinboard({
         'Drive thru': {
           name: 'drive_thruwalk_up_driveThru',
           key: 'driveThrough.dt',
-          value: function(state, item) { return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up); },
+          value: function(state, item) {
+            return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up); 
+          },
         },
         'Walk up': {
           name: 'drive_thruwalk_up_walkUp',
           key: 'driveThrough.wu',
-          value: function(state, item) { return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up); },
+          value: function(state, item) {
+            return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up); 
+          },
         },
       },
     },
@@ -184,8 +202,8 @@ pinboard({
         'en-US': {
           language: 'English',
           app: {
-            title: 'Covid testing sites',
-            subtitle: 'Find covid testing sites',
+            title: 'COVID-19 testing sites',
+            subtitle: 'Find a free COVID-19 test near you',
             about: 'About this finder',
             betaTag: 'Beta',
             feedback: 'Feedback',
@@ -217,15 +235,14 @@ pinboard({
             },
             p3: 'Check a location’s specific details on the map. Then, call or visit the provider\'s website before going for a test.',
             callout1: {
-              p1: '<b>Questions?</b> Please call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.'
-            }
+              p1: '<b>Questions?</b> Please call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
+            },
           },
           beforeYouGo: 'Before you go',
-          checkSite: 'Check the specific site information. Hours are subject to change.',
+          checkSite: 'Tests don’t require money, insurance, or proof of citizenship. But, many have other requirements. Check specific site details.',
           hoursVary: 'Hours and availability varies.',
           process: 'Process',
-          referralRequired: 'Referral needed?',
-          eligibility: 'Eligibility',
+          eligibility: 'Details',
           testingHours: 'Testing hours',
           daysOfOperation: 'Days of operation',
           Monday: 'Mon.',
@@ -254,14 +271,14 @@ pinboard({
             year18: 'Must be 18 years or older.',
             netPat: 'Must be a patient in the provider\'s network.',
             medPrior: 'Priority given to health care workers and first responders.',
-            homeless: 'Intended for people experiencing homelessness.'
+            homeless: 'Intended for people experiencing homelessness.',
           },
           notes:{
             schedApp: 'Must schedule an appointment.',
-            refReq: 'Referral required',
+            refReq: 'Referral required.',
             schedAppRefReq: 'Must schedule an appointment. Referral required.',
             noApp: 'No appointment necessary.',
-            testAll: 'Testing provided even if symptoms are not present',
+            testAll: 'Testing provided even if symptoms are not present.',
           },
           facilityType: {
             drugstore: 'Drugstore',
@@ -274,7 +291,6 @@ pinboard({
             cityHC: 'City health center',
             homelessServices: 'Homeless services',
           },
-
         },
         'es': {
           language: 'Español',
@@ -312,8 +328,8 @@ pinboard({
             },
             p3: 'Spanish Check a location’s specific details on the map. Then, call or visit the provider\'s website before going for a test.',
             callout1: {
-              p1: 'Spanish <b>Questions?</b> Please call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.'
-            }
+              p1: 'Spanish <b>Questions?</b> Please call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
+            },
           },
           beforeYouGo: 'Antes de ir',
           checkSite: 'Verifique la información específica del lugar. Los horarios pueden cambiar.',
@@ -349,7 +365,7 @@ pinboard({
             year18: 'Spanish Must be 18 years or older.',
             netPat: 'Spanish Must be a patient in the provider\'s network.',
             medPrior: 'Spanish Priority given to health care workers and first responders.',
-            homeless: 'Spanish Intended for people experiencing homelessness.'
+            homeless: 'Spanish Intended for people experiencing homelessness.',
           },
           notes:{
             schedApp: 'Spanish Must schedule an appointment.',
