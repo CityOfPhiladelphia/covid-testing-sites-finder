@@ -278,7 +278,7 @@ pinboard({
             refReq: 'Referral required.',
             schedAppRefReq: 'Must schedule an appointment. Referral required.',
             noApp: 'No appointment necessary.',
-            testAll: 'Testing provided even if symptoms are not presen.',
+            testAll: 'Testing provided even if symptoms are not present.',
           },
           facilityType: {
             drugstore: 'Drugstore',
@@ -291,7 +291,6 @@ pinboard({
             cityHC: 'City health center',
             homelessServices: 'Homeless services',
           },
-
         },
         'es': {
           language: 'Español',
