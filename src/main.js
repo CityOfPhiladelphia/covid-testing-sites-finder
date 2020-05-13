@@ -199,6 +199,27 @@ pinboard({
             clearAll: 'Clear all',
             applyFilters: 'Apply filters',
           },
+          introPage: {
+            introTitle: 'About this finder',
+            p1: 'This tool can help you find a free COVID-19 test in Philadelphia. (See our FAQs for more information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">who should get tested</a>.) You can:',
+            ul1: {
+              li1: 'Search for a testing site by address.',
+              li2: 'Click on a map location for specific site information.',
+              li3: 'Filter the site list by the tags provided.',
+            },
+            Section1Title: 'Find out if you’re eligible',
+            p2: 'Each site has different requirements. No testing sites require payment, insurance, or proof of citizenship. But, some sites may:',
+            ul2: {
+              li1: 'Limit testing to people who meet certain criteria.',
+              li2: 'Require an appointment.',
+              li3: 'Require a referral from your doctor.',
+              li4: 'Ask you to stay in your car (for drive-thru sites).',
+            },
+            p3: 'Check a location’s specific details on the map. Then, call or visit the provider\'s website before going for a test.',
+            callout1: {
+              p1: '<b>Questions?</b> Please call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.'
+            }
+          },
           beforeYouGo: 'Before you go',
           checkSite: 'Check the specific site information. Hours are subject to change.',
           hoursVary: 'Hours and availability varies.',
@@ -272,6 +293,27 @@ pinboard({
             refine: 'Ajustar',
             clearAll: 'Eliminar todo',
             applyFilters: 'Aplicar filtros',
+          },
+          introPage: {
+            introTitle: 'Spanish About this finder',
+            p1: 'Spanish This tool can help you find a free COVID-19 test in Philadelphia. (See our FAQs for more information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">who should get tested</a>.) You can:',
+            ul1: {
+              li1: 'Spanish Search for a testing site by address.',
+              li2: 'Spanish Click on a map location for specific site information.',
+              li3: 'Spanish Filter the site list by the tags provided.',
+            },
+            Section1Title: 'Spanish Find out if you’re eligible',
+            p2: 'Spanish Each site has different requirements. No testing sites require payment, insurance, or proof of citizenship. But, some sites may:',
+            ul2: {
+              li1: 'Spanish Limit testing to people who meet certain criteria.',
+              li2: 'Spanish Require an appointment.',
+              li3: 'Spanish Require a referral from your doctor.',
+              li4: 'Spanish Ask you to stay in your car (for drive-thru sites).',
+            },
+            p3: 'Spanish Check a location’s specific details on the map. Then, call or visit the provider\'s website before going for a test.',
+            callout1: {
+              p1: 'Spanish <b>Questions?</b> Please call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.'
+            }
           },
           beforeYouGo: 'Antes de ir',
           checkSite: 'Verifique la información específica del lugar. Los horarios pueden cambiar.',

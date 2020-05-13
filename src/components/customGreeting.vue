@@ -24,30 +24,52 @@
       />
     </div>
 
+    <h1>
+      {{ $t('introPage.introTitle') }}
+    </h1>
+    <p
+      v-html="$t('introPage.p1')"
+    />
+    <ul>
+      <li
+        v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
+      >
+        {{ $t('introPage.ul1.' + index) }}
+      </li>
+    </ul>
+    <p>
+      {{ $t('introPage.p2') }}
+    </p>
+    <ul>
+      <li
+        v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul2"
+      >
+        {{ $t('introPage.ul2.' + index) }}
+      </li>
+    </ul>
+    <p>
+      {{ $t('introPage.p3') }}
+    </p>
+    <div
+
+    >
+      <p
+        v-html="$t('introPage.callout1.p1')"
+      />
+      <!-- </p> -->
+    </div>
+
+
+
     <!-- sections that rely on data -->
-    <greeting-section
+    <!-- <greeting-section
       v-for="(section, key) in sections"
       :key="key"
       :header="key"
       :section="$config.sections[key]"
       :color="$config.sections[key].color"
-    />
+    /> -->
 
-    <!-- food pantries section -->
-    <!-- <div
-      class="section-header"
-      :style="{ 'background-color': '#F0F0F0', 'color': 'black' }"
-    >
-      <b>{{ $t('sections.foodPantries.header') }}</b>
-    </div>
-    <div class="custom-section">
-      {{ $t('sections.foodPantries.intro') }}
-      <ul class="custom-ul">
-        <li v-html="$t('sections.foodPantries.li1')" />
-        <li v-html="$t('sections.foodPantries.li2')" />
-        <li v-html="$t('sections.foodPantries.li3')" />
-      </ul>
-    </div> -->
   </div>
 </template>
 
@@ -56,12 +78,14 @@
 import TopicComponent from '@phila/vue-comps/src/components/TopicComponent.vue';
 import PhilaButton from '@phila/pinboard/src/components/PhilaButton.vue';
 import greetingSection from './greetingSection.vue';
+import callout from '@phila/vue-comps/src/components/Callout.vue';
 
 export default {
   name: 'CustomGreeting',
   components: {
     greetingSection,
     PhilaButton,
+    callout,
   },
   mixins: [ TopicComponent ],
   props: {
@@ -86,6 +110,14 @@ export default {
       }
       return false;
 
+    },
+    calloutOptions() {
+      return {}
+    },
+    calloutSlots() {
+      return {
+        text: 'test',
+      }
     },
     database() {
       if (this.$store.state.sources[this.$appType].data) {
