@@ -192,7 +192,7 @@ pinboard({
             searchPlaceholder: 'Search by address',
             viewMap: 'View map',
             viewList: 'View list',
-            noResults: 'No testing site was found within your search. Please call your health care provider or visit the Department of Public Health’s COVID-19 website for information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested">getting tested in Philadelphia</a>.',
+            noResults: 'No testing site was found within your search. Please call your health care provider or visit the Department of Public Health’s COVID-19 website for information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
           },
           refinePanel: {
             refine: 'Refine',
@@ -287,7 +287,7 @@ pinboard({
             searchPlaceholder: 'Buscar por dirección',
             viewMap: 'Ver mapa',
             viewList: 'Ver lista',
-            noResults: 'Spanish No testing site was found within your search. Please call your health care provider or visit the Department of Public Health’s COVID-19 website for information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested">getting tested in Philadelphia</a>.',
+            noResults: 'Spanish No testing site was found within your search. Please call your health care provider or visit the Department of Public Health’s COVID-19 website for information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
           },
           refinePanel: {
             refine: 'Ajustar',
@@ -330,7 +330,7 @@ pinboard({
           Friday: 'Viernes',
           Saturday: 'Sábado',
           Sunday: 'Domingo',
-          access: 'Access',
+          access: 'Spanish Access',
           Yes: 'Si',
           No: 'Non',
           Unknown: 'Spanish Unknown',
