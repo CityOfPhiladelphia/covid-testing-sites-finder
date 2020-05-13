@@ -207,7 +207,7 @@ pinboard({
               li2: 'Click on a map location for specific site information.',
               li3: 'Filter the site list by the tags provided.',
             },
-            Section1Title: 'Find out if you’re eligible',
+            section1Title: 'Find out if you’re eligible',
             p2: 'Each site has different requirements. No testing sites require payment, insurance, or proof of citizenship. But, some sites may:',
             ul2: {
               li1: 'Limit testing to people who meet certain criteria.',
@@ -302,7 +302,7 @@ pinboard({
               li2: 'Spanish Click on a map location for specific site information.',
               li3: 'Spanish Filter the site list by the tags provided.',
             },
-            Section1Title: 'Spanish Find out if you’re eligible',
+            section1Title: 'Spanish Find out if you’re eligible',
             p2: 'Spanish Each site has different requirements. No testing sites require payment, insurance, or proof of citizenship. But, some sites may:',
             ul2: {
               li1: 'Spanish Limit testing to people who meet certain criteria.',

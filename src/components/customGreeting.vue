@@ -37,6 +37,9 @@
         {{ $t('introPage.ul1.' + index) }}
       </li>
     </ul>
+    <h2>
+      {{ $t('introPage.section1Title') }}
+    </h2>
     <p>
       {{ $t('introPage.p2') }}
     </p>
