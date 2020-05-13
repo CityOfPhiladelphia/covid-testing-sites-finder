@@ -24,54 +24,48 @@
       />
     </div>
 
-    <h1>
-      {{ $t('introPage.introTitle') }}
-    </h1>
-    <p
-      v-html="$t('introPage.p1')"
-    />
-    <ul>
-      <li
-        v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
-      >
-        {{ $t('introPage.ul1.' + index) }}
-      </li>
-    </ul>
-    <h2>
-      {{ $t('introPage.section1Title') }}
-    </h2>
-    <p>
-      {{ $t('introPage.p2') }}
-    </p>
-    <ul>
-      <li
-        v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul2"
-      >
-        {{ $t('introPage.ul2.' + index) }}
-      </li>
-    </ul>
-    <p>
-      {{ $t('introPage.p3') }}
-    </p>
     <div
-
+      class="main-area"
     >
+      <h1>
+        {{ $t('introPage.introTitle') }}
+      </h1>
       <p
-        v-html="$t('introPage.callout1.p1')"
+        v-html="$t('introPage.p1')"
       />
-      <!-- </p> -->
-    </div>
+      <ul>
+        <li
+          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
+        >
+          {{ $t('introPage.ul1.' + index) }}
+        </li>
+      </ul>
+      <h2>
+        {{ $t('introPage.section1Title') }}
+      </h2>
+      <p>
+        {{ $t('introPage.p2') }}
+      </p>
+      <ul>
+        <li
+          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul2"
+        >
+          {{ $t('introPage.ul2.' + index) }}
+        </li>
+      </ul>
+      <p>
+        {{ $t('introPage.p3') }}
+      </p>
+      <div
+        class="custom-callout"
+      >
+        <p
+          v-html="$t('introPage.callout1.p1')"
+          class="no-margin"
+        />
+      </div>
 
-
-
-    <!-- sections that rely on data -->
-    <!-- <greeting-section
-      v-for="(section, key) in sections"
-      :key="key"
-      :header="key"
-      :section="$config.sections[key]"
-      :color="$config.sections[key].color"
-    /> -->
+    </div> <!-- end of main-area -->
 
   </div>
 </template>
@@ -210,6 +204,28 @@ export default {
 
 <style scoped>
 
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .main-area {
+    padding: 10px;
+  }
+
+  .custom-callout {
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+  }
+
+  .no-margin {
+    margin: 0px;
+  }
+
   .open-list-div {
     margin: 0 auto;
   }
@@ -238,7 +254,7 @@ export default {
 
   .exclamation-details {
     margin-left: 14px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .mb-panel-topics-greeting {
