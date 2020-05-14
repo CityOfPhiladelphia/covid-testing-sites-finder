@@ -283,16 +283,16 @@ pinboard({
               li2: 'Hacer clic en una ubicación del mapa para obtener información específica del lugar.',
               li3: 'Filtrar la lista de lugares según las etiquetas provistas.',
             },
-          section1Title: 'Saber si es elegible.',
-          p2: 'Cada lugar tiene distintos requisitos. Ningún lugar requiere pagos, seguro ni verificación de ciudadanía. Sin embargo, algunos lugares podrían hacer lo siguiente:',
-          ul2: {
-            li1: 'Restringir la prueba para personas que cumplan ciertos requisitos.',
-            li2: 'Exigir una cita.',
-            li3: 'Exigir una derivación médica.',
-            li4: 'Pedirle que se quede en su automóvil (en lugares a los que se accede en automóvil).',
-          },
-          p3: 'Revise los detalles de una ubicación específica en el mapa. Luego, puede llamar o visitar el sitio web del proveedor antes de ir a realizarse la prueba.',
-          callout1: {
+            section1Title: 'Saber si es elegible.',
+            p2: 'Cada lugar tiene distintos requisitos. Ningún lugar requiere pagos, seguro ni verificación de ciudadanía. Sin embargo, algunos lugares podrían hacer lo siguiente:',
+            ul2: {
+              li1: 'Restringir la prueba para personas que cumplan ciertos requisitos.',
+              li2: 'Exigir una cita.',
+              li3: 'Exigir una derivación médica.',
+              li4: 'Pedirle que se quede en su automóvil (en lugares a los que se accede en automóvil).',
+            },
+            p3: 'Revise los detalles de una ubicación específica en el mapa. Luego, puede llamar o visitar el sitio web del proveedor antes de ir a realizarse la prueba.',
+            callout1: {
               p1: '<b>¿Tiene preguntas?</b> Llame a su proveedor de atención médica o consulte nuestras Preguntas frecuentes sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
             },
           },
@@ -303,13 +303,13 @@ pinboard({
           eligibility: 'Detalles',
           testingHours: 'Horario para las pruebas',
           daysOfOperation: 'Días de servicio',
-          Monday: 'Lu.',
-          Tuesday: 'Ma.',
-          Wednesday: 'Mi.',
-          Thursday: 'Ju.',
-          Friday: 'Vi.',
-          Saturday: 'Sá.',
-          Sunday: 'Do.',
+          Monday: 'Lun.',
+          Tuesday: 'Mar.',
+          Wednesday: 'Mié.',
+          Thursday: 'Jue.',
+          Friday: 'Vie.',
+          Saturday: 'Sáb.',
+          Sunday: 'Dom.',
           access: 'Acceso',
           Yes: 'Sí',
           No: 'No',
@@ -318,7 +318,7 @@ pinboard({
           driveThrough: {
             dt: 'En vehículo',
             wu: 'A pie',
-          both: 'En vehículo y a pie',
+            both: 'En vehículo y a pie',
           },
           panelText: {
             p1: 'Si no puede obtener una prueba de COVID-19 a través de su proveedor de atención médica, esta herramienta puede ayudarlo a encontrar una prueba gratuita en la ciudad de Filadelfia.',
@@ -360,7 +360,7 @@ pinboard({
           introPage: {
             introTitle: '关于此搜索工具',
             p1: '此工具可以帮助您找到费城的 COVID-19 免费检测地点。（关于 <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">“应接受测试人员”</a>的更多信息，请参见我们的“常见问题”。）您可以：',
-              ul1: {
+            ul1: {
               li1: '按地址搜索检测地点。',
               li2: '点击地图上的位置了解具体地点信息。',
               li3: '按提供的标签筛选地点列表',
@@ -375,7 +375,7 @@ pinboard({
             },
             p3: '查看地图上某一位置的详情。然后，前去检测前，请致电或访问提供者的网站。',
             callout1: {
-            p1: '<b>是否有任何疑问？</b>关于在费城进行检测的信息，请致电您的医疗保健提供者或参见我们的“常见问题”.',
+              p1: '<b>是否有任何疑问？</b>关于在费城进行检测的信息，请致电您的医疗保健提供者或参见我们的“常见问题”.',
             },
           },
           beforeYouGo: '在您出发前请先了解以下信息',
@@ -397,15 +397,15 @@ pinboard({
           No: '否',
           Unknown: '未知',
           website: '网站',
-            driveThrough: {
+          driveThrough: {
             dt: '免下车',
             wu: '步行',
             both: '免下车和步行',
           },
           panelText: {
             p1: '如果您无法通过您的医疗保健提供者进行 COVID-19 检测，此工具可以帮助您找到费城市内的免费检测地点。',
-            },
-            restrictions: {
+          },
+          restrictions: {
             lowInc: '适用于低收入家庭和个人。',
             year14: '必须 14 岁或以上。',
             year18: '必须 18 岁或以上。',
@@ -457,7 +457,7 @@ pinboard({
             },
             p3: 'Kiểm tra thông tin cụ thể chi tiết của địa điểm trên bản đồ. Sau đó, gọi điện hoặc truy cập trang web của nhà cung cấp trước khi đến xét nghiệm.',
             callout1: {
-            p1: '<b>Quý vị có câu hỏi?</b> Vui lòng gọi điện cho nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị hoặc xem Các Câu Hỏi Thường Gặp của chúng tôi về <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cách nhận xét nghiệm tại Philadelphia</a>.',
+              p1: '<b>Quý vị có câu hỏi?</b> Vui lòng gọi điện cho nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị hoặc xem Các Câu Hỏi Thường Gặp của chúng tôi về <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cách nhận xét nghiệm tại Philadelphia</a>.',
             },
           },
           beforeYouGo: 'Trước khi quý vị đến',
@@ -467,12 +467,12 @@ pinboard({
           eligibility: 'Chi tiết',
           testingHours: 'Giờ xét nghiệm',
           daysOfOperation: 'Ngày làm việc',
-          Monday: 'Thứ 2',
-          Tuesday: 'Thứ 3',
-          Wednesday: 'Thứ 4',
-          Thursday: 'Thứ 5',
-          Friday: 'Thứ 6',
-          Saturday: 'Thứ 7',
+          Monday: 'Thứ hai',
+          Tuesday: 'Thứ ba',
+          Wednesday: 'Thứ tư',
+          Thursday: 'Thứ năm',
+          Friday: 'Thứ sáu',
+          Saturday: 'thứ bảy',
           Sunday: 'Chủ Nhật',
           access: 'Truy cập',
           Yes: 'Có',
@@ -485,7 +485,7 @@ pinboard({
             both: 'Lái xe qua & đi bộ vào',
           },
           panelText: {
-          p1: 'Nếu quý vị không được xét nghiệm COVID-19 thông qua nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị, thì công cụ này có thể giúp quý vị tìm cơ sở xét nghiệm miễn phí trong phạm vi Thành Phố Philadelphia.',
+            p1: 'Nếu quý vị không được xét nghiệm COVID-19 thông qua nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị, thì công cụ này có thể giúp quý vị tìm cơ sở xét nghiệm miễn phí trong phạm vi Thành Phố Philadelphia.',
           },
           restrictions: {
             lowInc: 'Dành cho các gia đình và cá nhân có thu nhập thấp.',
