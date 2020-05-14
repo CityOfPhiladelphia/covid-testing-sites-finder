@@ -1,4 +1,7 @@
-# immigrant-resource-finder
+# Covid-19 testing sites
+
+![](https://mapboard-images.s3.amazonaws.com/pinboard/covid-testing-finder.JPG)
+
 
 ## Project setup
 ```
