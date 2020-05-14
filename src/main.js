@@ -231,7 +231,7 @@ pinboard({
           Friday: 'Fri.',
           Saturday: 'Sat.',
           Sunday: 'Sun.',
-          access: 'Access',
+          access: 'Process',
           Yes: 'Yes',
           No: 'No',
           Unknown: 'Unknown',
