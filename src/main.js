@@ -38,6 +38,9 @@ pinboard({
     'HowToUse': false,
   },
   customComps,
+  hiddenRefine: {
+    City: function(state, item) { return item.attributes.City === 'Philadelphia' },
+  },
   refine: {
     // type: 'categoryField',
     // categoryField: function(item) { return item.attributes.facility_type; },
