@@ -121,8 +121,8 @@ pinboard({
     },
   },
   markerType: 'circle-marker',
-  locationSlots: {
-    title: function(state, item) {
+  locationInfo: {
+    siteName: function(state, item) {
       return item.attributes.testing_location_nameoperator;
     },
   },
