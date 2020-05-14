@@ -46,73 +46,60 @@ pinboard({
     multipleFieldGroups: {
       daysOfOperation: {
         'Monday': {
-          name: 'day_Monday',
+          unique_key: 'day_Monday',
           value: function(state, item) {
             return item.attributes.Monday !== null;
           },
         },
         'Tuesday': {
-          name: 'day_Tuesday',
+          unique_key: 'day_Tuesday',
           value: function(state, item) {
             return item.attributes.Tuesday !== null;
           },
         },
         'Wednesday': {
-          name: 'day_Wednesday',
+          unique_key: 'day_Wednesday',
           value: function(state, item) {
             return item.attributes.Wednesday !== null;
           },
         },
         'Thursday': {
-          name: 'day_Thursday',
+          unique_key: 'day_Thursday',
           value: function(state, item) {
             return item.attributes.Thursday !== null;
           },
         },
         'Friday': {
-          name: 'day_Friday',
+          unique_key: 'day_Friday',
           value: function(state, item) {
             return item.attributes.Friday !== null;
           },
         },
         'Saturday': {
-          name: 'day_Saturday',
+          unique_key: 'day_Saturday',
           value: function(state, item) {
             return item.attributes.Saturday !== null;
           },
         },
         'Sunday': {
-          name: 'day_Sunday',
+          unique_key: 'day_Sunday',
           value: function(state, item) {
             return item.attributes.Sunday !== null;
           },
         },
       },
-      // referralRequired: {
-      //   'Yes': {
-      //     name: 'Referral_yes',
-      //     value: function(state, item) { return item.attributes.Referral === 'Yes'; },
-      //   },
-      //   'No': {
-      //     name: 'Referral_no',
-      //     value: function(state, item) { return item.attributes.Referral === 'No'; },
-      //   },
-      //   'Unknown': {
-      //     name: 'Referral_unknown',
-      //     value: function(state, item) { return item.attributes.Referral == null; },
-      //   },
-      // },
       access: {
         'Drive thru': {
-          name: 'drive_thruwalk_up_driveThru',
-          key: 'driveThrough.dt',
+          // unique_key: 'dtwu_driveThru',
+          unique_key: 'driveThrough.dt',
+          i18n_key: 'driveThrough.dt',
           value: function(state, item) {
             return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
         },
         'Walk up': {
-          name: 'drive_thruwalk_up_walkUp',
-          key: 'driveThrough.wu',
+          unique_key: 'dtwu_walkUp',
+          i18n_key: 'driveThrough.wu',
           value: function(state, item) {
             return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
@@ -459,16 +446,38 @@ pinboard({
         'fr': {
           language: 'Français',
           app: {
-            title: 'Sites de distribution alimentaire',
-            subtitle: 'Trouver de la nourriture et des repas gratuits pendant le COVID-19',
+            title: 'Sites de dépistage du COVID-19',
+            subtitle: 'Trouver où recevoir gratuitement un test de dépistage du COVID-19 à proximité de chez vous',
+            noResults: 'Aucun site de dépistage n’a été trouvé pour votre recherche. Veuillez appeler votre prestataire de soins de santé ou consulter le site Web du département de la Santé publique sur le COVID-19 pour obtenir des informations sur les tests de dépistage à Philadelphie.',
           },
-          eligibility: 'Admissibilité au programme',
-          pickupDetails: 'Détails de collecte',
-          beforeYouGo: 'Avant de vous déplacer ',
-          change: 'Changement d’horaire',
-          closure: 'Fermeture temporaire',
-          checkSite: 'Consulter les informations concernant le site donné. Les horaires peuvent changers.',
+          introPage:{
+            introTitle: 'À propos de cet outil de recherche',
+            p1: 'Cet outil peut vous aider à trouver où recevoir gratuitement un test de dépistage du COVID-19 à Philadelphie. (Voir notre FAQ pour toute information complémentaire sur les personnes qui devraient se faire tester.) Vous pouvez :',
+            ul1:{
+              li1: 'Rechercher un site de dépistage à partir d’une adresse.',
+              li2: 'Cliquer sur la carte pour obtenir des informations concernant un site particulier.',
+              li3: 'Filtrer la liste des sites selon les balises données.',
+            },
+            section1Title: 'Découvrir si vous pouvez en bénéficier.',
+            p2: 'Les exigences de chaque site sont différentes. Aucun site de dépistage n’exige une assurance ou une preuve de citoyenneté. Cependant certains sites peuvent :',
+            ul2:{
+              li1: 'Limiter les tests de dépistage aux personnes qui remplissent certains critères.',
+              li2: 'Exiger un rendez-vous.',
+              li3: 'Exiger une référence de votre médecin traitant.',
+              li4: 'Demander que vous restiez dans votre véhicule (pour les sites en drive).',
+            },
+            p3: 'Consultez les détails spécifiques à un site sur la carte. Appelez ensuite le prestataire ou consultez son site Web avant de vous déplacer.',
+            callout1:{
+              p1: 'Des questions ? Veuillez appeler votre prestataire de soins de santé ou consulter notre FAQ sur les tests de dépistage à Philadelphie.',
+            },
+          },
+          beforeYouGo: 'Avant de vous déplacer',
+          checkSite: 'Une assurance ou une preuve de citoyenneté ne sont pas exigées pour les tests. Mais beaucoup de sites imposent d’autres conditions. Consultez les détails concernant un site particulier.',
           hoursVary: 'Les horaires et la disponibilité varient.',
+          process: 'Processus',
+          eligibility: 'Détails',
+          testingHours: 'Horaires de dépistage',
+          daysOfOperation: 'Jours d’ouverture',
           Monday: 'Lundi',
           Tuesday: 'Mardi',
           Wednesday: 'Mercredi',
@@ -476,14 +485,45 @@ pinboard({
           Friday: 'Vendredi',
           Saturday: 'Samedi',
           Sunday: 'Dimanche',
-          referralRequired: 'Referral required?',
-          access: 'Access',
-          Yes: 'Yes',
-          No: 'No',
-          Unknown: 'Unknown',
-          'Drive thru': 'Drive thru',
-          'Walk up': 'Walk up',
-          sections: {},
+          access: 'Accès',
+          Yes: 'Oui',
+          No: 'Non',
+          Unknown: 'Inconnu',
+          website: 'Site Web',
+          driveThrough:{
+            dt: 'Drive',
+            wu: 'Guichet',
+            both: 'Drive et guichet',
+          },
+          panelText:{
+            p1: 'Si vous ne pouvez pas vous faire dépister pour le COVID-19 par le biais de votre médecin traitant cet outil peut vous aider à trouver un site de dépistage gratuit dans la ville de Philadelphie.',
+          },
+          restrictions:{
+            lowInc: 'À l’intention des familles et des personnes à faibles revenus.',
+            year14: 'Doit être âgé d’au moins 14 ans.',
+            year18: 'Doit être âgé d’au moins 18 ans.',
+            netPat: 'Doit être un patient dans le réseau du prestataire.',
+            medPrior: 'La priorité est donnée au personnel soignant et aux premiers intervenants.',
+            homeless: 'À l’intention des sans-abri.',
+          },
+          notes:{
+            schedApp: 'Prise de rendez-vous obligatoire',
+            refReq: 'Référence du médecin exigée.',
+            schedAppRefReq: 'Rendez-vous et référence du médecin exigés.',
+            noApp: 'Sans rendez-vous.',
+            testAll: 'Tests effectués même sans symptômes.',
+          },
+          facilityType:{
+            drugstore: 'Pharmacie',
+            fieldSite: 'Site de terrain',
+            clinic: 'Clinique',
+            hospital: 'Hôpital',
+            other: 'Autre',
+            phmcHC: 'Centre médical PHMC',
+            urgentCare: 'Clinique de soins d’urgence',
+            cityHC: 'Centre médical de la ville',
+            homelessServices: 'Services aux sans-abri',
+          },
         },
       },
     },
