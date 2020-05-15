@@ -79,18 +79,20 @@
           v-slot:component1
           class="table-slot"
         >
-          <span
-            v-show="item.attributes.testing_restrictions != null"
-            class="td-style"
-          >
-            {{ $t('restrictions[\'' + item.attributes.testing_restrictions + '\']') }}
-          </span>
-          <span
-            v-show="item.attributes.Notes != null"
-            class="td-style"
-          >
-            {{ $t('notes[\'' + item.attributes.Notes + '\']') }}
-          </span>
+          <div class="td-textbox">
+            <span
+              v-show="item.attributes.testing_restrictions != null"
+              class="td-style"
+            >
+              {{ $t('restrictions[\'' + item.attributes.testing_restrictions + '\']') }}
+            </span>
+            <span
+              v-show="item.attributes.Notes != null"
+              class="td-style"
+            >
+              {{ $t('notes[\'' + item.attributes.Notes + '\']') }}
+            </span>
+          </div>
         </template>
 
         <template
@@ -219,6 +221,10 @@ export default {
 
 .td-style {
   font-size: 14px !important;
+}
+
+.td-textbox {
+  padding-left: 2rem;
 }
 
 .location-item {

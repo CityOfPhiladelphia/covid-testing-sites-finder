@@ -32,7 +32,7 @@ pinboard({
   comboSearch: {
     dropdown: [ 'address' ],
     position: 'right',
-    placeholderText: 'Search by address',
+    // placeholderText: 'app.searchPlaceholder',
   },
   footer: {
     'HowToUse': false,
@@ -93,8 +93,8 @@ pinboard({
       },
       access: {
         'Drive thru': {
-          // unique_key: 'dtwu_driveThru',
-          unique_key: 'driveThrough.dt',
+          unique_key: 'dtwu_driveThru',
+          // unique_key: 'driveThrough.dt',
           i18n_key: 'driveThrough.dt',
           value: function(state, item) {
             return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
