@@ -40,6 +40,7 @@ pinboard({
   customComps,
   hiddenRefine: {
     City: function(state, item) { return item.attributes.City === 'Philadelphia' },
+    Visibility: function(state, item) { return item.attributes.Visibility === 'pub' },
   },
   refine: {
     // type: 'categoryField',
