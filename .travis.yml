@@ -22,6 +22,6 @@ deploy:
     bucket: 'phila-resource-finder'
     upload-dir: 'covid-testing/dev'
     on:
-      branch: listButton
+      branch: dev
     local_dir: dist
     skip_cleanup: true
