@@ -114,6 +114,8 @@
 
 <script>
 
+import SharedFunctions from '@phila/pinboard/src/components/mixins/SharedFunctions.vue';
+
 export default {
   name: 'ExpandCollapseContent',
   components: {
@@ -127,9 +129,10 @@ export default {
       },
     },
   },
-  computed: {
-    mainVerticalTableSlots() {
-      let slots = {
+  mixins: [ SharedFunctions ],
+  data() {
+    let data = {
+      mainVerticalTableSlots: {
         id: 'mainTable',
         fields: [
           {
@@ -138,18 +141,28 @@ export default {
             valueType: 'component1',
           },
         ],
+      },
+      component1VerticalTableSlots: {
+        id: 'compTable1',
+        fields: [],
+      },
+    };
+    return data;
+  },
+  mounted() {
+    let days = this.createDays();
+    this.$data.component1VerticalTableSlots.fields = days;
+    if (days.length > 0) {
+      let newField = {
+        label: 'testingHours',
+        labelType: 'i18n',
+        valueType: 'component2',
       };
-      if (this.days.length > 0) {
-        let newField = {
-          label: 'testingHours',
-          labelType: 'i18n',
-          valueType: 'component2',
-        };
-        slots.fields.push(newField)
-      }
+      this.$data.mainVerticalTableSlots.fields.push(newField)
+    }
 
-      return slots;
-    },
+  },
+  computed: {
     mainVerticalTableOptions() {
       return {
         styles: {
@@ -164,30 +177,6 @@ export default {
             'font-size': '14px !important',
           },
         },
-      };
-    },
-
-    days() {
-      let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
-      let theFields = [];
-      let days = {};
-      for (let day of allDays) {
-        if (this.item.attributes[day] != null){
-          let dayObject = {
-            label: day,
-            labelType: 'i18n',
-            value: this.item.attributes[day],
-            // valueType: 'i18n',
-          };
-          theFields.push(dayObject);
-        }
-      }
-      return theFields;
-    },
-    component1VerticalTableSlots() {
-      return {
-        id: 'compTable1',
-        fields: this.days,
       };
     },
     component1VerticalTableOptions() {
@@ -211,6 +200,46 @@ export default {
     parseAddress(address) {
       const formattedAddress = address.replace(/(Phila.+)/g, city => `<div>${city}</div>`).replace(/^\d+\s[A-z]+\s[A-z]+/g, lineOne => `<div>${lineOne}</div>`).replace(/,/, '');
       return formattedAddress;
+    },
+    createDays() {
+      let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
+      let theFields = [];
+      let days = {};
+
+      let item = this.item;
+      let holidays = [];
+      let exceptions = [];
+      if (this.$config.holidays && this.$config.holidays.days) {
+        holidays = this.$config.holidays.days;
+      }
+      if (this.$config.holidays && this.$config.holidays.exceptions) {
+        exceptions = this.$config.holidays.exceptions;
+      }
+      let siteName = this.getSiteName(this.item);
+
+      for (let [index, day] of allDays.entries()) {
+        // console.log('in days loop, siteName:', siteName, 'holidays:', holidays, 'exceptions:', exceptions, 'day:', day, 'index:', index);
+        if (!holidays.includes(day) || exceptions.includes(this.getSiteName(this.item)) && (this.item.attributes[day] != null || holidays.includes(allDays[index-1]))){
+        // if (this.item.attributes[day] != null){
+          let dayObject = {
+            label: day,
+            labelType: 'i18n',
+            value: function() {
+              // console.log('allDays:', allDays, 'day:', day, 'index:', index, 'item.attributes:', item.attributes);
+              let value;
+              if (!holidays.includes(allDays[index-1])) {
+                value = item.attributes[day];
+              } else {
+                value = item.attributes[allDays[index-1]];
+              }
+              return value;
+            }
+          };
+          theFields.push(dayObject);
+        }
+      }
+
+      return theFields;
     },
   },
 };

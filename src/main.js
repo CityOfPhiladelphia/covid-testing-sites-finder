@@ -28,66 +28,73 @@ const customComps = {
 };
 
 pinboard({
-  // baseConfig: null,
+  app: {
+    logoAlt: 'City of Philadelphia',
+    type: 'covidTestingSites',
+  },
   comboSearch: {
     dropdown: [ 'address' ],
-    position: 'right',
-    // placeholderText: 'app.searchPlaceholder',
+  },
+  locationInfo: {
+    siteName: function(item) {
+      return item.attributes.testing_location_nameoperator;
+    },
   },
   footer: {
     'HowToUse': false,
   },
   customComps,
   hiddenRefine: {
-    City: function(state, item) { return item.attributes.City === 'Philadelphia' },
-    Visibility: function(state, item) { return item.attributes.Visibility === 'pub' },
+    City: function(item) { return item.attributes.City === 'Philadelphia' },
+    Visibility: function(item) { return item.attributes.Visibility === 'pub' },
+  },
+  holidays: {
+    days: ['Monday'],
+    exceptions: ['American Family Care (AFC) Urgent Care  - Northern Liberties'],
   },
   refine: {
-    // type: 'categoryField',
-    // categoryField: function(item) { return item.attributes.facility_type; },
-    // type: 'multipleFields',
     type: 'multipleFieldGroups',
     multipleFieldGroups: {
       daysOfOperation: {
         'Monday': {
           unique_key: 'day_Monday',
-          value: function(state, item) {
+          value: function(item) {
             return item.attributes.Monday !== null;
           },
         },
         'Tuesday': {
           unique_key: 'day_Tuesday',
-          value: function(state, item) {
+          value: function(item) {
             return item.attributes.Tuesday !== null;
           },
         },
         'Wednesday': {
           unique_key: 'day_Wednesday',
-          value: function(state, item) {
+          value: function(item) {
             return item.attributes.Wednesday !== null;
           },
         },
         'Thursday': {
           unique_key: 'day_Thursday',
-          value: function(state, item) {
+          value: function(item) {
             return item.attributes.Thursday !== null;
           },
         },
         'Friday': {
           unique_key: 'day_Friday',
-          value: function(state, item) {
+          value: function(item) {
             return item.attributes.Friday !== null;
           },
         },
         'Saturday': {
           unique_key: 'day_Saturday',
-          value: function(state, item) {
+          value: function(item) {
             return item.attributes.Saturday !== null;
           },
         },
         'Sunday': {
           unique_key: 'day_Sunday',
-          value: function(state, item) {
+          value: function(item) {
             return item.attributes.Sunday !== null;
           },
         },
@@ -97,14 +104,14 @@ pinboard({
           unique_key: 'dtwu_driveThru',
           // unique_key: 'driveThrough.dt',
           i18n_key: 'driveThrough.dt',
-          value: function(state, item) {
+          value: function(item) {
             return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
         },
         'Walk up': {
           unique_key: 'dtwu_walkUp',
           i18n_key: 'driveThrough.wu',
-          value: function(state, item) {
+          value: function(item) {
             return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
         },
@@ -112,11 +119,6 @@ pinboard({
     },
   },
   markerType: 'circle-marker',
-  locationInfo: {
-    siteName: function(state, item) {
-      return item.attributes.testing_location_nameoperator;
-    },
-  },
   baseConfig: BASE_CONFIG_URL,
   cyclomedia: {
     enabled: false,
@@ -133,10 +135,6 @@ pinboard({
   router: {
     enabled: false,
   },
-  app: {
-    logoAlt: 'City of Philadelphia',
-    type: 'covidTestingSites',
-  },
   projection: '4326',
   geocoder: {
     url(input) {
@@ -147,7 +145,6 @@ pinboard({
       include_units: true,
     },
   },
-  infoCircles: {},
   map: {
     defaultBasemap: 'pwd',
     center: [ -75.163471, 39.953338 ],
@@ -179,14 +176,8 @@ pinboard({
     radius: 8,
     mobileRadius: 12,
   },
-  sections: {},
-  subsections: {},
   i18n: {
-    header: 'i18nBanner',
     enabled: true,
-    refinePanel: true,
-    expandCollapseTitle: true,
-    footer: true,
     data: {
       locale: 'en-US',
       messages: {
