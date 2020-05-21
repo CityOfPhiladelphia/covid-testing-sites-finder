@@ -42,9 +42,9 @@ pinboard({
   },
   customComps,
   baseConfig: BASE_CONFIG_URL,
-  holidays: {
-    days: ['Monday'],
-  },
+  // holidays: {
+  //   days: ['Monday'],
+  // },
   hiddenRefine: {
     City: function(item) { return item.attributes.City === 'Philadelphia' },
     Visibility: function(item) { return item.attributes.Visibility === 'pub' },
