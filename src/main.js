@@ -28,6 +28,27 @@ const customComps = {
 };
 
 pinboard({
+  alerts: {
+    header: {
+      type: 'alertBanner',
+      enabled: function(state) {
+        return state.alertResponse === 'alertHours';
+      },
+      // content: '<b>Until further notice:</b> Please call ahead or check hours of operation while business restrictions are still in effect.',
+    },
+    alertChecks: [
+      {
+        type: 'alertHours',
+        condition: [
+          {
+            'day': 1,
+            'startTime': '1:00',
+            'endTime': '23:59',
+          },
+        ],
+      },
+    ],
+  },
   app: {
     logoAlt: 'City of Philadelphia',
     type: 'covidTestingSites',
@@ -189,6 +210,7 @@ pinboard({
           app: {
             title: 'COVID-19 testing sites',
             subtitle: 'Find a free COVID-19 test near you',
+            bannerAlert: 'Many sites are closed today. Check specific site details for more information.',
             noResults: 'No testing site was found within your search. Please call your health care provider or visit the Department of Public Health’s COVID-19 website for information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
           },
           introPage: {
@@ -271,6 +293,7 @@ pinboard({
           app: {
             title: 'Lugares donde se realizan pruebas de COVID-19',
             subtitle: 'Encuentre un lugar cercano para hacerse la prueba de COVID-19.',
+            bannerAlert: 'Muchos lugares están cerrados hoy. Consulte los detalles específicos del lugar para obtener más información.',
             noResults: 'No se encontró un lugar donde se realicen pruebas que coincida con su búsqueda. Llame a su proveedor de atención médica o visite el sitio web sobre COVID-19 del Departamento de Salud Pública para obtener información sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
           },
           introPage: {
@@ -353,6 +376,7 @@ pinboard({
           app: {
             title: 'COVID-19 检测地点',
             subtitle: '搜索您附近的 COVID-19 免费检测地点',
+            bannerAlert: '今天很多地点均关闭。有关更多信息，请查看具体地点详细信息。',
             noResults: '在您的搜索范围内未找到检测地点。请致电您的医疗保健提供者或访问公共卫生部 (Department of Public Health) 的 COVID-19 网站，了解关于 <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">在费城进行检测</a>的信息.',
           },
           introPage: {
@@ -435,6 +459,7 @@ pinboard({
           app: {
             title: 'Các cơ sở xét nghiệm COVID-19',
             subtitle: 'Tìm cơ sở xét nghiệm COVID-19 miễn phí gần quý vị',
+            bannerAlert: 'Hôm nay, nhiều địa điểm đóng cửa. Hãy kiểm tra các chi tiết về địa điểm cụ thể để biết thêm thông tin.',
             noResults: 'Không tìm thấy cơ sở xét nghiệm trong phạm vi tìm kiếm của quý vị. Vui lòng gọi điện cho nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị hoặc truy cập trang web về COVID-19 của Sở Y Tế Công Cộng để biết thông tin về a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cách nhận xét nghiệm tại Philadelphia</a>.',
           },
           introPage: {
@@ -517,6 +542,7 @@ pinboard({
           app: {
             title: 'Пункты тестирования на COVID-19',
             subtitle: 'Найдите бесплатный тест на COVID-19 поблизости',
+            bannerAlert: 'Многие места сегодня закрыты. Для получения более подробной информации о месте отдыха просмотрите дополнительные сведения.',
             noResults: 'В ходе поиска не найдено ни одного пункта для тестирования. Позвоните своему врачу или посетите веб-сайт Департамента здравоохранения, посвященный COVID-19, и узнайте, как <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">пройти тестирование в Филадельфии</a>.',
           },
           introPage: {
@@ -599,6 +625,7 @@ pinboard({
           app: {
             title: 'Sites de dépistage du COVID-19',
             subtitle: 'Trouver où recevoir gratuitement un test de dépistage du COVID-19 à proximité de chez vous',
+            bannerAlert: 'De nombreux sites sont fermés aujourd’hui. Consultez les détails spécifiques au site pour obtenir de plus amples informations.',
             noResults: 'Aucun site de dépistage n’a été trouvé pour votre recherche. Veuillez appeler votre prestataire de soins de santé ou consulter le site Web du département de la Santé publique sur le COVID-19 pour obtenir des informations sur les tests de dépistage à Philadelphie.',
           },
           introPage:{
