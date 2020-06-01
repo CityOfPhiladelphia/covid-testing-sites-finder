@@ -31,7 +31,7 @@ pinboard({
   alerts: {
     modal: {
       enabled: true,
-      // header: 'Closures',
+      header: 'Closures',
       body: '<p>Due to concerns about public safety, some testing sites may be closed. Please call ahead to ensure that the site you are going to is open.</p>',
     },
     header: {
@@ -73,10 +73,10 @@ pinboard({
   // },
   hiddenRefine: {
     City: function(item) {
-      return item.attributes.City === 'Philadelphia'; 
+      return item.attributes.City === 'Philadelphia';
     },
     Visibility: function(item) {
-      return item.attributes.Visibility === 'pub'; 
+      return item.attributes.Visibility === 'pub';
     },
   },
   refine: {
