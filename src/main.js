@@ -29,6 +29,11 @@ const customComps = {
 
 pinboard({
   alerts: {
+    modal: {
+      enabled: true,
+      // header: 'Closures',
+      body: '<p>Due to concerns about public safety, some testing sites may be closed. Please call ahead to ensure that the site you are going to is open.</p>',
+    },
     header: {
       type: 'alertBanner',
       enabled: function(state) {
@@ -67,8 +72,12 @@ pinboard({
   //   days: ['Monday'],
   // },
   hiddenRefine: {
-    City: function(item) { return item.attributes.City === 'Philadelphia' },
-    Visibility: function(item) { return item.attributes.Visibility === 'pub' },
+    City: function(item) {
+      return item.attributes.City === 'Philadelphia'; 
+    },
+    Visibility: function(item) {
+      return item.attributes.Visibility === 'pub'; 
+    },
   },
   refine: {
     type: 'multipleFieldGroups',
