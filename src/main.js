@@ -50,6 +50,11 @@ pinboard({
             'startTime': '1:00',
             'endTime': '23:59',
           },
+          {
+            'day': 2,
+            'startTime': '1:00',
+            'endTime': '23:59',
+          },
         ],
       },
     ],
