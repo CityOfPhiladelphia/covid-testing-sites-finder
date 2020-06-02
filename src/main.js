@@ -32,7 +32,7 @@ pinboard({
     modal: {
       enabled: true,
       header: 'Closures',
-      body: '<p>Due to concerns about public safety, some testing sites may be closed. Please call ahead to ensure that the site you are going to is open.</p>',
+      body: '<p>All City-run COVID-19 testing sites and health centers will be closed today, June 2, 2020. Please call ahead to ensure that the site you are going to is open.</p>',
     },
     header: {
       type: 'alertBanner',
