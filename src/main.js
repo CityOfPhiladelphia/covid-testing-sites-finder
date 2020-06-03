@@ -32,31 +32,31 @@ pinboard({
     modal: {
       enabled: true,
       header: 'Closures',
-      body: '<p>Due to concerns about public safety, some testing sites may be closed. Please call ahead to ensure that the site you are going to is open.</p>',
+      body: '<p>All City-run COVID-19 testing sites and health centers are open and on a normal schedule, though others may be closed. Please call ahead to ensure that the site you are going to is open.</p>',
     },
-    header: {
-      type: 'alertBanner',
-      enabled: function(state) {
-        return state.alertResponse === 'alertHours';
-      },
-      // content: '<b>Until further notice:</b> Please call ahead or check hours of operation while business restrictions are still in effect.',
-    },
+    // header: {
+    //   type: 'alertBanner',
+    //   // enabled: function(state) {
+    //   //   return state.alertResponse === 'alertHours';
+    //   // },
+    //   // content: '<b>Until further notice:</b> Please call ahead or check hours of operation while business restrictions are still in effect.',
+    // },
     alertChecks: [
-      {
-        type: 'alertHours',
-        condition: [
-          {
-            'day': 1,
-            'startTime': '1:00',
-            'endTime': '23:59',
-          },
-          {
-            'day': 2,
-            'startTime': '1:00',
-            'endTime': '23:59',
-          },
-        ],
-      },
+      // {
+      //   type: 'alertHours',
+      //   condition: [
+      //     {
+      //       'day': 1,
+      //       'startTime': '1:00',
+      //       'endTime': '23:59',
+      //     },
+      //     {
+      //       'day': 2,
+      //       'startTime': '1:00',
+      //       'endTime': '23:59',
+      //     },
+      //   ],
+      // },
     ],
   },
   app: {
