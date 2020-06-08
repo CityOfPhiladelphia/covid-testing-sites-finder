@@ -68,13 +68,11 @@
     </div>
 
     <div class="small-24">
-
       <vertical-table-light
         class="print-padding"
         :slots="mainVerticalTableSlots"
         :options="mainVerticalTableOptions"
       >
-
         <template
           v-slot:component1
           class="table-slot"
@@ -105,10 +103,8 @@
             :options="component1VerticalTableOptions"
           />
         </template>
-
       </vertical-table-light>
     </div>
-
   </div>
 </template>
 
@@ -148,7 +144,7 @@ export default {
           labelType: 'i18n',
           valueType: 'component2',
         };
-        slots.fields.push(newField)
+        slots.fields.push(newField);
       }
 
       return slots;
