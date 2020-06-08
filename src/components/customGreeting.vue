@@ -145,7 +145,7 @@ export default {
     },
   },
   watch: {
-    database(nextDatabase) {
+    database() {
       let subsections = this.getCounts();
       this.subsections = subsections;
       this.$store.commit('setSubsections', subsections);

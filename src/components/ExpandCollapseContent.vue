@@ -169,7 +169,7 @@ export default {
     days() {
       let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
       let theFields = [];
-      let days = {};
+      // let days = {};
 
       let item = this.item;
       let holidays = [];
@@ -180,7 +180,7 @@ export default {
       if (this.$config.holidays && this.$config.holidays.exceptions) {
         exceptions = this.$config.holidays.exceptions;
       }
-      let siteName = this.getSiteName(this.item);
+      // let siteName = this.getSiteName(this.item);
 
       for (let [ index, day ] of allDays.entries()) {
         let normallyOpen = item.attributes[day] != null;
