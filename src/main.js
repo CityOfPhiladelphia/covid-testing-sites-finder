@@ -81,7 +81,7 @@ pinboard({
       return item.attributes.City === 'Philadelphia';
     },
     Visibility: function(item) {
-      return item.attributes.Visibility === 'pub';
+      return item.attributes.Visibility === 'pub' || item.attributes.Visibility === 'For Public View';
     },
   },
   refine: {
