@@ -156,6 +156,8 @@ pinboard({
     weight: 0,
     radius: 8,
     mobileRadius: 12,
+    size: 16,
+    mobileSize: 20,
   },
   cyclomedia: {
     enabled: false,
@@ -182,9 +184,19 @@ pinboard({
       include_units: true,
     },
   },
+  footer: {
+    'HowToUse': false,
+  },
   map: {
+    // type: 'leaflet',
+    type: 'mapbox',
+    containerClass: 'map-container',
     defaultBasemap: 'pwd',
     center: [ -75.163471, 39.953338 ],
+    minZoom: 11,
+    maxZoom: 25,
+    shouldInitialize: true,
+
     zoom: 12,
     geocodeZoom: 15,
     imagery: {
@@ -207,8 +219,78 @@ pinboard({
       },
     },
   },
-  footer: {
-    'HowToUse': false,
+  mbStyle: {
+    version: 8,
+    sources: {
+      pwd: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+    },
+    layers: [
+      {
+        id: 'pwd',
+        type: 'raster',
+        source: 'pwd',
+      },
+    ],
+  },
+  basemapSources: {
+    pwd: {
+      source: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
+          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'pwd',
+        type: 'raster',
+      },
+    },
+    imagery2019: {
+      source: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_2019_3in/MapServer/tile/{z}/{y}/{x}',
+          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'imagery2019',
+        type: 'raster',
+      },
+    },
+  },
+  basemapLabelSources:{
+    cityBasemapLabels: {
+      source: {
+        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}' ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'cityBasemapLabels',
+        type: 'raster',
+      },
+    },
+    imageryBasemapLabels: {
+      source: {
+        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_Labels/MapServer/tile/{z}/{y}/{x}' ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'imageryBasemapLabels',
+        type: 'raster',
+      },
+    },
   },
   i18n: {
     header: 'i18nBanner',
