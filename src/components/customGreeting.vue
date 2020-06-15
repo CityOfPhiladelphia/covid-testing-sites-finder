@@ -36,6 +36,7 @@
       <ul>
         <li
           v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
+          :key="index"
         >
           {{ $t('introPage.ul1.' + index) }}
         </li>
@@ -49,6 +50,7 @@
       <ul>
         <li
           v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul2"
+          :key="index"
         >
           {{ $t('introPage.ul2.' + index) }}
         </li>
@@ -60,13 +62,11 @@
         class="custom-callout"
       >
         <p
-          v-html="$t('introPage.callout1.p1')"
           class="no-margin"
+          v-html="$t('introPage.callout1.p1')"
         />
       </div>
-
     </div> <!-- end of main-area -->
-
   </div>
 </template>
 
@@ -107,12 +107,12 @@ export default {
 
     },
     calloutOptions() {
-      return {}
+      return {};
     },
     calloutSlots() {
       return {
         text: 'test',
-      }
+      };
     },
     database() {
       if (this.$store.state.sources[this.$appType].data) {
@@ -145,7 +145,7 @@ export default {
     },
   },
   watch: {
-    database(nextDatabase) {
+    database() {
       let subsections = this.getCounts();
       this.subsections = subsections;
       this.$store.commit('setSubsections', subsections);
