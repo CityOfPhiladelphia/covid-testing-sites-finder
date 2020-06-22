@@ -401,7 +401,7 @@ pinboard({
               li3: 'Filtrar la lista de lugares según las etiquetas provistas.',
             },
             section1Title: 'Saber si es elegible.',
-            p2: 'Cada lugar tiene distintos requisitos. Sin embargo, algunos lugares podrían hacer lo siguiente:',
+            p2: 'Ningún centro de pruebas le solicitará dinero. Se le pedirá una identificación y también es posible que se le pida información del seguro de salud. Si no tiene una identificación o seguro de salud, de todos modos, pueden realizarse una prueba. Además, es posible que algunos sitios:',
             ul2: {
               li1: 'Restringir la prueba para personas que cumplan ciertos requisitos.',
               li2: 'Exigir una cita.',
@@ -484,7 +484,7 @@ pinboard({
               li3: '按提供的标签筛选地点列表',
             },
             section1Title: '查询您是否符合条件',
-            p2: '每个地点的要求各不相同。但一些地点可能：',
+            p2: '测试点不会向您收取费用。我们会要求您提供身份证明，还可能会要求您提供医疗保险信息。如果您没有身份证明或医疗保险，仍可以接受检查。此外，有些测试点可能会：',
             ul2: {
               li1: '仅限符合特定标准的人进行检测。',
               li2: '需要预约。',
@@ -567,7 +567,7 @@ pinboard({
               li3: 'Lọc danh sách cơ sở bằng các thẻ gắn được cung cấp.',
             },
             section1Title: 'Tìm hiểu liệu quý vị có hội đủ điều kiện không',
-            p2: 'Mỗi cơ sở có các yêu cầu khác nhau. Nhưng một số cơ sở có thể:',
+            p2: 'Không cơ sở xét nghiệm nào sẽ đề nghị quý vị trả tiền. Họ sẽ hỏi danh tính và cũng có thể hỏi thông tin bảo hiểm y tế của quý vị. Nếu quý vị không có giấy tờ tùy thân hoặc bảo hiểm y tế, quý vị vẫn có thể nhận được dịch vụ xét nghiệm. Ngoài ra, một số cơ sở có thể:',
             ul2: {
               li1: 'Hạn chế chỉ xét nghiệm cho những người đáp ứng các tiêu chí nhất định.',
               li2: 'Yêu cầu đặt lịch hẹn.',
@@ -650,7 +650,7 @@ pinboard({
               li3: 'Отфильтровать список пунктов по предоставленным тегам.',
             },
             section1Title: 'Узнать, имеете ли вы право',
-            p2: 'В каждом пункте свои требования. Тем не менее, некоторые пункты имеют право:',
+            p2: 'Ни в одном из пунктов тестирования не взимается плата. Вас попросят предъявить идентификационный документ, а также могут попросить предоставить информацию о медицинской страховке. Если у вас нет документов или страховки, вы все равно можете пройти тестирование. Помимо этого, некоторые пункты могут:',
             ul2: {
               li1: 'Ограничивать тестирование, проводя его только для людей, которые соответствуют определенным критериям.',
               li2: 'Требовать предварительной записи.',
@@ -733,7 +733,7 @@ pinboard({
               li3: 'Filtrer la liste des sites selon les balises données.',
             },
             section1Title: 'Découvrir si vous pouvez en bénéficier.',
-            p2: 'Les exigences de chaque site sont différentes. Cependant certains sites peuvent :',
+            p2: 'Tous les sites de dépistage sont gratuits. On vous demandera une pièce d’identité et peut-être des informations sur votre assurance-santé. Si vous n’avez pas de pièce d’identité ou d’assurance-santé, vous pouvez tout de même vous faire dépister. En outre, certains sites peuvent :',
             ul2:{
               li1: 'Limiter les tests de dépistage aux personnes qui remplissent certains critères.',
               li2: 'Exiger un rendez-vous.',
