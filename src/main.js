@@ -196,7 +196,7 @@ pinboard({
   map: {
     // type: 'leaflet',
     type: 'mapbox',
-    tiles: 'hosted',
+    // tiles: 'hosted',
     containerClass: 'map-container',
     defaultBasemap: 'pwd',
     center: [ -75.163471, 39.953338 ],
@@ -226,26 +226,26 @@ pinboard({
       },
     },
   },
-  mbStyle: 'mapbox://styles/ajrothwell/ck6gz6rmk04681ir1fdmagq5h',
-  // mbStyle: {
-  //   version: 8,
-  //   sources: {
-  //     pwd: {
-  //       tiles: [
-  //         'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
-  //       ],
-  //       type: 'raster',
-  //       tileSize: 256,
-  //     },
-  //   },
-  //   layers: [
-  //     {
-  //       id: 'pwd',
-  //       type: 'raster',
-  //       source: 'pwd',
-  //     },
-  //   ],
-  // },
+  // mbStyle: 'mapbox://styles/ajrothwell/ck6gz6rmk04681ir1fdmagq5h',
+  mbStyle: {
+    version: 8,
+    sources: {
+      pwd: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+    },
+    layers: [
+      {
+        id: 'pwd',
+        type: 'raster',
+        source: 'pwd',
+      },
+    ],
+  },
   basemapSources: {
     pwd: {
       source: {
