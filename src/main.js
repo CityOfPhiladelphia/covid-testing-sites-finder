@@ -93,51 +93,103 @@ pinboard({
   refine: {
     type: 'multipleFieldGroups',
     multipleFieldGroups: {
-      daysOfOperation: {
-        'Monday': {
-          unique_key: 'day_Monday',
+      // daysOfOperation: {
+      //   'Monday': {
+      //     unique_key: 'day_Monday',
+      //     value: function(item) {
+      //       return item.attributes.Monday !== null;
+      //     },
+      //   },
+      //   'Tuesday': {
+      //     unique_key: 'day_Tuesday',
+      //     value: function(item) {
+      //       return item.attributes.Tuesday !== null;
+      //     },
+      //   },
+      //   'Wednesday': {
+      //     unique_key: 'day_Wednesday',
+      //     value: function(item) {
+      //       return item.attributes.Wednesday !== null;
+      //     },
+      //   },
+      //   'Thursday': {
+      //     unique_key: 'day_Thursday',
+      //     value: function(item) {
+      //       return item.attributes.Thursday !== null;
+      //     },
+      //   },
+      //   'Friday': {
+      //     unique_key: 'day_Friday',
+      //     value: function(item) {
+      //       return item.attributes.Friday !== null;
+      //     },
+      //   },
+      //   'Saturday': {
+      //     unique_key: 'day_Saturday',
+      //     value: function(item) {
+      //       return item.attributes.Saturday !== null;
+      //     },
+      //   },
+      //   'Sunday': {
+      //     unique_key: 'day_Sunday',
+      //     value: function(item) {
+      //       return item.attributes.Sunday !== null;
+      //     },
+      //   },
+      // },
+      Age: {
+        '+18 years old': {
+          unique_key: 'year18',
           value: function(item) {
-            return item.attributes.Monday !== null;
+            return item.attributes.Age === 'year18';
           },
         },
-        'Tuesday': {
-          unique_key: 'day_Tuesday',
+        '+14 years old': {
+          unique_key: 'year14',
           value: function(item) {
-            return item.attributes.Tuesday !== null;
+            return item.attributes.Age === 'year14';
           },
         },
-        'Wednesday': {
-          unique_key: 'day_Wednesday',
+        'Pediatric care': {
+          unique_key: 'pedCare',
           value: function(item) {
-            return item.attributes.Wednesday !== null;
-          },
-        },
-        'Thursday': {
-          unique_key: 'day_Thursday',
-          value: function(item) {
-            return item.attributes.Thursday !== null;
-          },
-        },
-        'Friday': {
-          unique_key: 'day_Friday',
-          value: function(item) {
-            return item.attributes.Friday !== null;
-          },
-        },
-        'Saturday': {
-          unique_key: 'day_Saturday',
-          value: function(item) {
-            return item.attributes.Saturday !== null;
-          },
-        },
-        'Sunday': {
-          unique_key: 'day_Sunday',
-          value: function(item) {
-            return item.attributes.Sunday !== null;
+            return item.attributes.Age === 'pedCare';
           },
         },
       },
-      access: {
+      'Referral required': {
+        'Yes': {
+          unique_key: 'referral_yes',
+          i18n_key: 'referral.yes',
+          value: function(item) {
+            return item.attributes.Referral === 'yes';
+          },
+        },
+        'No': {
+          unique_key: 'referral_no',
+          i18n_key: 'referral.yes',
+          value: function(item) {
+            return item.attributes.Referral === 'no';
+          },
+        },
+      },
+      Symptomatic: {
+        'Yes': {
+          unique_key: 'symptom_yes',
+          i18n_key: 'symptomatic.symptom',
+          value: function(item) {
+            return item.attributes.Symptoms === 'symptom';
+          },
+        },
+        'No': {
+          unique_key: 'symptom_no',
+          i18n_key: 'symptomatic.asymptom',
+          value: function(item) {
+            return item.attributes.Symptoms === 'asymptom';
+          },
+        },
+      },
+      Process: {
         'Drive thru': {
           unique_key: 'dtwu_driveThru',
           // unique_key: 'driveThrough.dt',
@@ -361,6 +413,16 @@ pinboard({
             dt: 'Drive-thru',
             wu: 'Walk-up',
             both: 'Drive-thru & walk-up',
+          },
+          symptomatic: {
+            null: 'no data',
+            symptom: 'Yes',
+            asymptom: 'No',
+          },
+          referral: {
+            null: 'no data',
+            yes: 'Yes',
+            no: 'No',
           },
           panelText:{
             p1: 'If you are unable to get a COVID-19 test through your health care provider, this tool can help you find a test within the City of Philadelphia.',

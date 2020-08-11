@@ -65,6 +65,28 @@
           </div>
         </div>
       </div>
+
+      <div
+        v-if="item.attributes.facility_type"
+        class="grid-x detail"
+      >
+        <div class="small-2">
+          <font-awesome-icon icon="user-md" />
+        </div>
+        <div
+          class="small-22"
+        >
+          <div>
+            Referral: {{ $t( 'referral[\'' + item.attributes.Referral + '\']') }}
+          </div>
+
+          <div
+            v-if="item.attributes.drive_thruwalk_up !== null"
+          >
+            Symptomatic: {{ $t( 'symptomatic[\'' + item.attributes.Symptoms + '\']') }}
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="small-24">
