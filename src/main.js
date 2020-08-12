@@ -167,7 +167,7 @@ pinboard({
         },
         'No': {
           unique_key: 'referral_no',
-          i18n_key: 'referral.yes',
+          i18n_key: 'referral.no',
           value: function(item) {
             return item.attributes.Referral === 'no';
           },
