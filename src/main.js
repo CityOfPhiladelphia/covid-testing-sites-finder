@@ -138,27 +138,30 @@ pinboard({
       //     },
       //   },
       // },
-      'Patient age': {
+      patientAge: {
         '+18 years old': {
           unique_key: 'year18',
+          i18n_key: 'patientAge.year18',
           value: function(item) {
             return item.attributes.Age === 'year18';
           },
         },
         '+14 years old': {
           unique_key: 'year14',
+          i18n_key: 'patientAge.year14',
           value: function(item) {
             return item.attributes.Age === 'year14';
           },
         },
         'Offers pediatric care': {
           unique_key: 'pedCare',
+          i18n_key: 'patientAge.pedCare',
           value: function(item) {
             return item.attributes.Age === 'pedCare';
           },
         },
       },
-      'Referral required': {
+      refReq: {
         'Yes': {
           unique_key: 'referral_yes',
           i18n_key: 'Yes',
@@ -174,7 +177,7 @@ pinboard({
           },
         },
       },
-      'Must be Symptomatic': {
+      symptomatic: {
         'Yes': {
           unique_key: 'symptom_yes',
           i18n_key: 'Yes',
@@ -190,17 +193,17 @@ pinboard({
           },
         },
       },
-      Process: {
+      process: {
         'Drive thru': {
           unique_key: 'dtwu_driveThru',
-          i18n_key: 'driveThrough.dt',
+          i18n_key: 'process.dt',
           value: function(item) {
             return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
         },
         'Walk up': {
           unique_key: 'dtwu_walkUp',
-          i18n_key: 'driveThrough.wu',
+          i18n_key: 'process.wu',
           value: function(item) {
             return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
@@ -401,7 +404,6 @@ pinboard({
           beforeYouGo: 'Before you go',
           checkSite: 'Eligibility requirements and testing hours vary by site. Be sure to check site details to arrange for testing.',
           hoursVary: 'Hours and availability varies.',
-          process: 'Process',
           eligibility: 'Details',
           testingHours: 'Testing hours',
           daysOfOperation: 'Days of operation',
@@ -412,25 +414,35 @@ pinboard({
           Friday: 'Fri.',
           Saturday: 'Sat.',
           Sunday: 'Sun.',
-          access: 'Process',
+          // access: 'Process',
           Yes: 'Yes',
           No: 'No',
           Unknown: 'Unknown',
           website: 'Website',
-          driveThrough: {
+          process: {
+            category: 'Process',
             dt: 'Drive-thru',
             wu: 'Walk-up',
             both: 'Drive-thru & walk-up',
           },
           symptomatic: {
+            category: 'Must be symptomatic',
             null: '',
             symptom: 'Must be symptomatic',
             asymptom: 'Need not be symptomatic',
           },
-          referral: {
+          refReq: {
+            category: 'Referral required',
             null: '',
             yes: 'Referral required',
             no: 'No referral required',
+          },
+          patientAge: {
+            category: 'Patient age',
+            null: '',
+            year14: '+14 years old',
+            year18: '+18 years old',
+            pedCare: 'Offers pediatric testing',
           },
           panelText:{
             p1: 'If you are unable to get a COVID-19 test through your health care provider, this tool can help you find a test within the City of Philadelphia.',
@@ -446,10 +458,10 @@ pinboard({
             onlineQuest: 'An online questionnaire must be completed before visiting this site.',
           },
           notes:{
-            schedApp: 'Must schedule an appointment.',
+            schedApp: 'Appointments are required for testing.',
             refReq: 'Referral required.',
             schedAppRefReq: 'Appointment and referral required.',
-            noApp: 'No appointment necessary.',
+            noApp: 'No appointment necessary for testing.',
             testAll: 'Testing provided even if symptoms are not present.',
           },
           facilityType: {
@@ -496,7 +508,6 @@ pinboard({
           beforeYouGo: 'Antes de ir',
           checkSite: 'Revise los detalles específicos del lugar.',
           hoursVary: 'Los horarios y la disponibilidad pueden variar.',
-          process: 'Proceso',
           eligibility: 'Detalles',
           testingHours: 'Horario para las pruebas',
           daysOfOperation: 'Días de servicio',
@@ -507,25 +518,35 @@ pinboard({
           Friday: 'Vie.',
           Saturday: 'Sáb.',
           Sunday: 'Dom.',
-          access: 'Acceso',
+          // access: 'Acceso',
           Yes: 'Sí',
           No: 'No',
           Unknown: 'Desconocido',
           website: 'Sitio web',
-          driveThrough: {
+          process: {
+            category: 'Proceso',
             dt: 'En vehículo',
             wu: 'A pie',
             both: 'En vehículo y a pie',
           },
           symptomatic: {
+            category: 'Must be symptomatic',
             null: '',
             symptom: 'Must be symptomatic',
             asymptom: 'Need not be symptomatic',
           },
-          referral: {
+          refReq: {
+            category: 'Referral required',
             null: '',
             yes: 'Referral required',
             no: 'No referral required',
+          },
+          patientAge: {
+            category: 'Patient age',
+            null: '',
+            year14: '+14 years old',
+            year18: '+18 years old',
+            pedCare: 'Offers pediatric testing',
           },
           panelText: {
             p1: 'Si no puede obtener una prueba de COVID-19 a través de su proveedor de atención médica, esta herramienta puede ayudarlo a encontrar una prueba gratuita en la ciudad de Filadelfia.',
@@ -591,7 +612,6 @@ pinboard({
           beforeYouGo: '在您出发前请先了解以下信息',
           checkSite: '查看具体地点详情。',
           hoursVary: '时间和可用性各不相同。',
-          process: '流程',
           eligibility: '详情',
           testingHours: '检测时间',
           daysOfOperation: '营业时间',
@@ -602,25 +622,35 @@ pinboard({
           Friday: '周五',
           Saturday: '周六',
           Sunday: '周日',
-          access: '访问',
+          // access: '访问',
           Yes: '是',
           No: '否',
           Unknown: '未知',
           website: '网站',
-          driveThrough: {
+          process: {
+            category: '流程',
             dt: '免下车',
             wu: '步行',
             both: '免下车和步行',
           },
           symptomatic: {
+            category: 'Must be symptomatic',
             null: '',
             symptom: 'Must be symptomatic',
             asymptom: 'Need not be symptomatic',
           },
-          referral: {
+          refReq: {
+            category: 'Referral required',
             null: '',
             yes: 'Referral required',
             no: 'No referral required',
+          },
+          patientAge: {
+            category: 'Patient age',
+            null: '',
+            year14: '+14 years old',
+            year18: '+18 years old',
+            pedCare: 'Offers pediatric testing',
           },
           panelText: {
             p1: '如果您无法通过您的医疗保健提供者进行 COVID-19 检测，此工具可以帮助您找到费城市内的免费检测地点。',
@@ -686,7 +716,6 @@ pinboard({
           beforeYouGo: 'Trước khi quý vị đến',
           checkSite: 'Hãy kiểm tra thông tin chi tiết của cơ sở cụ thể.',
           hoursVary: 'Giờ làm việc và tính sẵn có khác nhau.',
-          process: 'Quy trình',
           eligibility: 'Chi tiết',
           testingHours: 'Giờ xét nghiệm',
           daysOfOperation: 'Ngày làm việc',
@@ -697,25 +726,35 @@ pinboard({
           Friday: 'Thứ sáu',
           Saturday: 'thứ bảy',
           Sunday: 'Chủ Nhật',
-          access: 'Truy cập',
+          // access: 'Truy cập',
           Yes: 'Có',
           No: 'Không',
           Unknown: 'Không biết',
           website: 'Trang web',
-          driveThrough: {
+          process: {
+            category: 'Quy trình',
             dt: 'Lái xe qua',
             wu: 'Đi bộ vào',
             both: 'Lái xe qua & đi bộ vào',
           },
           symptomatic: {
+            category: 'Must be symptomatic',
             null: '',
             symptom: 'Must be symptomatic',
             asymptom: 'Need not be symptomatic',
           },
-          referral: {
+          refReq: {
+            category: 'Referral required',
             null: '',
             yes: 'Referral required',
             no: 'No referral required',
+          },
+          patientAge: {
+            category: 'Patient age',
+            null: '',
+            year14: '+14 years old',
+            year18: '+18 years old',
+            pedCare: 'Offers pediatric testing',
           },
           panelText: {
             p1: 'Nếu quý vị không được xét nghiệm COVID-19 thông qua nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị, thì công cụ này có thể giúp quý vị tìm cơ sở xét nghiệm miễn phí trong phạm vi Thành Phố Philadelphia.',
@@ -781,7 +820,6 @@ pinboard({
           beforeYouGo: 'Прежде чем вы пойдете',
           checkSite: 'Проверьте дополнительные сведения о пункте тестирования.',
           hoursVary: 'Часы работы и возможность оказания услуги могут меняться.',
-          process: 'Процесс',
           eligibility: 'Сведения',
           testingHours: 'Часы тестирования',
           daysOfOperation: 'Рабочие дни',
@@ -792,25 +830,35 @@ pinboard({
           Friday: 'Пт',
           Saturday: 'Сб',
           Sunday: 'Вс',
-          access: 'Доступ',
+          // access: 'Доступ',
           Yes: 'Да',
           No: 'Нет',
           Unknown: 'Неизвестно',
           website: 'Веб-сайт',
-          driveThrough: {
+          process: {
+            category: 'Процесс',
             dt: 'Без выхода из машины',
             wu: 'Пункт внутри помещения',
             both: 'Обслуживание как без выхода из машины, так и внутри помещения',
           },
           symptomatic: {
+            category: 'Must be symptomatic',
             null: '',
             symptom: 'Must be symptomatic',
             asymptom: 'Need not be symptomatic',
           },
-          referral: {
+          refReq: {
+            category: 'Referral required',
             null: '',
             yes: 'Referral required',
             no: 'No referral required',
+          },
+          patientAge: {
+            category: 'Patient age',
+            null: '',
+            year14: '+14 years old',
+            year18: '+18 years old',
+            pedCare: 'Offers pediatric testing',
           },
           panelText: {
             p1: 'Если вы не можете пройти тест COVID-19 у своего врача, этот инструмент поможет вам найти пункт бесплатного тестирования в пределах городской черты Филадельфии.',
@@ -876,7 +924,6 @@ pinboard({
           beforeYouGo: 'Avant de vous déplacer',
           checkSite: 'Consultez les détails concernant un site particulier.',
           hoursVary: 'Les horaires et la disponibilité varient.',
-          process: 'Processus',
           eligibility: 'Détails',
           testingHours: 'Horaires de dépistage',
           daysOfOperation: 'Jours d’ouverture',
@@ -887,25 +934,35 @@ pinboard({
           Friday: 'Vendredi',
           Saturday: 'Samedi',
           Sunday: 'Dimanche',
-          access: 'Accès',
+          // access: 'Accès',
           Yes: 'Oui',
           No: 'Non',
           Unknown: 'Inconnu',
           website: 'Site Web',
-          driveThrough:{
+          process:{
+            category: 'Processus',
             dt: 'Drive',
             wu: 'Guichet',
             both: 'Drive et guichet',
           },
           symptomatic: {
+            category: 'Must be symptomatic',
             null: '',
             symptom: 'Must be symptomatic',
             asymptom: 'Need not be symptomatic',
           },
-          referral: {
+          refReq: {
+            category: 'Referral required',
             null: '',
             yes: 'Referral required',
             no: 'No referral required',
+          },
+          patientAge: {
+            category: 'Patient age',
+            null: '',
+            year14: '+14 years old',
+            year18: '+18 years old',
+            pedCare: 'Offers pediatric testing',
           },
           panelText:{
             p1: 'Si vous ne pouvez pas vous faire dépister pour le COVID-19 par le biais de votre médecin traitant cet outil peut vous aider à trouver un site de dépistage gratuit dans la ville de Philadelphie.',

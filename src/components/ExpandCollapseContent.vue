@@ -61,7 +61,7 @@
           <div
             v-if="item.attributes.drive_thruwalk_up !== null"
           >
-            {{ $t( 'driveThrough[\'' + item.attributes.drive_thruwalk_up + '\']') }}
+            {{ $t( 'process[\'' + item.attributes.drive_thruwalk_up + '\']') }}
           </div>
         </div>
       </div>
@@ -77,7 +77,11 @@
           class="small-22"
         >
           <div>
-            {{ $t( 'referral[\'' + item.attributes.Referral + '\']') }}
+            {{ $t( 'patientAge[\'' + item.attributes.Age + '\']') }}
+          </div>
+
+          <div>
+            {{ $t( 'refReq[\'' + item.attributes.Referral + '\']') }}
           </div>
 
           <!-- v-if="item.attributes.drive_thruwalk_up !== null" -->
