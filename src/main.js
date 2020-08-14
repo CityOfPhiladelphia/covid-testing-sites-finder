@@ -16,7 +16,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
-library.add(faExclamationTriangle, faBuilding, faUserMd);
+import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle';
+library.add(faExclamationTriangle, faBuilding, faUserMd, faCircle);
 
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
@@ -137,7 +138,7 @@ pinboard({
       //     },
       //   },
       // },
-      Age: {
+      'Patient age': {
         '+18 years old': {
           unique_key: 'year18',
           value: function(item) {
@@ -150,7 +151,7 @@ pinboard({
             return item.attributes.Age === 'year14';
           },
         },
-        'Pediatric care': {
+        'Offers pediatric care': {
           unique_key: 'pedCare',
           value: function(item) {
             return item.attributes.Age === 'pedCare';
@@ -160,30 +161,30 @@ pinboard({
       'Referral required': {
         'Yes': {
           unique_key: 'referral_yes',
-          i18n_key: 'referral.yes',
+          i18n_key: 'Yes',
           value: function(item) {
             return item.attributes.Referral === 'yes';
           },
         },
         'No': {
           unique_key: 'referral_no',
-          i18n_key: 'referral.no',
+          i18n_key: 'No',
           value: function(item) {
             return item.attributes.Referral === 'no';
           },
         },
       },
-      Symptomatic: {
+      'Must be Symptomatic': {
         'Yes': {
           unique_key: 'symptom_yes',
-          i18n_key: 'symptomatic.symptom',
+          i18n_key: 'Yes',
           value: function(item) {
             return item.attributes.Symptoms === 'symptom';
           },
         },
         'No': {
           unique_key: 'symptom_no',
-          i18n_key: 'symptomatic.asymptom',
+          i18n_key: 'No',
           value: function(item) {
             return item.attributes.Symptoms === 'asymptom';
           },
@@ -192,7 +193,6 @@ pinboard({
       Process: {
         'Drive thru': {
           unique_key: 'dtwu_driveThru',
-          // unique_key: 'driveThrough.dt',
           i18n_key: 'driveThrough.dt',
           value: function(item) {
             return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
@@ -415,25 +415,27 @@ pinboard({
             both: 'Drive-thru & walk-up',
           },
           symptomatic: {
-            null: 'no data',
-            symptom: 'Yes',
-            asymptom: 'No',
+            null: '',
+            symptom: 'Must be symptomatic',
+            asymptom: 'Need not be symptomatic',
           },
           referral: {
-            null: 'no data',
-            yes: 'Yes',
-            no: 'No',
+            null: '',
+            yes: 'Referral required',
+            no: 'No referral required',
           },
           panelText:{
             p1: 'If you are unable to get a COVID-19 test through your health care provider, this tool can help you find a test within the City of Philadelphia.',
           },
           restrictions: {
-            lowInc: 'Intended for low-income families and individuals.',
+            lowInc: 'This site is intended for low-income families and individuals.',
             year14: 'Must be 14 years or older.',
             year18: 'Must be 18 years or older.',
-            netPat: 'Must be a patient in the provider\'s network.',
-            medPrior: 'Priority given to health care workers and first responders.',
-            homeless: 'Intended for people experiencing homelessness.',
+            netPat: 'A patient must be in the provider’s network to receive a test at this site.',
+            medPrior: 'Priority will be given to health care workers and first responders at this site.',
+            homeless: 'This site is intended for people experiencing homelessness.',
+            telemed: 'A telemedicine visit is required before testing at this site.',
+            onlineQuest: 'An online questionnaire must be completed before visiting this site.',
           },
           notes:{
             schedApp: 'Must schedule an appointment.',
@@ -507,6 +509,16 @@ pinboard({
             wu: 'A pie',
             both: 'En vehículo y a pie',
           },
+          symptomatic: {
+            null: '',
+            symptom: 'Must be symptomatic',
+            asymptom: 'Need not be symptomatic',
+          },
+          referral: {
+            null: '',
+            yes: 'Referral required',
+            no: 'No referral required',
+          },
           panelText: {
             p1: 'Si no puede obtener una prueba de COVID-19 a través de su proveedor de atención médica, esta herramienta puede ayudarlo a encontrar una prueba gratuita en la ciudad de Filadelfia.',
           },
@@ -517,6 +529,8 @@ pinboard({
             netPat: 'Debe ser un paciente de la red del proveedor.',
             medPrior: 'Se da prioridad a los trabajadores de la salud y personas en la primera línea de respuesta.',
             homeless: 'Está dirigido a personas sin hogar.',
+            telemed: 'A telemedicine visit is required before testing at this site.',
+            onlineQuest: 'An online questionnaire must be completed before visiting this site.',
           },
           notes: {
             schedApp: 'Se debe programar una cita.',
@@ -590,6 +604,16 @@ pinboard({
             wu: '步行',
             both: '免下车和步行',
           },
+          symptomatic: {
+            null: '',
+            symptom: 'Must be symptomatic',
+            asymptom: 'Need not be symptomatic',
+          },
+          referral: {
+            null: '',
+            yes: 'Referral required',
+            no: 'No referral required',
+          },
           panelText: {
             p1: '如果您无法通过您的医疗保健提供者进行 COVID-19 检测，此工具可以帮助您找到费城市内的免费检测地点。',
           },
@@ -600,6 +624,8 @@ pinboard({
             netPat: '必须是提供者网络内的患者。',
             medPrior: '优先考虑医疗保健工作人员和急救人员。',
             homeless: '适用于无家可归者。',
+            telemed: 'A telemedicine visit is required before testing at this site.',
+            onlineQuest: 'An online questionnaire must be completed before visiting this site.',
           },
           notes: {
             schedApp: '必须安排预约。',
@@ -673,6 +699,16 @@ pinboard({
             wu: 'Đi bộ vào',
             both: 'Lái xe qua & đi bộ vào',
           },
+          symptomatic: {
+            null: '',
+            symptom: 'Must be symptomatic',
+            asymptom: 'Need not be symptomatic',
+          },
+          referral: {
+            null: '',
+            yes: 'Referral required',
+            no: 'No referral required',
+          },
           panelText: {
             p1: 'Nếu quý vị không được xét nghiệm COVID-19 thông qua nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị, thì công cụ này có thể giúp quý vị tìm cơ sở xét nghiệm miễn phí trong phạm vi Thành Phố Philadelphia.',
           },
@@ -683,6 +719,8 @@ pinboard({
             netPat: 'Phải là bệnh nhân trong mạng lưới của nhà cung cấp.',
             medPrior: 'Ưu tiên cho các nhân viên chăm sóc sức khỏe và nhân viên phản ứng tuyến đầu.',
             homeless: 'Dành cho người vô gia cư.',
+            telemed: 'A telemedicine visit is required before testing at this site.',
+            onlineQuest: 'An online questionnaire must be completed before visiting this site.',
           },
           notes: {
             schedApp: 'Phải sắp xếp lịch hẹn.',
@@ -756,6 +794,16 @@ pinboard({
             wu: 'Пункт внутри помещения',
             both: 'Обслуживание как без выхода из машины, так и внутри помещения',
           },
+          symptomatic: {
+            null: '',
+            symptom: 'Must be symptomatic',
+            asymptom: 'Need not be symptomatic',
+          },
+          referral: {
+            null: '',
+            yes: 'Referral required',
+            no: 'No referral required',
+          },
           panelText: {
             p1: 'Если вы не можете пройти тест COVID-19 у своего врача, этот инструмент поможет вам найти пункт бесплатного тестирования в пределах городской черты Филадельфии.',
           },
@@ -766,6 +814,8 @@ pinboard({
             netPat: 'Только для пациентов сети медучреждения.',
             medPrior: 'Приоритет имеют работники системы здравоохранения и служб экстренного реагирования.',
             homeless: 'Пункт предназначен для бездомных людей.',
+            telemed: 'A telemedicine visit is required before testing at this site.',
+            onlineQuest: 'An online questionnaire must be completed before visiting this site.',
           },
           notes: {
             schedApp: 'Только по предварительной записи.',
@@ -839,6 +889,16 @@ pinboard({
             wu: 'Guichet',
             both: 'Drive et guichet',
           },
+          symptomatic: {
+            null: '',
+            symptom: 'Must be symptomatic',
+            asymptom: 'Need not be symptomatic',
+          },
+          referral: {
+            null: '',
+            yes: 'Referral required',
+            no: 'No referral required',
+          },
           panelText:{
             p1: 'Si vous ne pouvez pas vous faire dépister pour le COVID-19 par le biais de votre médecin traitant cet outil peut vous aider à trouver un site de dépistage gratuit dans la ville de Philadelphie.',
           },
@@ -849,6 +909,8 @@ pinboard({
             netPat: 'Doit être un patient dans le réseau du prestataire.',
             medPrior: 'La priorité est donnée au personnel soignant et aux premiers intervenants.',
             homeless: 'À l’intention des sans-abri.',
+            telemed: 'A telemedicine visit is required before testing at this site.',
+            onlineQuest: 'An online questionnaire must be completed before visiting this site.',
           },
           notes:{
             schedApp: 'Prise de rendez-vous obligatoire',

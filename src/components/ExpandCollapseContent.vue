@@ -77,13 +77,12 @@
           class="small-22"
         >
           <div>
-            Referral: {{ $t( 'referral[\'' + item.attributes.Referral + '\']') }}
+            {{ $t( 'referral[\'' + item.attributes.Referral + '\']') }}
           </div>
 
-          <div
-            v-if="item.attributes.drive_thruwalk_up !== null"
-          >
-            Symptomatic: {{ $t( 'symptomatic[\'' + item.attributes.Symptoms + '\']') }}
+          <!-- v-if="item.attributes.drive_thruwalk_up !== null" -->
+          <div>
+            {{ $t( 'symptomatic[\'' + item.attributes.Symptoms + '\']') }}
           </div>
         </div>
       </div>
