@@ -249,7 +249,7 @@ pinboard({
     'HowToUse': false,
   },
   infoCircles: {
-    'Must be Symptomatic': {
+    'symptomatic': {
       'html': '\
       <div class="full-div">For more information, see <a class="white-font-link" target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">\
       Symptoms of coronavirus (CDC)</a>.</div>\
