@@ -542,7 +542,7 @@ pinboard({
             no: 'No se necesita derivación',
           },
           patientAge: {
-            category: 'Patient age',
+            category: 'Edad del paciente',
             null: '',
             year14: 'Más de 14 años',
             year18: 'Más de 18 años',
