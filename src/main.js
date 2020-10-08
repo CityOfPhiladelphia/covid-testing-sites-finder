@@ -70,6 +70,9 @@ pinboard({
     logoAlt: 'City of Philadelphia',
     type: 'covidTestingSites',
   },
+  gtag: {
+    category: 'rf-covid',
+  },
   comboSearch: {
     dropdown: [ 'address' ],
   },
