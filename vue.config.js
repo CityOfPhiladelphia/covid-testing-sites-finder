@@ -2,7 +2,7 @@ const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   filenameHashing: false,
-  publicPath: "/covid-testing-sites/",
+  publicPath: "/covid-testing-sites/dev/",
   //: "/covid-testing/dev/",
   configureWebpack: {
     plugins: [

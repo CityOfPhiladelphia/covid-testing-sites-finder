@@ -58,6 +58,16 @@
       <p>
         {{ $t('introPage.p3') }}
       </p>
+      <h2>
+        {{ $t('introPage.section2Title') }}
+      </h2>
+      <p>
+        <a
+          target="_blank"
+          href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
+        >{{ $t('introPage.p4') }}</a>
+      </p>
+
       <div
         class="custom-callout"
       >
@@ -208,6 +218,10 @@ export default {
 
   h2 {
     font-size: 16px;
+  }
+
+  ul {
+    margin-bottom: 6px;
   }
 
   .main-area {
