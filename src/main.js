@@ -529,7 +529,7 @@ pinboard({
             translationServices: 'Servicios telefónicos de interpretación:',
           },
           beforeYouGo: 'Antes de ir',
-          checkSite: 'Revise los detalles específicos del lugar.',
+          checkSite: 'Algunos centros de prueba podrán estar cerrado el día de las elecciones y los días siguientes. Siempre llame o visite el sitio web del centro antes de ir.',
           hoursVary: 'Los horarios y la disponibilidad pueden variar.',
           eligibility: 'Detalles',
           testingHours: 'Horario para las pruebas',
