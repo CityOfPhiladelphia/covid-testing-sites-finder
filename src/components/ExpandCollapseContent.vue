@@ -122,6 +122,36 @@
           v-slot:component2
           class="table-slot"
         >
+          <div class="td-textbox">
+            <div
+              v-for="(language, index) of languagesSpoken"
+              v-show="item.attributes.Language_Spoken != null"
+              :key="index"
+              class="td-style"
+            >
+              {{ $t('languages[\'' + language.toLowerCase() + '\']') }}
+            </div>
+          </div>
+        </template>
+
+        <template
+          v-slot:component3
+          class="table-slot"
+        >
+          <div class="td-textbox">
+            <p
+              v-show="item.attributes.Language_Spoken != null"
+              class="td-style"
+            >
+              {{ $t(item.attributes.translation_services) }}
+            </p>
+          </div>
+        </template>
+
+        <template
+          v-slot:component4
+          class="table-slot"
+        >
           <vertical-table-light
             class="print-padding"
             :slots="component1VerticalTableSlots"
@@ -152,6 +182,9 @@ export default {
     },
   },
   computed: {
+    languagesSpoken() {
+      return this.$props.item.attributes.Language_Spoken.split(', ');
+    },
     mainVerticalTableSlots() {
       let slots = {
         id: 'mainTable',
@@ -161,13 +194,23 @@ export default {
             labelType: 'i18n',
             valueType: 'component1',
           },
+          {
+            label: 'languages.languagesSpoken',
+            labelType: 'i18n',
+            valueType: 'component2',
+          },
+          {
+            label: 'languages.translationServices',
+            labelType: 'i18n',
+            valueType: 'component3',
+          },
         ],
       };
       if (this.days.length > 0) {
         let newField = {
           label: 'testingHours',
           labelType: 'i18n',
-          valueType: 'component2',
+          valueType: 'component4',
         };
         slots.fields.push(newField);
       }
