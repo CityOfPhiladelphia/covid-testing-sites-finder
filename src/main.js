@@ -412,6 +412,7 @@ pinboard({
             spanish: 'Spanish',
             chinese: 'Chinese',
             french: 'French',
+            arabic: 'Arabic',
             translationServices: 'Phone interpretation services:',
           },
           beforeYouGo: 'Before you go',
