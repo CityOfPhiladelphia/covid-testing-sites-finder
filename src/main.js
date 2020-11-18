@@ -415,7 +415,7 @@ pinboard({
             translationServices: 'Phone interpretation services:',
           },
           beforeYouGo: 'Before you go',
-          checkSite: 'Some testing sites may be closed on Election Day and the days that follow. Always call or visit the provider\'s website before going for a test.',
+          checkSite: 'Some testing sites may be closed on Thanksgiving Day and the days that follow. Always call or visit the provider\'s website before going for a test.',
           hoursVary: 'Hours and availability varies.',
           eligibility: 'Details',
           testingHours: 'Testing hours',
