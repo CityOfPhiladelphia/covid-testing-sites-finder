@@ -183,7 +183,11 @@ export default {
   },
   computed: {
     languagesSpoken() {
-      return this.$props.item.attributes.Language_Spoken.split(', ');
+      let values = [];
+      if (this.$props.item.attributes.Language_Spoken) {
+        let values = this.$props.item.attributes.Language_Spoken.split(', ');
+      }
+      return values;
     },
     mainVerticalTableSlots() {
       let slots = {
