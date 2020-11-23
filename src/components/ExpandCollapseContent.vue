@@ -188,7 +188,7 @@ export default {
     languagesSpoken() {
       let values = [];
       if (this.$props.item.attributes.Language_Spoken) {
-        console.log('in languagesSpoken computed, this.$props.item.attributes.Language_Spoken:', this.$props.item.attributes.Language_Spoken);
+        // console.log('in languagesSpoken computed, this.$props.item.attributes.Language_Spoken:', this.$props.item.attributes.Language_Spoken);
         values = this.$props.item.attributes.Language_Spoken.split(', ');
       }
       return values;
