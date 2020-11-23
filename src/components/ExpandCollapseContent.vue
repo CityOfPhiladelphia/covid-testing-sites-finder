@@ -122,7 +122,10 @@
           v-slot:component2
           class="table-slot"
         >
-          <div class="td-textbox">
+          <div
+            v-if="languagesSpoken.length"
+            class="td-textbox"
+          >
             <div
               v-for="(language, index) of languagesSpoken"
               v-show="item.attributes.Language_Spoken != null"
@@ -185,7 +188,8 @@ export default {
     languagesSpoken() {
       let values = [];
       if (this.$props.item.attributes.Language_Spoken) {
-        let values = this.$props.item.attributes.Language_Spoken.split(', ');
+        console.log('in languagesSpoken computed, this.$props.item.attributes.Language_Spoken:', this.$props.item.attributes.Language_Spoken);
+        values = this.$props.item.attributes.Language_Spoken.split(', ');
       }
       return values;
     },
@@ -198,18 +202,26 @@ export default {
             labelType: 'i18n',
             valueType: 'component1',
           },
-          {
-            label: 'languages.languagesSpoken',
-            labelType: 'i18n',
-            valueType: 'component2',
-          },
-          {
-            label: 'languages.translationServices',
-            labelType: 'i18n',
-            valueType: 'component3',
-          },
         ],
       };
+      if (this.$props.item.attributes.Language_Spoken != null) {
+        let row2 = {
+          label: 'languages.languagesSpoken',
+          labelType: 'i18n',
+          valueType: 'component2',
+        };
+        slots.fields.push(row2);
+      }
+
+      if (this.$props.item.attributes.translation_services != null) {
+        let row3 = {
+          label: 'languages.translationServices',
+          labelType: 'i18n',
+          valueType: 'component3',
+        };
+        slots.fields.push(row3);
+      }
+
       if (this.days.length > 0) {
         let newField = {
           label: 'testingHours',
