@@ -212,6 +212,22 @@ pinboard({
           },
         },
       },
+      rapid: {
+        'Yes': {
+          unique_key: 'rapid_testing_yes',
+          i18n_key: 'Yes',
+          value: function(item) {
+            return item.attributes.rapid_testing === 'Yes';
+          },
+        },
+        'No': {
+          unique_key: 'rapid_testing_no',
+          i18n_key: 'No',
+          value: function(item) {
+            return item.attributes.rapid_testing === 'No' || item.attributes.rapid_testing == null;
+          },
+        },
+      },
     },
   },
   markerType: 'circle-marker',
@@ -445,6 +461,10 @@ pinboard({
             symptom: 'Must be symptomatic',
             asymptom: 'Need not be symptomatic',
           },
+          rapid: {
+            category: 'Rapid testing',
+            Yes: 'Offers rapid testing (call for details)',
+          },
           refReq: {
             category: 'Referral required',
             null: '',
@@ -558,6 +578,10 @@ pinboard({
             null: '',
             symptom: 'Debe ser sintomático',
             asymptom: 'No debe ser sintomático',
+          },
+          rapid: {
+            category: 'Pruebas rápidas',
+            Yes: 'Ofrece pruebas rápidas (llamar para obtener detalles)',
           },
           refReq: {
             category: 'Se necesita derivación',
@@ -673,6 +697,10 @@ pinboard({
             symptom: '必须有症状',
             asymptom: '不需要有症状',
           },
+          rapid: {
+            category: '快速测试',
+            Yes: '网站提供快速测试（请致电获取详细信息）',
+          },
           refReq: {
             category: '需要转介',
             null: '',
@@ -786,6 +814,10 @@ pinboard({
             null: '',
             symptom: 'Phải có triệu chứng',
             asymptom: 'Không cần có triệu chứng',
+          },
+          rapid: {
+            category: 'Kiểm tra nhanh',
+            Yes: 'Cung cấp thử nghiệm nhanh (gọi để biết chi tiết)',
           },
           refReq: {
             category: 'Phải có giấy giới thiệu',
@@ -901,6 +933,10 @@ pinboard({
             symptom: 'Наличие симптомов обязательно',
             asymptom: 'Наличие симптомов не обязательно',
           },
+          rapid: {
+            category: 'Экспресс-тестирование',
+            Yes: 'Предлагает экспресс-тестирование (подробности по телефону)',
+          },
           refReq: {
             category: 'Требуется направление',
             null: '',
@@ -1014,6 +1050,10 @@ pinboard({
             null: '',
             symptom: 'Sans symptômes',
             asymptom: 'Il n’est pas nécessaire d’avoir des symptômes',
+          },
+          rapid: {
+            category: 'Test de diagnostic rapide',
+            Yes: 'Le site propose des tests rapides (appelez pour plus de détails)',
           },
           refReq: {
             category: 'Référence du médecin exigée',

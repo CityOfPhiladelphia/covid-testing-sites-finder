@@ -2,7 +2,7 @@
   <div
     class="grid-y custom-greeting"
   >
-    <div class="exclamation-holder">
+    <!-- <div class="exclamation-holder">
       <font-awesome-icon
         icon="exclamation-triangle"
         class="fa-3x fa-icon-class"
@@ -13,7 +13,7 @@
         <div><b>{{ $t('beforeYouGo') }}:</b></div>
         <div>{{ $t('checkSite') }}</div>
       </div>
-    </div>
+    </div> -->
 
     <div class="open-list-div">
       <!-- class="button open-list-button hide-for-medium" -->
