@@ -80,6 +80,10 @@
             {{ $t( 'patientAge[\'' + item.attributes.Age + '\']') }}
           </div>
 
+          <div v-if="item.attributes.rapid_testing">
+            {{ $t( 'rapid[\'' + item.attributes.rapid_testing + '\']') }}
+          </div>
+
           <div>
             {{ $t( 'refReq[\'' + item.attributes.Referral + '\']') }}
           </div>
