@@ -461,7 +461,7 @@ pinboard({
             category: 'Must be symptomatic',
             null: '',
             symptom: 'Must be symptomatic',
-            asymptom: 'Need not be symptomatic',
+            asymptom: 'Symptoms not required (but exposure might be)',
           },
           rapid: {
             category: 'Rapid testing',
@@ -579,7 +579,7 @@ pinboard({
             category: 'Debe ser sintomático',
             null: '',
             symptom: 'Debe ser sintomático',
-            asymptom: 'No debe ser sintomático',
+            asymptom: 'No se requieren síntomas (pero la exposición puede ser)',
           },
           rapid: {
             category: 'Pruebas rápidas',
@@ -697,7 +697,7 @@ pinboard({
             category: '必须有症状',
             null: '',
             symptom: '必须有症状',
-            asymptom: '不需要有症状',
+            asymptom: '不需要症状（但可能需要暴露）',
           },
           rapid: {
             category: '快速测试',
@@ -815,7 +815,7 @@ pinboard({
             category: 'Phải có triệu chứng',
             null: '',
             symptom: 'Phải có triệu chứng',
-            asymptom: 'Không cần có triệu chứng',
+            asymptom: 'Các triệu chứng không bắt buộc (nhưng có thể bị phơi nhiễm)',
           },
           rapid: {
             category: 'Kiểm tra nhanh',
@@ -933,7 +933,7 @@ pinboard({
             category: 'Наличие симптомов обязательно',
             null: '',
             symptom: 'Наличие симптомов обязательно',
-            asymptom: 'Наличие симптомов не обязательно',
+            asymptom: 'Симптомы не требуются (но возможно воздействие)',
           },
           rapid: {
             category: 'Экспресс-тестирование',
@@ -1051,7 +1051,7 @@ pinboard({
             category: 'Sans symptômes',
             null: '',
             symptom: 'Sans symptômes',
-            asymptom: 'Il n’est pas nécessaire d’avoir des symptômes',
+            asymptom: 'Symptômes non requis (mais une exposition peut l\'être)',
           },
           rapid: {
             category: 'Test de diagnostic rapide',
