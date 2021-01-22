@@ -2,8 +2,8 @@ const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   filenameHashing: false,
-  publicPath: "/covid-testing-sites/",
-  //publicPath: "/covid-testing/dev/",
+  // publicPath: "/covid-testing-sites/",
+  publicPath: "/covid-testing/dev/",
   configureWebpack: {
     plugins: [
       new Visualizer({ filename: './statistics.html' }),
