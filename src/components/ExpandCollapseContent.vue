@@ -1,157 +1,146 @@
 <template>
-  <div class="grid-x grid-padding-x">
-    <div class="cell medium-12">
-      <div
-        v-if="item.attributes.testing_location_address"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="map-marker-alt" />
+  <div class="main-content">
+    <div class="columns">
+      <div class="column">
+        <div
+          v-if="item.attributes.testing_location_address"
+          class="columns is-mobile"
+        >
+          <div class="column is-1">
+            <font-awesome-icon icon="map-marker-alt" />
+          </div>
+          <div class="column">
+            {{ item.attributes.testing_location_address }}<br>
+            {{ item.attributes.City }}, PA {{ item.attributes.zipcode }}<br>
+            {{ item.attributes.TestingLocation2 }}
+          </div>
         </div>
-        <div class="small-22">
-          {{ item.attributes.testing_location_address }}<br>
-          {{ item.attributes.City }}, PA {{ item.attributes.zipcode }}<br>
-          {{ item.attributes.TestingLocation2 }}
-        </div>
-      </div>
 
-      <div
-        v-if="item.attributes.ProviderURL"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="globe" />
-        </div>
-        <div class="small-22">
-          <a
-            target="_blank"
-            :href="item.attributes.ProviderURL"
-          >{{ $t('website') }}</a>
-        </div>
-      </div>
-
-      <div
-        v-if="item.attributes.contact_phone_number"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="phone" />
-        </div>
-        <div class="small-22">
-          {{ item.attributes.contact_phone_number }}
-        </div>
-      </div>
-    </div>
-
-    <div class="cell medium-12">
-      <div
-        v-if="item.attributes.facility_type"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="building" />
+        <div
+          v-if="item.attributes.ProviderURL"
+          class="columns is-mobile"
+        >
+          <div class="column is-1">
+            <font-awesome-icon icon="globe" />
+          </div>
+          <div class="column">
+            <a
+              target="_blank"
+              :href="item.attributes.ProviderURL"
+            >{{ $t('website') }}</a>
+          </div>
         </div>
         <div
-          class="small-22"
+          v-if="item.attributes.contact_phone_number"
+          class="columns is-mobile"
         >
-          <div>
-            {{ $t( 'facilityType[\'' + item.attributes.facility_type + '\']') }}
+          <div class="column is-1">
+            <font-awesome-icon icon="phone" />
           </div>
-
-          <div
-            v-if="item.attributes.drive_thruwalk_up !== null"
-          >
-            {{ $t( 'process[\'' + item.attributes.drive_thruwalk_up + '\']') }}
+          <div class="column">
+            {{ item.attributes.contact_phone_number }}
           </div>
         </div>
       </div>
 
-      <div
-        v-if="item.attributes.facility_type"
-        class="grid-x detail"
-      >
-        <div class="small-2">
-          <font-awesome-icon icon="user-md" />
-        </div>
-        <div
-          class="small-22"
-        >
-          <div>
-            {{ $t( 'patientAge[\'' + item.attributes.Age + '\']') }}
-          </div>
-
-          <div v-if="item.attributes.rapid_testing">
-            {{ $t( 'rapid[\'' + item.attributes.rapid_testing + '\']') }}
-          </div>
-
-          <div>
-            {{ $t( 'refReq[\'' + item.attributes.Referral + '\']') }}
-          </div>
-
-          <!-- v-if="item.attributes.drive_thruwalk_up !== null" -->
-          <div>
-            {{ $t( 'symptomatic[\'' + item.attributes.Symptoms + '\']') }}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="small-24">
-      <vertical-table-light
-        class="print-padding"
-        :slots="mainVerticalTableSlots"
-        :options="mainVerticalTableOptions"
-      >
-        <template
-          v-slot:component1
-          class="table-slot"
-        >
-          <div class="td-textbox">
-            <span
-              v-show="item.attributes.testing_restrictions != null"
-              class="td-style"
-            >
-              {{ $t('restrictions[\'' + item.attributes.testing_restrictions + '\']') }}
-            </span>
-            <span
-              v-show="item.attributes.Notes != null"
-              class="td-style"
-            >
-              {{ $t('notes[\'' + item.attributes.Notes + '\']') }}
-            </span>
-          </div>
-        </template>
-
-        <template
-          v-slot:component2
-          class="table-slot"
-        >
+      <div class="column">
+        <div class="columns is-mobile">
           <div
-            v-if="languagesSpoken.length"
-            class="td-textbox"
+            v-if="item.attributes.facility_type"
+            class="column is-1"
           >
+            <font-awesome-icon icon="building" />
+          </div>
+          <div class="column">
+            <div>{{ $t( 'facilityType[\'' + item.attributes.facility_type + '\']') }}</div>
+
             <div
-              v-for="(language, index) of languagesSpoken"
-              v-show="item.attributes.Language_Spoken != null"
-              :key="index"
-              class="td-style"
+              v-if="item.attributes.drive_thruwalk_up !== null"
             >
-              {{ $t('languages[\'' + language.toLowerCase() + '\']') }}
+              {{ $t( 'process[\'' + item.attributes.drive_thruwalk_up + '\']') }}
             </div>
           </div>
-        </template>
+        </div>
 
-        <template
-          v-slot:component3
-          class="table-slot"
+        <div
+          v-if="item.attributes.facility_type"
+          class="columns is-mobile"
         >
-          <div class="td-textbox">
-            <p
-              v-show="item.attributes.Language_Spoken != null"
-              class="td-style"
-            >
-              {{ $t(item.attributes.translation_services) }}
-            </p>
+          <div class="column is-1">
+            <font-awesome-icon icon="user-md" />
+          </div>
+          <div class="column">
+            <div>
+              {{ $t( 'patientAge[\'' + item.attributes.Age + '\']') }}
+            </div>
+
+            <div v-if="item.attributes.rapid_testing">
+              {{ $t( 'rapid[\'' + item.attributes.rapid_testing + '\']') }}
+            </div>
+
+            <div>
+              {{ $t( 'refReq[\'' + item.attributes.Referral + '\']') }}
+            </div>
+
+            <!-- v-if="item.attributes.drive_thruwalk_up !== null" -->
+            <div>
+              {{ $t( 'symptomatic[\'' + item.attributes.Symptoms + '\']') }}
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="columns is-mobile no-margins">
+      <div class="column is-one-quarter">
+        <div>Details</div>
+      </div>
+      <div class="column">
+        <div>some details</div>
+      </div>
+    </div>
+    <hr class="no-margins">
+
+    <div class="columns is-mobile no-margins">
+      <div class="column is-one-quarter">
+        <div>Languages Spoken</div>
+      </div>
+      <div class="column">
+        <div
+          v-for="(language, index) of languagesSpoken"
+          :key="index"
+        >
+          {{ $t('languages[\'' + language.toLowerCase() + '\']') }}
+        </div>
+      </div>
+    </div>
+    <hr class="no-margins">
+
+    <div class="columns is-mobile no-margins">
+      <div class="column is-one-quarter">
+        <div>Testing hours</div>
+      </div>
+
+      <div class="column">
+        <div
+          v-for="(day, index) of days"
+          :key="index"
+        >
+          <div
+            class="columns is-mobile no-margins"
+          >
+            <div class="column">
+              <div>
+                {{ $t(day.label) }}
+              </div>
+            </div>
+
+            <div class="column">
+              <div>
+                {{ day.value }}
+              </div>
+            </div>
           </div>
         </template>
 
@@ -183,12 +172,12 @@
 
 <script>
 
-import SharedFunctions from '@phila/pinboard/src/components/mixins/SharedFunctions.vue';
+import SharedFunctions from './mixins/SharedFunctions.vue';
 
 export default {
   name: 'ExpandCollapseContent',
   components: {
-    VerticalTableLight: () => import(/* webpackChunkName: "pvc_VerticalTable3CellsLight" */'@phila/vue-comps/src/components/VerticalTableLight.vue'),
+    // VerticalTableLight: () => import(/* webpackChunkName: "pvc_VerticalTable3CellsLight" */'@phila/vue-comps/src/components/VerticalTableLight.vue'),
   },
   mixins: [ SharedFunctions ],
   props: {
@@ -411,6 +400,19 @@ export default {
 </script>
 
 <style lang="scss">
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.no-margins {
+  margin: 0px;
+  margin-bottom: 0px !important;
+}
+
+.main-content {
+  font-size: 14px,
+}
 
 .td-style {
   font-size: 14px !important;
