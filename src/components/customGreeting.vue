@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid-y custom-greeting"
+    class="custom-greeting"
   >
     <div class="exclamation-holder">
       <font-awesome-icon
@@ -8,7 +8,7 @@
         class="fa-3x fa-icon-class"
       />
       <div
-        class="grid-y exclamation-details small-19 medium-20"
+        class="exclamation-details small-19 medium-20"
       >
         <div><b>{{ $t('beforeYouGo') }}:</b></div>
         <div>{{ $t('checkSite') }}</div>
@@ -17,9 +17,9 @@
 
     <div class="open-list-div">
       <!-- class="button open-list-button hide-for-medium" -->
-      <phila-button
+      <button
         class="button open-list-button"
-        @click.native="$emit('view-list')"
+        @click="$emit('view-list')"
         v-html="$t('app.viewList')"
       />
     </div>
@@ -83,13 +83,13 @@
 <script>
 
 import TopicComponent from '@phila/vue-comps/src/components/TopicComponent.vue';
-import PhilaButton from '@phila/pinboard/src/components/PhilaButton.vue';
+// import PhilaButton from '@phila/pinboard/src/components/PhilaButton.vue';
 import callout from '@phila/vue-comps/src/components/Callout.vue';
 
 export default {
   name: 'CustomGreeting',
   components: {
-    PhilaButton,
+    // PhilaButton,
     callout,
   },
   mixins: [ TopicComponent ],
@@ -242,11 +242,11 @@ export default {
     margin: 0 auto;
   }
 
-  .open-list-button {
+  /* .open-list-button {
     margin-top: 6px;
     margin-bottom: 14px;
     width: 200px;
-  }
+  } */
 
   .custom-greeting {
     padding: 12px;
