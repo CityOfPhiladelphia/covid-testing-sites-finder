@@ -18,7 +18,7 @@
     <div class="open-list-div">
       <!-- class="button open-list-button hide-for-medium" -->
       <button
-        class="button open-list-button"
+        class="button open-list-button is-primary"
         @click="$emit('view-list')"
         v-html="$t('app.viewList')"
       />
