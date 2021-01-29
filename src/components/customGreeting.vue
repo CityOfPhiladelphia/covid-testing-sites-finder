@@ -70,17 +70,17 @@
 
 <script>
 
-import TopicComponent from '@phila/vue-comps/src/components/TopicComponent.vue';
+// import TopicComponent from '@phila/vue-comps/src/components/TopicComponent.vue';
 // import PhilaButton from '@phila/pinboard/src/components/PhilaButton.vue';
-import callout from '@phila/vue-comps/src/components/Callout.vue';
+// import callout from '@phila/vue-comps/src/components/Callout.vue';
 
 export default {
   name: 'CustomGreeting',
   components: {
     // PhilaButton,
-    callout,
+    // callout,
   },
-  mixins: [ TopicComponent ],
+  // mixins: [ TopicComponent ],
   props: {
     'message': {
       type: String,
@@ -282,12 +282,12 @@ export default {
   }
 
   /*medium*/
-  @media screen and (min-width: 750px) {
+  /*make this scroll on medium screens*/
+  /*REVIEW this is a little hacky. the 120px shouldn't be hard-coded.*/
+  /* @media screen and (min-width: 750px) {
     .mb-panel-topics-greeting {
-      /*make this scroll on medium screens*/
-      /*REVIEW this is a little hacky. the 120px shouldn't be hard-coded.*/
       height: calc(100vh - 120px);
       overflow: auto;
     }
-  }
+  } */
 </style>
