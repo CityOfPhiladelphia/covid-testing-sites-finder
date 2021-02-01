@@ -37,7 +37,7 @@ const customComps = {
 pinboard({
   alerts: {
     modal: {
-      enabled: false,
+      enabled: true,
       // header: 'Possible closures',
       // body: '<p>All City-run COVID-19 testing sites and health centers are open and on a normal schedule, though others may be closed. Please call ahead to ensure that the site you are going to is open.</p>',
       header: 'Before you go',
