@@ -248,7 +248,7 @@ export default {
 
       if (this.daysRapid.length > 0) {
         let newField = {
-          label: 'testingHours',
+          label: 'rapid.category',
           labelType: 'i18n',
           valueType: 'component5',
         };
