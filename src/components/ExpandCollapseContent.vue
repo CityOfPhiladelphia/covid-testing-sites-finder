@@ -349,12 +349,12 @@ export default {
 
           let hours;
           if ((normallyOpen && !holidayToday) || (normallyOpen && siteIsException)) {
-            let value = day + '_rapid_tests';
-            console.log('day:', day, 'value:', value);
+            // let value = day + '_rapid_tests';
+            // console.log('day:', day, 'value:', value);
             hours = item.attributes[day+'_rapid_tests'];
           } else if (!normallyOpen && holidayYesterday) {
-            let value = yesterday + '_rapid_tests';
-            console.log('yesterday:', yesterday, 'value:', value);
+            // let value = yesterday + '_rapid_tests';
+            // console.log('yesterday:', yesterday, 'value:', value);
             hours = item.attributes[yesterday+'_rapid_tests'];
           }
 
