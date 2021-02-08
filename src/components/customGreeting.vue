@@ -27,6 +27,15 @@
     <div
       class="main-area"
     >
+      <h2>
+        {{ $t('introPage.section2Title') }}
+      </h2>
+      <p>
+        <a
+          target="_blank"
+          href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
+        >{{ $t('introPage.p4') }}</a>
+      </p>
       <h1>
         {{ $t('introPage.introTitle') }}
       </h1>
@@ -58,7 +67,7 @@
       <p>
         {{ $t('introPage.p3') }}
       </p>
-      <h2>
+      <!-- <h2>
         {{ $t('introPage.section2Title') }}
       </h2>
       <p>
@@ -66,7 +75,7 @@
           target="_blank"
           href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
         >{{ $t('introPage.p4') }}</a>
-      </p>
+      </p> -->
 
       <div
         class="custom-callout"
