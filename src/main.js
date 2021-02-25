@@ -99,50 +99,6 @@ pinboard({
   refine: {
     type: 'multipleFieldGroups',
     multipleFieldGroups: {
-      // daysOfOperation: {
-      //   'Monday': {
-      //     unique_key: 'day_Monday',
-      //     value: function(item) {
-      //       return item.attributes.Monday !== null;
-      //     },
-      //   },
-      //   'Tuesday': {
-      //     unique_key: 'day_Tuesday',
-      //     value: function(item) {
-      //       return item.attributes.Tuesday !== null;
-      //     },
-      //   },
-      //   'Wednesday': {
-      //     unique_key: 'day_Wednesday',
-      //     value: function(item) {
-      //       return item.attributes.Wednesday !== null;
-      //     },
-      //   },
-      //   'Thursday': {
-      //     unique_key: 'day_Thursday',
-      //     value: function(item) {
-      //       return item.attributes.Thursday !== null;
-      //     },
-      //   },
-      //   'Friday': {
-      //     unique_key: 'day_Friday',
-      //     value: function(item) {
-      //       return item.attributes.Friday !== null;
-      //     },
-      //   },
-      //   'Saturday': {
-      //     unique_key: 'day_Saturday',
-      //     value: function(item) {
-      //       return item.attributes.Saturday !== null;
-      //     },
-      //   },
-      //   'Sunday': {
-      //     unique_key: 'day_Sunday',
-      //     value: function(item) {
-      //       return item.attributes.Sunday !== null;
-      //     },
-      //   },
-      // },
       patientAge: {
         '+18 years old': {
           unique_key: 'year18',
