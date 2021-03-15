@@ -15,8 +15,7 @@
       </div>
     </div>
 
-    <div class="open-list-div">
-      <!-- class="button open-list-button hide-for-medium" -->
+    <div class="has-text-centered">
       <button
         class="button open-list-button is-primary"
         @click="$emit('view-list')"
@@ -27,6 +26,18 @@
     <div
       class="main-area"
     >
+      <h2>
+        {{ $t('introPage.section2Title') }}
+      </h2>
+      <p>
+        <a
+          target="_blank"
+          href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
+        >{{ $t('introPage.p4') }}</a>
+      </p>
+      <h1>
+        {{ $t('introPage.introTitle') }}
+      </h1>
       <p
         v-html="$t('introPage.p1')"
       />
@@ -227,7 +238,7 @@ export default {
   }
 
   .open-list-div {
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   /* .open-list-button {
