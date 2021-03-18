@@ -1,21 +1,23 @@
 <template>
   <div
-    class="custom-greeting"
+    class="custom-greeting content"
   >
-    <div class="exclamation-holder">
-      <font-awesome-icon
-        icon="exclamation-triangle"
-        class="fa-3x fa-icon-class"
-      />
+    <div class="exclamation-holder columns is-mobile">
+      <div class="column is-narrow">
+        <font-awesome-icon
+          icon="exclamation-triangle"
+          class="fa-3x fa-icon-class"
+        />
+      </div>
       <div
-        class="exclamation-details small-19 medium-20"
+        class="column exclamation-details"
       >
         <div><b>{{ $t('beforeYouGo') }}:</b></div>
         <div>{{ $t('checkSite') }}</div>
       </div>
     </div>
 
-    <div class="has-text-centered">
+    <div class="has-text-centered container">
       <button
         class="button open-list-button is-primary"
         @click="$emit('view-list')"
@@ -26,52 +28,60 @@
     <div
       class="main-area"
     >
-      <h2>
-        {{ $t('introPage.section2Title') }}
-      </h2>
-      <p>
-        <a
-          target="_blank"
-          href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
-        >{{ $t('introPage.p4') }}</a>
-      </p>
-      <h1>
-        {{ $t('introPage.introTitle') }}
-      </h1>
-      <p
-        v-html="$t('introPage.p1')"
-      />
-      <h1>{{ $t('introPage.section1Title') }}</h1>
-      <p
-        v-html="$t('introPage.p2')"
-      />
-      <h2>{{ $t('introPage.section2Title') }}</h2>
-      <p><b>{{ $t('introPage.p3') }}</b></p>
-      <ol>
-        <li
-          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ol1"
-          :key="index"
-        >
-          {{ $t('introPage.ol1.' + index) }}
-        </li>
-      </ol>
-      <p><b>{{ $t('introPage.p4') }}</b></p>
-      <p>{{ $t('introPage.p5') }}</p>
-      <p>{{ $t('introPage.p6') }}</p>
-      <p>{{ $t('introPage.p7') }}</p>
-      <ul>
-        <li
-          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
-          :key="index"
-        >
-          {{ $t('introPage.ul1.' + index) }}
-        </li>
-      </ul>
+      <div class="container">
+        <h4 class="title is-4">
+          {{ $t('introPage.section2Title') }}
+        </h4>
+        <p>
+          <a
+            target="_blank"
+            href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
+          >{{ $t('introPage.p4') }}</a>
+        </p>
+      </div>
+
+      <div class="container">
+        <h4 class="title is-4">
+          {{ $t('introPage.introTitle') }}
+        </h4>
+        <p
+          v-html="$t('introPage.p1')"
+        />
+
+        <ul>
+          <li
+            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
+            :key="index"
+          >
+            {{ $t('introPage.ul1.' + index) }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <h4 class="title is-4">
+          {{ $t('introPage.section1Title') }}
+        </h4>
+        <p>
+          {{ $t('introPage.p2') }}
+        </p>
+        <ul>
+          <li
+            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul2"
+            :key="index"
+          >
+            {{ $t('introPage.ul2.' + index) }}
+          </li>
+        </ul>
+        <p>
+          {{ $t('introPage.p3') }}
+        </p>
+      </div>
+
       <div
         class="custom-callout"
       >
         <p
-          class="no-margin"
           v-html="$t('introPage.callout1.p1')"
         />
       </div>
@@ -81,17 +91,8 @@
 
 <script>
 
-// import TopicComponent from '@phila/vue-comps/src/components/TopicComponent.vue';
-// import PhilaButton from '@phila/pinboard/src/components/PhilaButton.vue';
-// import callout from '@phila/vue-comps/src/components/Callout.vue';
-
 export default {
   name: 'CustomGreeting',
-  components: {
-    // PhilaButton,
-    // callout,
-  },
-  // mixins: [ TopicComponent ],
   props: {
     'message': {
       type: String,
@@ -128,7 +129,6 @@ export default {
         return this.$store.state.sources[this.$appType].data.rows || this.$store.state.sources[this.$appType].data.features || this.$store.state.sources[this.$appType].data;
       }
       return [];
-
     },
     hasError() {
       return this.$store.state.geocode.status === 'error';
@@ -211,20 +211,12 @@ export default {
 
 <style scoped>
 
-  h1 {
-    font-size: 20px;
-  }
-
-  h2 {
-    font-size: 16px;
-  }
-
-  ul {
-    margin-bottom: 6px;
-  }
-
   .main-area {
-    padding: 10px;
+    /* padding: 1rem; */
+  }
+
+  .container {
+    margin-bottom: 1rem;
   }
 
   .custom-callout {
@@ -233,29 +225,13 @@ export default {
     padding: 10px;
   }
 
-  .no-margin {
-    margin: 0px;
-  }
-
-  .open-list-div {
-    /* margin: 0 auto; */
-  }
-
-  /* .open-list-button {
-    margin-top: 6px;
-    margin-bottom: 14px;
-    width: 200px;
-  } */
-
-  .custom-greeting {
-    padding: 12px;
+  .open-list-button {
+    text-transform: uppercase;
   }
 
   .exclamation-holder {
-    display: flex;
-    align-items: center;
-    margin-top: 6px;
-    margin-bottom: 14px;
+    padding: 1rem;
+    margin-bottom: 0px;
   }
 
   .fa-icon-class {
@@ -265,32 +241,47 @@ export default {
 
   .exclamation-details {
     margin-left: 14px;
-    font-size: 14px;
   }
 
   .mb-panel-topics-greeting {
     padding-top: 20px;
   }
 
-  .greeting {
+  /* .greeting {
     font-size: 20px;
     color: #444;
     padding: 14px;
+  } */
+
+  /* ul {
+    margin-bottom: 6px;
+  } */
+
+  /* h1 {
+    font-size: 20px;
   }
 
-  .greeting-error {
+  h2 {
+    font-size: 16px;
+  } */
+
+  /* .custom-greeting {
+    padding: 1rem;
+  } */
+
+  /* .greeting-error {
     border-left-color: #ff0000;
-  }
+  } */
 
-  .custom-section {
+  /* .custom-section {
     margin-left: 8px;
     margin-top: 4px;
-  }
+  } */
 
-  .custom-ul {
+  /* .custom-ul {
     margin-left: 4rem;
     font-size: 14px;
-  }
+  } */
 
   /*medium*/
   /*make this scroll on medium screens*/
