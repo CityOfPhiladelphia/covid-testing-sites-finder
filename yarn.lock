@@ -1099,9 +1099,9 @@
     bulma-checkradio "^1.1.1"
     core-js "^3.6.5"
 
-"@phila/pinboard@https://github.com/CityOfPhiladelphia/pinboard#be2ea2803d13e260c40bad17436eeff4d1fdfecd":
+"@phila/pinboard@https://github.com/CityOfPhiladelphia/pinboard#cb417833ac3dd9e6a9d5d0791b4b0de1aaae4dbb":
   version "0.5.12"
-  resolved "https://github.com/CityOfPhiladelphia/pinboard#be2ea2803d13e260c40bad17436eeff4d1fdfecd"
+  resolved "https://github.com/CityOfPhiladelphia/pinboard#cb417833ac3dd9e6a9d5d0791b4b0de1aaae4dbb"
   dependencies:
     "@fortawesome/free-brands-svg-icons" "^5.11.2"
     "@phila/phila-ui" "2.1.0-beta.9"
