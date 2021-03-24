@@ -75,8 +75,11 @@ pinboard({
   gtag: {
     category: 'rf-covid',
   },
-  comboSearch: {
-    dropdown: [ 'address' ],
+  searchBar: {
+    dropdown: [
+      'address',
+      'keyword',
+    ],
   },
   locationInfo: {
     siteName: function(item) {
@@ -389,6 +392,8 @@ pinboard({
             arabic: 'Arabic',
             translationServices: 'Phone interpretation services:',
           },
+          address: 'address',
+          keyword: 'keyword',
           beforeYouGo: 'Before you go',
           checkSite: 'Check the specific site information. Hours are subject to change.',
           hoursVary: 'Hours and availability varies.',
@@ -507,6 +512,8 @@ pinboard({
             french: 'Francés',
             translationServices: 'Servicios telefónicos de interpretación:',
           },
+          address: 'spanish address',
+          keyword: 'spanish keyword',
           beforeYouGo: 'Antes de ir',
           checkSite: 'Verifique la información específica del lugar. Los horarios pueden cambiar.',
           hoursVary: 'Los horarios y la disponibilidad pueden variar.',
@@ -625,6 +632,8 @@ pinboard({
             french: '法语',
             translationServices: '电话译员服务：',
           },
+          address: 'chinese address',
+          keyword: 'chinese keyword',
           beforeYouGo: '在您出发前请先了解以下信息',
           checkSite: '查看特定场所的信息。 时间有可能会变动。',
           hoursVary: '时间和可用性各不相同。',
@@ -743,6 +752,8 @@ pinboard({
             french: 'Tiếng Pháp',
             translationServices: 'Dịch vụ thông dịch qua điện thoại:',
           },
+          address: 'vietnamese address',
+          keyword: 'vietnamese keyword',
           beforeYouGo: 'Trước khi quý vị đến',
           checkSite: 'Kiểm tra thông tin địa điểm cụ thể. Giờ hoạt động có thể thay đổi.',
           hoursVary: 'Giờ làm việc và tính sẵn có khác nhau.',
@@ -861,6 +872,8 @@ pinboard({
             french: 'Французский',
             translationServices: 'Услуги переводчика по телефону:',
           },
+          address: 'russian address',
+          keyword: 'russian keyword',
           beforeYouGo: 'Прежде чем вы пойдете',
           checkSite: 'уточните информацию по конкретному пункту. Часы работы могут меняться.',
           hoursVary: 'Часы работы и возможность оказания услуги могут меняться.',
@@ -979,6 +992,8 @@ pinboard({
             french: 'Français',
             translationServices: 'Services d’interprétation par téléphone:',
           },
+          address: 'french address',
+          keyword: 'french keyword',
           beforeYouGo: 'Avant de vous déplacer',
           checkSite: 'Consulter les informations concernant le site donné. Les horaires peuvent changers.',
           hoursVary: 'Les horaires et la disponibilité varient.',
