@@ -93,20 +93,21 @@
     </div>
 
     <div class="columns is-mobile no-margins">
-      <div class="column is-one-quarter">
-        <div>Details</div>
+      <div class="column is-one-quarter is-paddingless">
+        <div>{{ $t( 'eligibility' ) }}</div>
       </div>
-      <div class="column">
-        <div>some details</div>
+      <div class="column is-paddingless">
+        <span>{{ $t( 'restrictions[\'' + item.attributes.testing_restrictions + '\']') }}</span>
+        <span>  {{ $t( 'notes[\'' + item.attributes.Notes + '\']') }}</span>
       </div>
     </div>
     <hr class="no-margins">
 
     <div class="columns is-mobile no-margins">
-      <div class="column is-one-quarter">
-        <div>Languages Spoken</div>
+      <div class="column is-one-quarter is-paddingless">
+        <div>{{ $t( 'languages.languagesSpoken' ) }}</div>
       </div>
-      <div class="column">
+      <div class="column is-paddingless">
         <div
           v-for="(language, index) of languagesSpoken"
           :key="index"
@@ -118,11 +119,21 @@
     <hr class="no-margins">
 
     <div class="columns is-mobile no-margins">
-      <div class="column is-one-quarter">
-        <div>Testing hours</div>
+      <div class="column is-one-quarter is-paddingless">
+        <div>{{ $t( 'languages.translationServices' ) }}</div>
+      </div>
+      <div class="column is-paddingless">
+        <div>{{ $t( item.attributes.translation_services ) }}</div>
+      </div>
+    </div>
+    <hr class="no-margins">
+
+    <div class="columns is-mobile no-margins">
+      <div class="column is-one-quarter is-paddingless">
+        <div>{{ $t( 'testingHours' ) }}</div>
       </div>
 
-      <div class="column">
+      <div class="column is-paddingless">
         <div
           v-for="(day, index) of days"
           :key="index"
@@ -130,13 +141,13 @@
           <div
             class="columns is-mobile no-margins"
           >
-            <div class="column">
+            <div class="column is-paddingless">
               <div>
                 {{ $t(day.label) }}
               </div>
             </div>
 
-            <div class="column">
+            <div class="column is-paddingless">
               <div>
                 {{ day.value }}
               </div>
@@ -176,9 +187,6 @@ import SharedFunctions from './mixins/SharedFunctions.vue';
 
 export default {
   name: 'ExpandCollapseContent',
-  components: {
-    // VerticalTableLight: () => import(/* webpackChunkName: "pvc_VerticalTable3CellsLight" */'@phila/vue-comps/src/components/VerticalTableLight.vue'),
-  },
   mixins: [ SharedFunctions ],
   props: {
     item: {
@@ -197,6 +205,7 @@ export default {
       }
       return values;
     },
+<<<<<<< HEAD
     mainVerticalTableSlots() {
       let slots = {
         id: 'mainTable',
@@ -262,6 +271,8 @@ export default {
         },
       };
     },
+=======
+>>>>>>> 14573f3 (changes to expand-collapse)
 
     days() {
       let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
@@ -308,6 +319,7 @@ export default {
       }
       return theFields;
     },
+<<<<<<< HEAD
 
     daysRapid() {
       let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
@@ -388,6 +400,8 @@ export default {
       };
     },
 
+=======
+>>>>>>> 14573f3 (changes to expand-collapse)
   },
   methods: {
     parseAddress(address) {
@@ -422,75 +436,4 @@ export default {
   padding-left: 2rem;
 }
 
-// .location-item {
-//   position: relative;
-//   border-bottom: 1px solid black;
-//   height:100%;
-//
-//   &:hover::after {
-//     color: white;
-//   }
-//
-//   .temp-close-section {
-//     width: 100%;
-//   }
-//
-//   .card-exclamation-holder {
-//     padding: 20px;
-//     background-color: #CC3000;
-//     text-align: center;
-//   }
-//
-//   .fa-icon-class {
-//     color: white;
-//     text-align: center;
-//   }
-//
-//   .card-exclamation-details {
-//     padding: 10px;
-//     background-color: #F5D6CC;
-//   }
-//
-//   .location-title {
-//     cursor: pointer;
-//     padding: 1rem;
-//     margin-bottom: 0;
-//     &:hover{
-//       background: #2176d2;
-//       color: white;
-//     }
-//   }
-//
-//   &::after{
-//     position: absolute;
-//     right:1rem;
-//     top: 0;
-//     content: '+';
-//     font-weight: 900;
-//     font-size:1.5rem;
-//     z-index: 100;
-//     color: color(dark-ben-franklin)
-//   }
-//   &.open{
-//     h2{
-//       color:white;
-//       background-color: color(ben-franklin-blue);
-//       font-weight: 900;
-//     }
-//     &::after{
-//       content: '-';
-//       color:white;
-//     }
-//   }
-//   .location-content{
-//     overflow: hidden;
-//     height:0;
-//
-//     &.location-open{
-//       padding: 1rem;
-//       height: 100%;
-//       overflow: initial;
-//     }
-//   }
-// }
 </style>
