@@ -55,6 +55,7 @@ module.exports = {
   transpileDependencies: [
     // can be string or regex
     '@phila/pinboard',
+    '@phila/phila-ui',
     // '@phila/vue-comps',
     '@phila/vue-mapping',
     '@phila/vue-datafetch',
