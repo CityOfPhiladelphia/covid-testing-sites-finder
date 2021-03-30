@@ -14,10 +14,11 @@ if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons/faCalendarAlt';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle';
-library.add(faExclamationTriangle, faBuilding, faUserMd, faCircle);
+library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle);
 
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
@@ -268,6 +269,12 @@ pinboard({
   },
   footer: {
     'HowToUse': false,
+    'OtherLinks': {
+      locations: {
+        text: 'viewAccessible',
+        link: 'https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/data/testing/',
+      },
+    },
   },
   infoCircles: {
     'symptomatic': {
@@ -401,28 +408,31 @@ pinboard({
             bannerAlert: 'Many sites are closed today. Check specific site details for more information.',
             noResults: 'No testing site was found within your search. Please call your health care provider or visit the Department of Public Health’s COVID-19 website for information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
           },
+          viewAccessible: 'View accessible list of site locations',
           introPage: {
-            introTitle: 'About this finder',
-            p1: 'This tool can help you find a COVID-19 test in Philadelphia. (See our FAQ for more information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">who should get tested</a>.) You can:',
-            ul1: {
-              li1: 'Search for a testing site by address.',
-              li2: 'Click on a map location for specific site information.',
-              li3: 'Filter the site list by the tags provided.',
+            p1: 'There are permanent and temporary testing sites throughout Philadelphia. <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">Find out who should get tested</a>.',
+            section1Title: 'Find a pop-up testing event',
+            p2: 'Pop-up events are hosted at temporary locations and are not shown on the map. <a href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19" target="_blank">Check the calendar event for details</a>.',
+            section2Title: 'Find a test site',
+            p3: 'Use this finder to:',
+            ol1: {
+              li1: 'Locate a COVID-19 testing site in Philadelphia.',
+              li2: 'Select the location on the map for details.',
+              li3: 'Contact the provider before going for a test.',
             },
-            section1Title: 'Find out if you’re eligible',
-            p2: '​No testing site will ask you for money. You will be asked for identification and may also be asked for health insurance information. If you don’t have identification or health insurance, you can still get a test. In addition, some sites may:',
-            ul2: {
+            p4: 'What to expect at a test site',
+            p5: 'You won’t have to pay out-of-pocket to get a test. However, some sites may bill your insurance for a visit fee.',
+            p6: 'At the site, you will be asked for identification and may also be asked for health insurance information. If you don’t have these, you can still get a test.',
+            p7: 'Some sites may:',
+            ul1: {
               li1: 'Limit testing to people who meet certain criteria.',
               li2: 'Require an appointment.',
               li3: 'Require a referral from your doctor.',
               li4: 'Ask you to stay in your car (for drive-thru sites).',
             },
-            p3: 'Check a location’s specific details on the map. Then, call or visit the provider\'s website before going for a test.',
             callout1: {
-              p1: '<b>Questions?</b> Please call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
+              p1: '<b>Questions?</b> Call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
             },
-            section2Title: 'Mobile and pop-up testing events',
-            p4: 'Find a mobile or pop-up community testing event in Philadelphia',
           },
           languages: {
             languagesSpoken: 'Languages spoken:',
@@ -521,27 +531,29 @@ pinboard({
             noResults: 'No se encontró un lugar donde se realicen pruebas que coincida con su búsqueda. Llame a su proveedor de atención médica o visite el sitio web sobre COVID-19 del Departamento de Salud Pública para obtener información sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
           },
           introPage: {
-            introTitle: 'Sobre este buscador',
-            p1: 'Esta herramienta puede ayudarlo a encontrar una prueba de COVID-19 gratuita en Filadelfia. (Consulte nuestras Preguntas frecuentes para obtener más información sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">quién debería hacerse la prueba</a>). Puede hacer lo siguiente:',
+            p1: 'Hay sitios de pruebas permanentes y temporales en toda Filadelfia. <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">Averigüe quién debe hacerse la prueba</a>.',
+            section1Title: 'Encuentre un evento emergente de pruebas',
+            p2: 'Los eventos emergentes se realizan en lugares temporales y no se muestran en el mapa. <a href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19" target="_blank">Revise el evento en el calendario para obtener más detalles</a>.',
+            section2Title: 'Encuentre un centro de pruebas',
+            p3: 'Utilice este buscador para:',
+            ol1: {
+              li1: 'localizar un sitio de pruebas de COVID-19 en Filadelfia;',
+              li2: 'seleccionar la ubicación en el mapa para obtener detalles;',
+              li3: 'ponerse en contacto con el proveedor antes de ir a hacer la prueba.',
+            },
+            p4: 'Qué esperar en un sitio de pruebas',
+            p5: 'No tendrá que pagar de su bolsillo para hacerse una prueba. Sin embargo, algunos sitios pueden facturar a su seguro un cargo por visita.',
+            p6: 'En el sitio de pruebas, se le pedirá que se identifique y es posible que también se le soliciten los datos de su seguro médico. Si no tiene la información, igual puede hacerse la prueba.',
+            p7: 'Algunos sitios pueden:',
             ul1: {
-              li1: 'Buscar un lugar donde se realicen pruebas según la dirección.',
-              li2: 'Hacer clic en una ubicación del mapa para obtener información específica del lugar.',
-              li3: 'Filtrar la lista de lugares según las etiquetas provistas.',
+              li1: 'limitar las pruebas a las personas que cumplan ciertos criterios;',
+              li2: 'exigir una cita;',
+              li3: 'exigir una derivación de su médico;',
+              li4: 'pedirle que se quede dentro de su automóvil (en los sitios donde se realiza la prueba en vehículos).',
             },
-            section1Title: 'Saber si es elegible.',
-            p2: 'Ningún centro de pruebas le solicitará dinero. Se le pedirá una identificación y también es posible que se le pida información del seguro de salud. Si no tiene una identificación o seguro de salud, de todos modos, pueden realizarse una prueba. Además, es posible que algunos sitios:',
-            ul2: {
-              li1: 'Restringir la prueba para personas que cumplan ciertos requisitos.',
-              li2: 'Exigir una cita.',
-              li3: 'Exigir una derivación médica.',
-              li4: 'Pedirle que se quede en su automóvil (en lugares a los que se accede en automóvil).',
-            },
-            p3: 'Revise los detalles de una ubicación específica en el mapa. Luego, puede llamar o visitar el sitio web del proveedor antes de ir a realizarse la prueba.',
             callout1: {
-              p1: '<b>¿Tiene preguntas?</b> Llame a su proveedor de atención médica o consulte nuestras Preguntas frecuentes sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
+              p1: '<b>¿Tiene preguntas?</b> Llame a su proveedor de atención médica o consulte nuestras preguntas frecuentes (FAQ) sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
             },
-            section2Title: 'Eventos móviles de realización de pruebas',
-            p4: 'Encuentre un evento móvil de pruebas comunitarias en Filadelfia',
           },
           languages: {
             languagesSpoken: 'Idiomas que se hablan:',
@@ -639,27 +651,29 @@ pinboard({
             noResults: '在您的搜索范围内未找到检测地点。请致电您的医疗保健提供者或访问公共卫生部 (Department of Public Health) 的 COVID-19 网站，了解关于 <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">在费城进行检测</a>的信息.',
           },
           introPage: {
-            introTitle: '关于此搜索工具',
-            p1: '此工具可以帮助您找到费城的 COVID-19 检测地点。（关于 <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">“应接受测试人员”</a>的更多信息，请参见我们的“常见问题”。）您可以：',
+            p1: '费城市有许多常驻及临时检测站。<a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">查看哪些人应接受检测。</a>',
+            section1Title: '查找临时检测服务站',
+            p2: '临时检测服务站设立在临时地点并且未在地图上显示。<a href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19" target="_blank">查看检测服务的日程详情。</a>',
+            section2Title: '查找检测站',
+            p3: '使用此查找器，即可：',
+            ol1: {
+              li1: '定位费城市的 COVID-19 检测站。',
+              li2: '在地图上选择地点，即可了解详情。',
+              li3: '在去做检测之前，联系服务提供者。',
+            },
+            p4: '检测站的提示和要求',
+            p5: '您不必自行承担检测费用。然而，一些检测站可能向您的保险计划开具账单以支付诊疗费。',
+            p6: '检测站可能要求您提供身份证件或健康保险信息。如果您没有上述证明，仍然可以进行检测。',
+            p7: '一些检测站可能：',
             ul1: {
-              li1: '按地址搜索检测地点。',
-              li2: '点击地图上的位置了解具体地点信息。',
-              li3: '按提供的标签筛选地点列表',
-            },
-            section1Title: '查询您是否符合条件',
-            p2: '测试点不会向您收取费用。我们会要求您提供身份证明，还可能会要求您提供医疗保险信息。如果您没有身份证明或医疗保险，仍可以接受检查。此外，有些测试点可能会：',
-            ul2: {
-              li1: '仅限符合特定标准的人进行检测。',
+              li1: '只对符合一定条件的人群提供检测。',
               li2: '需要预约。',
-              li3: '需要医生转介。',
-              li4: '要求您留在车里（适用于免下车地点）。',
+              li3: '要求您提供医生开具的转诊信函。',
+              li4: '要求您待在您的车里（如免下车检测服务站）。',
             },
-            p3: '查看地图上某一位置的详情。然后，前去检测前，请致电或访问提供者的网站。',
             callout1: {
-              p1: '<b>是否有任何疑问？</b>关于在费城进行检测的信息，请致电您的医疗保健提供者或参见我们的“常见问题”.',
+              p1: '<b>有疑问？</b> 联系您的医疗保健提供者或浏览网站 <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">在费城参加检测</a>，查看常见问题与解答。',
             },
-            section2Title: '移动和弹出式检测项目',
-            p4: '找到费城的移动或弹出式社区检测项目',
           },
           languages: {
             languagesSpoken: '所用语言：',
@@ -757,27 +771,29 @@ pinboard({
             noResults: 'Không tìm thấy cơ sở xét nghiệm trong phạm vi tìm kiếm của quý vị. Vui lòng gọi điện cho nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị hoặc truy cập trang web về COVID-19 của Sở Y Tế Công Cộng để biết thông tin về a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cách nhận xét nghiệm tại Philadelphia</a>.',
           },
           introPage: {
-            introTitle: 'Giới thiệu công cụ tìm kiếm này',
-            p1: 'Công cụ này có thể giúp quý vị tìm một cơ sở xét nghiệm tại Philadelphia. (Xem Các Câu Hỏi Thường Gặp của chúng tôi để biết thêm thông tin về <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">những người nên được xét nghiệm</a>.) Quý vị có thể:',
+            p1: 'Có các địa điểm xét nghiệm cố định và tạm thời trên khắp Philadelphia. <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">Tìm hiểu xem ai nên xét nghiệm</a>.',
+            section1Title: 'Tìm một sự kiện xét nghiệm lưu động',
+            p2: 'Sự kiện lưu động được tổ chức ở các địa điểm tạm thời và không được hiển thị trên bản đồ. <a href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19" target="_blank">Kiểm tra sự kiện trên lịch để biết thông tin chi tiết</a>.',
+            section2Title: 'Tìm một địa điểm xét nghiệm',
+            p3: 'Sử dụng trình tìm kiếm này để:',
+            ol1: {
+              li1: 'Định vị một địa điểm xét nghiệm COVID-19 ở Philadelphia.',
+              li2: 'Chọn địa điểm trên bản đồ để biết thông tin chi tiết.',
+              li3: 'Liên hệ với nhà cung cấp trước khi đi xét nghiệm.',
+            },
+            p4: 'Những điều nên dự kiến ở địa điểm xét nghiệm',
+            p5: 'Bạn sẽ không phải trả tiền túi để làm xét nghiệm. Tuy nhiên, một số địa điểm có thể lập hóa đơn bảo hiểm của bạn đối với phí thăm khám.',
+            p6: 'Ở địa điểm, bạn sẽ được yêu cầu trình giấy tờ nhận dạng và cũng có thể được yêu cầu cung cấp thông tin bảo hiểm y tế. Nếu không có những thứ này, bạn vẫn có thể làm xét nghiệm.',
+            p7: 'Một số địa điểm có thể:',
             ul1: {
-              li1: 'Tìm cơ sở xét nghiệm theo địa chỉ.',
-              li2: 'Nhấn vào địa điểm trên bản đồ để biết thông tin về cơ sở cụ thể.',
-              li3: 'Lọc danh sách cơ sở bằng các thẻ gắn được cung cấp.',
+              li1: 'Hạn chế xét nghiệm đối với những người đáp ứng các tiêu chí nhất định.',
+              li2: 'Yêu cầu hẹn trước.',
+              li3: 'Yêu cầu có giới thiệu từ bác sĩ của bạn.',
+              li4: 'Yêu cầu bạn ngồi trong xe (đối với các địa điểm cho phép lái xe qua).',
             },
-            section1Title: 'Tìm hiểu liệu quý vị có hội đủ điều kiện không',
-            p2: 'Không cơ sở xét nghiệm nào sẽ đề nghị quý vị trả tiền. Họ sẽ hỏi danh tính và cũng có thể hỏi thông tin bảo hiểm y tế của quý vị. Nếu quý vị không có giấy tờ tùy thân hoặc bảo hiểm y tế, quý vị vẫn có thể nhận được dịch vụ xét nghiệm. Ngoài ra, một số cơ sở có thể:',
-            ul2: {
-              li1: 'Hạn chế chỉ xét nghiệm cho những người đáp ứng các tiêu chí nhất định.',
-              li2: 'Yêu cầu đặt lịch hẹn.',
-              li3: 'Yêu cầu giấy giới thiệu từ bác sĩ của quý vị.',
-              li4: 'Yêu cầu quý vị ở yên trong xe (với các cơ sở lái xe qua).',
-            },
-            p3: 'Kiểm tra thông tin cụ thể chi tiết của địa điểm trên bản đồ. Sau đó, gọi điện hoặc truy cập trang web của nhà cung cấp trước khi đến xét nghiệm.',
             callout1: {
-              p1: '<b>Quý vị có câu hỏi?</b> Vui lòng gọi điện cho nhà cung cấp dịch vụ chăm sóc sức khỏe của quý vị hoặc xem Các Câu Hỏi Thường Gặp của chúng tôi về <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cách nhận xét nghiệm tại Philadelphia</a>.',
+              p1: '<b>Có thắc mắc?</b> Gọi cho nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn hoặc xem Các Câu hỏi Thường gặp của chúng tôi về <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">đi xét nghiệm ở Philadelphia</a>.',
             },
-            section2Title: 'Các sự kiện xét nghiệm lưu động và tạm thời',
-            p4: 'Tìm sự kiện xét ngiệm lưu động và tạm thời tại cộng đồng ở Philadelphia',
           },
           languages: {
             languagesSpoken: 'Các ngôn ngữ được nói:',
@@ -875,27 +891,29 @@ pinboard({
             noResults: 'В ходе поиска не найдено ни одного пункта для тестирования. Позвоните своему врачу или посетите веб-сайт Департамента здравоохранения, посвященный COVID-19, и узнайте, как <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">пройти тестирование в Филадельфии</a>.',
           },
           introPage: {
-            introTitle: 'Об этом средстве поиска',
-            p1: 'Этот инструмент поможет вам найти пункт тестирования на COVID-19 в Филадельфии. (См. раздел часто задаваемых вопросов, чтобы подробнее узнать, <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">кто должен проходить тестирование</a>.) Вы можете:',
+            p1: 'В разных районах Филадельфии работают постоянные и временные центры тестирования. <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">Узнайте, кому нужно сдавать тесты.</a>.',
+            section1Title: 'Найдите мобильный центр тестирования',
+            p2: 'Мобильные центры тестирования, где тесты можно сдать в определенные даты, не показаны на карте. <a href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19" target="_blank">Проверьте расписание мобильных центров тестирования в календаре</a>.',
+            section2Title: 'Найдите центр тестирования',
+            p3: 'С помощью этого инструмента вы можете:',
+            ol1: {
+              li1: 'Найти центр тестирования на COVID-19 в Филадельфии.',
+              li2: 'Выбрать центр на карте и узнать подробные сведения.',
+              li3: 'Связаться с центром до сдачи теста.',
+            },
+            p4: 'Сдача теста в центре тестирования',
+            p5: 'Вы не платите за сдачу теста. Однако в некоторых центрах могут выставить счет за посещение вашей страховой компании.',
+            p6: 'Вас попросят предъявить удостоверение личности, а в некоторых центрах могут также попросить сообщить информацию о медицинском страховании. Вы можете сдать тест, даже если у вас этого нет.',
+            p7: 'В некоторых центрах тестирования:',
             ul1: {
-              li1: 'Выполнить поиск пункта для тестирования по адресу.',
-              li2: 'Нажать на местоположение на карте, чтобы получить конкретную информацию о пункте.',
-              li3: 'Отфильтровать список пунктов по предоставленным тегам.',
+              li1: 'Тесты делают только людям, соответствующим определенным критериям.',
+              li2: 'Требуется предварительная запись.',
+              li3: 'Требуется направление от врача.',
+              li4: 'Вас могут попросить оставаться в автомобиле (в центрах «drive-thru»).',
             },
-            section1Title: 'Узнать, имеете ли вы право',
-            p2: 'Ни в одном из пунктов тестирования не взимается плата. Вас попросят предъявить идентификационный документ, а также могут попросить предоставить информацию о медицинской страховке. Если у вас нет документов или страховки, вы все равно можете пройти тестирование. Помимо этого, некоторые пункты могут:',
-            ul2: {
-              li1: 'Ограничивать тестирование, проводя его только для людей, которые соответствуют определенным критериям.',
-              li2: 'Требовать предварительной записи.',
-              li3: 'Требовать направления от вашего врача.',
-              li4: 'Просить вас оставаться в машине (если обслуживание проводится без выхода из машины).',
-            },
-            p3: 'Проверьте дополнительные сведения о местоположении на карте. Затем, прежде чем отправляться на тестирование, позвоните врачу или посетите его веб-сайт.',
             callout1: {
-              p1: '<b>Вопросы?</b> Позвоните своему врачу или посмотрите раздел часто задаваемых вопросов о <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">тестировании в Филадельфии</a>.',
+              p1: '<b>Есть вопросы?</b> Позвоните своему врачу или прочитайте ответы на часто задаваемые вопросы о <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">тестировании на COVID-19 в Филадельфии</a>.',
             },
-            section2Title: 'Мобильные и временные пункты тестирования',
-            p4: 'Найти мобильный или временный общественный пункт тестирования в Филадельфии',
           },
           languages: {
             languagesSpoken: 'Доступные языки:',
@@ -992,29 +1010,54 @@ pinboard({
             bannerAlert: 'De nombreux sites sont fermés aujourd’hui. Consultez les détails spécifiques au site pour obtenir de plus amples informations.',
             noResults: 'Aucun site de dépistage n’a été trouvé pour votre recherche. Veuillez appeler votre prestataire de soins de santé ou consulter le site Web du département de la Santé publique sur le COVID-19 pour obtenir des informations sur les tests de dépistage à Philadelphie.',
           },
-          introPage:{
-            introTitle: 'À propos de cet outil de recherche',
-            p1: 'Cet outil peut vous aider à trouver où recevoir un test de dépistage du COVID-19 à Philadelphie. (Voir notre FAQ pour toute information complémentaire sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">les personnes qui devraient se faire tester</a>.) Vous pouvez :',
-            ul1:{
-              li1: 'Rechercher un site de dépistage à partir d’une adresse.',
-              li2: 'Cliquer sur la carte pour obtenir des informations concernant un site particulier.',
-              li3: 'Filtrer la liste des sites selon les balises données.',
+          introPage: {
+            p1: 'Des sites de dépistage permanents et temporaires se trouvent dans toute la ville de Philadelphie. <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">Découvrez qui devrait se faire dépister</a>.',
+            section1Title: 'Trouvez un événement éphémère de dépistage',
+            p2: 'Les événements éphémères ont lieu dans des sites temporaires et ne figurent pas sur la carte. <a href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19" target="_blank">Consultez le calendrier des événements pour obtenir des détails</a>.',
+            section2Title: 'Trouver un site de dépistage',
+            p3: 'Utilisez ce localisateur pour :',
+            ol1: {
+              li1: 'Trouver un site de dépistage COVID-19 à Philadelphie.',
+              li2: 'Sélectionner son emplacement sur la carte pour en obtenir les détails.',
+              li3: 'Contacter le prestataire avant de vous y rendre pour un test.',
             },
-            section1Title: 'Découvrir si vous pouvez en bénéficier.',
-            p2: 'Tous les sites de dépistage sont gratuits. On vous demandera une pièce d’identité et peut-être des informations sur votre assurance-santé. Si vous n’avez pas de pièce d’identité ou d’assurance-santé, vous pouvez tout de même vous faire dépister. En outre, certains sites peuvent :',
-            ul2:{
-              li1: 'Limiter les tests de dépistage aux personnes qui remplissent certains critères.',
-              li2: 'Exiger un rendez-vous.',
-              li3: 'Exiger une référence de votre médecin traitant.',
-              li4: 'Demander que vous restiez dans votre véhicule (pour les sites en drive).',
+            p4: 'Au site de dépistage :',
+            p5: 'Vous n’aurez rien à payer pour vous faire dépister. Cependant, certains sites pourraient envoyer une facture à votre assurance pour le forfait de la visite.',
+            p6: 'Il vous sera demandé une pièce d’identité, et possiblement vos informations d’assurance maladie. Si vous ne les avez pas, vous pourrez quand même vous faire dépister.',
+            p7: 'Il est possible que certains sites :',
+            ul1: {
+              li1: 'Limitent le dépistage aux personnes répondant à certains critères.',
+              li2: 'Exigent un rendez-vous.',
+              li3: 'Exigent un renvoi de votre médecin.',
+              li4: 'Demandent que vous restiez dans votre voiture (sites drive-thru)',
             },
-            p3: 'Consultez les détails spécifiques à un site sur la carte. Appelez ensuite le prestataire ou consultez son site Web avant de vous déplacer.',
             callout1:{
-              p1: '<b>Des questions ?</b> Veuillez appeler votre prestataire de soins de santé ou consulter notre FAQ sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">les tests de dépistage à Philadelphie.</a>',
+              p1: '<b>Des questions ?</b> Appelez votre prestataire de soins de santé ou consultez notre FAQ sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">le dépistage à Philadelphie.</a>',
             },
-            section2Title: 'Sites mobiles et ponctuels de dépistage',
-            p4: 'Pour trouver un site mobile ou un site ponctuel de dépistage à Philadelphie',
           },
+          // introPage:{
+          //   introTitle: 'À propos de cet outil de recherche',
+          //   p1: 'Cet outil peut vous aider à trouver où recevoir un test de dépistage du COVID-19 à Philadelphie. (Voir notre FAQ pour toute information complémentaire sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">les personnes qui devraient se faire tester</a>.) Vous pouvez :',
+          //   ul1:{
+          //     li1: 'Rechercher un site de dépistage à partir d’une adresse.',
+          //     li2: 'Cliquer sur la carte pour obtenir des informations concernant un site particulier.',
+          //     li3: 'Filtrer la liste des sites selon les balises données.',
+          //   },
+          //   section1Title: 'Découvrir si vous pouvez en bénéficier.',
+          //   p2: 'Tous les sites de dépistage sont gratuits. On vous demandera une pièce d’identité et peut-être des informations sur votre assurance-santé. Si vous n’avez pas de pièce d’identité ou d’assurance-santé, vous pouvez tout de même vous faire dépister. En outre, certains sites peuvent :',
+          //   ul2:{
+          //     li1: 'Limiter les tests de dépistage aux personnes qui remplissent certains critères.',
+          //     li2: 'Exiger un rendez-vous.',
+          //     li3: 'Exiger une référence de votre médecin traitant.',
+          //     li4: 'Demander que vous restiez dans votre véhicule (pour les sites en drive).',
+          //   },
+          //   p3: 'Consultez les détails spécifiques à un site sur la carte. Appelez ensuite le prestataire ou consultez son site Web avant de vous déplacer.',
+          //   callout1:{
+          //     p1: '<b>Des questions ?</b> Veuillez appeler votre prestataire de soins de santé ou consulter notre FAQ sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">les tests de dépistage à Philadelphie.</a>',
+          //   },
+          //   section2Title: 'Sites mobiles et ponctuels de dépistage',
+          //   p4: 'Pour trouver un site mobile ou un site ponctuel de dépistage à Philadelphie',
+          // },
           languages: {
             languagesSpoken: 'Langues parlées:',
             english: 'Anglais',

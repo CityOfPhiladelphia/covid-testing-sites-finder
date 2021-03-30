@@ -16,7 +16,6 @@
     </div>
 
     <div class="open-list-div">
-      <!-- class="button open-list-button hide-for-medium" -->
       <phila-button
         class="button open-list-button"
         @click.native="$emit('view-list')"
@@ -27,21 +26,27 @@
     <div
       class="main-area"
     >
-      <h2>
-        {{ $t('introPage.section2Title') }}
-      </h2>
-      <p>
-        <a
-          target="_blank"
-          href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
-        >{{ $t('introPage.p4') }}</a>
-      </p>
-      <h1>
-        {{ $t('introPage.introTitle') }}
-      </h1>
       <p
         v-html="$t('introPage.p1')"
       />
+      <h1>{{ $t('introPage.section1Title') }}</h1>
+      <p
+        v-html="$t('introPage.p2')"
+      />
+      <h2>{{ $t('introPage.section2Title') }}</h2>
+      <p><b>{{ $t('introPage.p3') }}</b></p>
+      <ol>
+        <li
+          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ol1"
+          :key="index"
+        >
+          {{ $t('introPage.ol1.' + index) }}
+        </li>
+      </ol>
+      <p><b>{{ $t('introPage.p4') }}</b></p>
+      <p>{{ $t('introPage.p5') }}</p>
+      <p>{{ $t('introPage.p6') }}</p>
+      <p>{{ $t('introPage.p7') }}</p>
       <ul>
         <li
           v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
@@ -50,33 +55,6 @@
           {{ $t('introPage.ul1.' + index) }}
         </li>
       </ul>
-      <h2>
-        {{ $t('introPage.section1Title') }}
-      </h2>
-      <p>
-        {{ $t('introPage.p2') }}
-      </p>
-      <ul>
-        <li
-          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul2"
-          :key="index"
-        >
-          {{ $t('introPage.ul2.' + index) }}
-        </li>
-      </ul>
-      <p>
-        {{ $t('introPage.p3') }}
-      </p>
-      <!-- <h2>
-        {{ $t('introPage.section2Title') }}
-      </h2>
-      <p>
-        <a
-          target="_blank"
-          href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
-        >{{ $t('introPage.p4') }}</a>
-      </p> -->
-
       <div
         class="custom-callout"
       >
