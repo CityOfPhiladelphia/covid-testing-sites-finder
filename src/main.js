@@ -80,6 +80,8 @@ pinboard({
       'address',
       // 'keyword',
     ],
+    labelText:'address',
+    placeholderText:'address',
   },
   locationInfo: {
     siteName: function(item) {
