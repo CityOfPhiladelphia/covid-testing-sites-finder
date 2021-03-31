@@ -226,15 +226,37 @@ pinboard({
       include_units: true,
     },
   },
-  footer: {
-    'HowToUse': false,
-    'OtherLinks': {
-      locations: {
-        text: 'viewAccessible',
-        link: 'https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/data/testing/',
+  footer: [
+    {
+      type: "native",
+      href: "https://www.phila.gov/",
+      attrs: {
+        target: "_blank",
       },
+      text: "cityOfPhiladelphia",
     },
-  },
+    {
+      type: "native",
+      href: "#",
+      text: "about",
+    },
+    {
+      type: "native",
+      href: "https://www.phila.gov/feedback/",
+      attrs: {
+        target: "_blank",
+      },
+      text: "feedback",
+    },
+    {
+      type: "native",
+      href: "https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/data/testing/",
+      attrs: {
+        target: "_blank",
+      },
+      text: "viewAccessible",
+    },
+  ],
   infoCircles: {
     'symptomatic': {
       'html': '\
