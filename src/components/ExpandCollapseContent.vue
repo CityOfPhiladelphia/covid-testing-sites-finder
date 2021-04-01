@@ -154,7 +154,7 @@
             </div>
           </div>
           <hr
-            v-if="day.label != 'Sunday'"
+            v-if="day.label != lastDay"
             class="no-margins"
           >
         </div>
@@ -232,6 +232,9 @@ export default {
         }
       }
       return theFields;
+    },
+    lastDay() {
+      return this.days[this.days.length - 1].label;
     },
   },
   methods: {
