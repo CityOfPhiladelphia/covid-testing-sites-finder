@@ -320,6 +320,7 @@ export default {
       return theFields;
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     daysRapid() {
       let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
@@ -402,6 +403,11 @@ export default {
 
 =======
 >>>>>>> 14573f3 (changes to expand-collapse)
+=======
+    lastDay() {
+      return this.days[this.days.length - 1].label;
+    },
+>>>>>>> 2840592 (expand collapse content - fixes end line of table after last day if the last day is not sunday)
   },
   methods: {
     parseAddress(address) {
