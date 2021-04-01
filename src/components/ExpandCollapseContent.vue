@@ -97,8 +97,8 @@
         <div>{{ $t( 'eligibility' ) }}</div>
       </div>
       <div class="column is-paddingless">
-        <span>{{ $t( 'restrictions[\'' + item.attributes.testing_restrictions + '\']') }}</span>
-        <span>  {{ $t( 'notes[\'' + item.attributes.Notes + '\']') }}</span>
+        <span v-if="item.attributes.testing_restrictions">{{ $t( 'restrictions[\'' + item.attributes.testing_restrictions + '\']') }}  </span>
+        <span v-if="item.attributes.Notes">{{ $t( 'notes[\'' + item.attributes.Notes + '\']') }}</span>
       </div>
     </div>
     <hr class="no-margins">
