@@ -6,7 +6,7 @@ name: dev2 Push to S3
 on:
   push:
     branches:
-      - ui-details
+      - fix-refine
 
 jobs:
   build:

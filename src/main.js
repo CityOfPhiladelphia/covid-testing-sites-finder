@@ -100,67 +100,23 @@ pinboard({
   refine: {
     type: 'multipleFieldGroups',
     multipleFieldGroups: {
-      // daysOfOperation: {
-      //   'Monday': {
-      //     unique_key: 'day_Monday',
-      //     value: function(item) {
-      //       return item.attributes.Monday !== null;
-      //     },
-      //   },
-      //   'Tuesday': {
-      //     unique_key: 'day_Tuesday',
-      //     value: function(item) {
-      //       return item.attributes.Tuesday !== null;
-      //     },
-      //   },
-      //   'Wednesday': {
-      //     unique_key: 'day_Wednesday',
-      //     value: function(item) {
-      //       return item.attributes.Wednesday !== null;
-      //     },
-      //   },
-      //   'Thursday': {
-      //     unique_key: 'day_Thursday',
-      //     value: function(item) {
-      //       return item.attributes.Thursday !== null;
-      //     },
-      //   },
-      //   'Friday': {
-      //     unique_key: 'day_Friday',
-      //     value: function(item) {
-      //       return item.attributes.Friday !== null;
-      //     },
-      //   },
-      //   'Saturday': {
-      //     unique_key: 'day_Saturday',
-      //     value: function(item) {
-      //       return item.attributes.Saturday !== null;
-      //     },
-      //   },
-      //   'Sunday': {
-      //     unique_key: 'day_Sunday',
-      //     value: function(item) {
-      //       return item.attributes.Sunday !== null;
-      //     },
-      //   },
-      // },
       patientAge: {
-        '+18 years old': {
-          unique_key: 'year18',
+        'year18': {
+          unique_key: 'patientAge_year18',
           i18n_key: 'patientAge.year18',
           value: function(item) {
             return item.attributes.Age === 'year18';
           },
         },
-        '+14 years old': {
-          unique_key: 'year14',
+        'year14': {
+          unique_key: 'patientAge_year14',
           i18n_key: 'patientAge.year14',
           value: function(item) {
             return item.attributes.Age === 'year14';
           },
         },
-        'Offers pediatric care': {
-          unique_key: 'pedCare',
+        'pedCare': {
+          unique_key: 'patientAge_pedCare',
           i18n_key: 'patientAge.pedCare',
           value: function(item) {
             return item.attributes.Age === 'pedCare';
@@ -168,15 +124,15 @@ pinboard({
         },
       },
       refReq: {
-        'Yes': {
-          unique_key: 'referral_yes',
+        'yes': {
+          unique_key: 'refReq_yes',
           i18n_key: 'Yes',
           value: function(item) {
             return item.attributes.Referral === 'yes';
           },
         },
-        'No': {
-          unique_key: 'referral_no',
+        'no': {
+          unique_key: 'refReq_no',
           i18n_key: 'No',
           value: function(item) {
             return item.attributes.Referral === 'no';
@@ -184,15 +140,15 @@ pinboard({
         },
       },
       symptomatic: {
-        'Yes': {
-          unique_key: 'symptom_yes',
+        'yes': {
+          unique_key: 'symptomatic_yes',
           i18n_key: 'Yes',
           value: function(item) {
             return item.attributes.Symptoms === 'symptom';
           },
         },
-        'No': {
-          unique_key: 'symptom_no',
+        'no': {
+          unique_key: 'symptomatic_no',
           i18n_key: 'No',
           value: function(item) {
             return item.attributes.Symptoms === 'asymptom';
@@ -200,15 +156,15 @@ pinboard({
         },
       },
       process: {
-        'Drive thru': {
-          unique_key: 'dtwu_driveThru',
+        'driveThru': {
+          unique_key: 'process_driveThru',
           i18n_key: 'process.dt',
           value: function(item) {
             return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
           },
         },
-        'Walk up': {
-          unique_key: 'dtwu_walkUp',
+        'walkUp': {
+          unique_key: 'process_walkUp',
           i18n_key: 'process.wu',
           value: function(item) {
             return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
@@ -217,14 +173,14 @@ pinboard({
       },
       rapid: {
         'Yes': {
-          unique_key: 'rapid_testing_yes',
+          unique_key: 'rapid_yes',
           i18n_key: 'Yes',
           value: function(item) {
             return item.attributes.rapid_testing === 'Yes';
           },
         },
         'No': {
-          unique_key: 'rapid_testing_no',
+          unique_key: 'rapid_no',
           i18n_key: 'No',
           value: function(item) {
             return item.attributes.rapid_testing === 'No' || item.attributes.rapid_testing == null;

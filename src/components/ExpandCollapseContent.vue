@@ -367,7 +367,7 @@ export default {
           theFields.push(dayObject);
         }
       }
-      console.log('theFields:', theFields);
+      // console.log('theFields:', theFields);
       return theFields;
     },
 
