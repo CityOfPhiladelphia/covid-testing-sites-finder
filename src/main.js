@@ -172,14 +172,14 @@ pinboard({
         },
       },
       rapid: {
-        'Yes': {
+        'yes': {
           unique_key: 'rapid_yes',
           i18n_key: 'Yes',
           value: function(item) {
             return item.attributes.rapid_testing === 'Yes';
           },
         },
-        'No': {
+        'no': {
           unique_key: 'rapid_no',
           i18n_key: 'No',
           value: function(item) {
