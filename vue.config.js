@@ -1,9 +1,7 @@
 const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
-  filenameHashing: false,
-  // publicPath: "/covid-testing/dev2/",
-  // publicPath: "/covid-testing-sites/",
+  // filenameHashing: false,
   publicPath: process.env.VUE_APP_PUBLICPATH,
   configureWebpack: {
     plugins: [
