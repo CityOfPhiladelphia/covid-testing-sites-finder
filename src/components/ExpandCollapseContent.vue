@@ -152,31 +152,19 @@
                 {{ day.value }}
               </div>
             </div>
+
+            <div class="column is-paddingless">
+              <div>
+                {{ day.value }}
+              </div>
+            </div>
           </div>
-        </template>
-
-        <template
-          v-slot:component4
-          class="table-slot"
-        >
-          <vertical-table-light
-            class="print-padding"
-            :slots="component4VerticalTableSlots"
-            :options="component1VerticalTableOptions"
-          />
-        </template>
-
-        <template
-          v-slot:component5
-          class="table-slot"
-        >
-          <vertical-table-light
-            class="print-padding"
-            :slots="component5VerticalTableSlots"
-            :options="component1VerticalTableOptions"
-          />
-        </template>
-      </vertical-table-light>
+          <hr
+            v-if="day.label != lastDay"
+            class="no-margins"
+          >
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -205,75 +193,6 @@ export default {
       }
       return values;
     },
-<<<<<<< HEAD
-    mainVerticalTableSlots() {
-      let slots = {
-        id: 'mainTable',
-        fields: [
-          {
-            label: 'eligibility',
-            labelType: 'i18n',
-            valueType: 'component1',
-          },
-        ],
-      };
-      if (this.$props.item.attributes.Language_Spoken != null) {
-        let row2 = {
-          label: 'languages.languagesSpoken',
-          labelType: 'i18n',
-          valueType: 'component2',
-        };
-        slots.fields.push(row2);
-      }
-
-      if (this.$props.item.attributes.translation_services != null) {
-        let row3 = {
-          label: 'languages.translationServices',
-          labelType: 'i18n',
-          valueType: 'component3',
-        };
-        slots.fields.push(row3);
-      }
-
-      if (this.days.length > 0) {
-        let newField = {
-          label: 'testingHours',
-          labelType: 'i18n',
-          valueType: 'component4',
-        };
-        slots.fields.push(newField);
-      }
-
-      if (this.daysRapid.length > 0) {
-        let newField = {
-          label: 'rapid.category',
-          labelType: 'i18n',
-          valueType: 'component5',
-        };
-        slots.fields.push(newField);
-      }
-
-      return slots;
-    },
-    mainVerticalTableOptions() {
-      return {
-        styles: {
-          th: {
-            'vertical-align': 'top',
-            'font-size': '14px',
-            'min-width': '40px !important',
-            'max-width': '50px !important',
-            'width': '10% !important',
-          },
-          td: {
-            'font-size': '14px !important',
-          },
-        },
-      };
-    },
-=======
->>>>>>> 14573f3 (changes to expand-collapse)
-
     days() {
       let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
       let theFields = [];
@@ -319,95 +238,9 @@ export default {
       }
       return theFields;
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    daysRapid() {
-      let allDays = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
-      let theFields = [];
-      // let days = {};
-
-      let item = this.item;
-      let holidays = [];
-      let exceptions = [];
-      if (this.$config.holidays && this.$config.holidays.days) {
-        holidays = this.$config.holidays.days;
-      }
-      if (this.$config.holidays && this.$config.holidays.exceptions) {
-        exceptions = this.$config.holidays.exceptions;
-      }
-      // let siteName = this.getSiteName(this.item);
-
-      for (let [ index, day ] of allDays.entries()) {
-        let normallyOpen = item.attributes[day+'_rapid_tests'] != null;
-        let holidayToday = holidays.includes(day);
-        let yesterday = allDays[index-1];
-        let normallyOpenYesterday = item.attributes[yesterday] != null;
-        let holidayYesterday = holidays.includes(yesterday);
-        let siteIsException = exceptions.includes(this.getSiteName(this.item));
-
-        // if (this.item.attributes[day] != null){
-        if ((normallyOpen || (!siteIsException && holidayYesterday && normallyOpenYesterday)) && (!holidayToday || siteIsException)) {
-
-          let hours;
-          if ((normallyOpen && !holidayToday) || (normallyOpen && siteIsException)) {
-            // let value = day + '_rapid_tests';
-            // console.log('day:', day, 'value:', value);
-            hours = item.attributes[day+'_rapid_tests'];
-          } else if (!normallyOpen && holidayYesterday) {
-            // let value = yesterday + '_rapid_tests';
-            // console.log('yesterday:', yesterday, 'value:', value);
-            hours = item.attributes[yesterday+'_rapid_tests'];
-          }
-
-          let dayObject = {
-            label: day,
-            labelType: 'i18n',
-            value: hours,
-            // valueType: 'i18n',
-          };
-          theFields.push(dayObject);
-        }
-      }
-      // console.log('theFields:', theFields);
-      return theFields;
-    },
-
-    component4VerticalTableSlots() {
-      return {
-        id: 'compTable1',
-        fields: this.days,
-      };
-    },
-    component5VerticalTableSlots() {
-      return {
-        id: 'compTable1',
-        fields: this.daysRapid,
-      };
-    },
-    component1VerticalTableOptions() {
-      return {
-        styles: {
-          th: {
-            'font-size': '14px',
-            'min-width': '45px !important',
-            'max-width': '50px !important',
-            'width': '25% !important',
-          },
-          td: {
-            'font-size': '14px !important',
-          },
-        },
-      };
-    },
-
-=======
->>>>>>> 14573f3 (changes to expand-collapse)
-=======
     lastDay() {
       return this.days[this.days.length - 1].label;
     },
->>>>>>> 2840592 (expand collapse content - fixes end line of table after last day if the last day is not sunday)
   },
   methods: {
     parseAddress(address) {
