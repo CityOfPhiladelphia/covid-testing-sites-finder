@@ -77,12 +77,14 @@ pinboard({
     category: 'rf-covid',
   },
   searchBar: {
-    dropdown: [
-      'address',
-      // 'keyword',
-    ],
-    labelText:'address',
-    placeholderText:'address',
+    placeholder: 'Search by address',
+    searchTypes: [ 'address' ],
+    labelText:  {
+      address: 'Search by address',
+    },
+    placeholderText: {
+      address: 'Search by address',
+    },
   },
   locationInfo: {
     siteName: function(item) {
