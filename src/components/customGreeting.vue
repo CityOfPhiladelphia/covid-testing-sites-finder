@@ -9,9 +9,7 @@
           class="fa-3x fa-icon-class"
         />
       </div>
-      <div
-        class="column exclamation-details"
-      >
+      <div class="column exclamation-details">
         <div><b>{{ $t('beforeYouGo') }}:</b></div>
         <div>{{ $t('checkSite') }}</div>
       </div>
@@ -28,60 +26,38 @@
     <div
       class="main-area"
     >
-      <div class="container">
-        <h4 class="title is-4">
-          {{ $t('introPage.section2Title') }}
-        </h4>
-        <p>
-          <a
-            target="_blank"
-            href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19"
-          >{{ $t('introPage.p4') }}</a>
-        </p>
-      </div>
+      <p v-html="$t('introPage.p1')" />
 
-      <div class="container">
-        <h4 class="title is-4">
-          {{ $t('introPage.introTitle') }}
-        </h4>
-        <p
-          v-html="$t('introPage.p1')"
-        />
+      <h3>{{ $t('introPage.section1Title') }}</h3>
 
-        <ul>
-          <li
-            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
-            :key="index"
-          >
-            {{ $t('introPage.ul1.' + index) }}
-          </li>
-        </ul>
-      </div>
-
-      <div class="container">
-        <h4 class="title is-4">
-          {{ $t('introPage.section1Title') }}
-        </h4>
-        <p>
-          {{ $t('introPage.p2') }}
-        </p>
-        <ul>
-          <li
-            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul2"
-            :key="index"
-          >
-            {{ $t('introPage.ul2.' + index) }}
-          </li>
-        </ul>
-        <p>
-          {{ $t('introPage.p3') }}
-        </p>
-      </div>
-
+      <p v-html="$t('introPage.p2')" />
+      <h4>{{ $t('introPage.section2Title') }}</h4>
+      <p><b>{{ $t('introPage.p3') }}</b></p>
+      <ol>
+        <li
+          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ol1"
+          :key="index"
+        >
+          {{ $t('introPage.ol1.' + index) }}
+        </li>
+      </ol>
+      <p><b>{{ $t('introPage.p4') }}</b></p>
+      <p>{{ $t('introPage.p5') }}</p>
+      <p>{{ $t('introPage.p6') }}</p>
+      <p>{{ $t('introPage.p7') }}</p>
+      <ul>
+        <li
+          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
+          :key="index"
+        >
+          {{ $t('introPage.ul1.' + index) }}
+        </li>
+      </ul>
       <div
         class="custom-callout"
       >
         <p
+          class="no-margin"
           v-html="$t('introPage.callout1.p1')"
         />
       </div>
@@ -211,8 +187,9 @@ export default {
 
 <style scoped>
 
-  .main-area {
-    /* padding: 1rem; */
+
+  .custom-greeting {
+    padding: 2rem;
   }
 
   .container {
