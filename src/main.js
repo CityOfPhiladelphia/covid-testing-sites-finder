@@ -18,7 +18,12 @@ import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons/faCalendarAlt';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle';
-library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle);
+
+import { faTimes as farTimes } from '@fortawesome/pro-regular-svg-icons/faTimes';
+import { faPlus as farPlus } from '@fortawesome/pro-regular-svg-icons/faPlus';
+import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus';
+
+library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle, farTimes, farPlus, farMinus);
 
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
@@ -34,6 +39,8 @@ const customComps = {
   'expandCollapseContent': expandCollapseContent,
   'customGreeting': customGreeting,
 };
+
+import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 pinboard({
   alerts: {
@@ -73,6 +80,8 @@ pinboard({
     logoAlt: 'City of Philadelphia',
     type: 'covidTestingSites',
   },
+  retractableRefine: false,
+  dropdownRefine: false,
   gtag: {
     category: 'rf-covid',
   },
@@ -106,91 +115,105 @@ pinboard({
   },
   refine: {
     type: 'multipleFieldGroups',
+    columns: false,
     multipleFieldGroups: {
       patientAge: {
-        'year18': {
-          unique_key: 'patientAge_year18',
-          i18n_key: 'patientAge.year18',
-          value: function(item) {
-            return item.attributes.Age === 'year18';
+        dependent: {
+          'year18': {
+            unique_key: 'patientAge_year18',
+            i18n_key: 'patientAge.year18',
+            value: function(item) {
+              return item.attributes.Age === 'year18';
+            },
           },
-        },
-        'year14': {
-          unique_key: 'patientAge_year14',
-          i18n_key: 'patientAge.year14',
-          value: function(item) {
-            return item.attributes.Age === 'year14';
+          'year14': {
+            unique_key: 'patientAge_year14',
+            i18n_key: 'patientAge.year14',
+            value: function(item) {
+              return item.attributes.Age === 'year14';
+            },
           },
-        },
-        'pedCare': {
-          unique_key: 'patientAge_pedCare',
-          i18n_key: 'patientAge.pedCare',
-          value: function(item) {
-            return item.attributes.Age === 'pedCare';
+          'pedCare': {
+            unique_key: 'patientAge_pedCare',
+            i18n_key: 'patientAge.pedCare',
+            value: function(item) {
+              return item.attributes.Age === 'pedCare';
+            },
           },
         },
       },
       refReq: {
-        'yes': {
-          unique_key: 'refReq_yes',
-          i18n_key: 'Yes',
-          value: function(item) {
-            return item.attributes.Referral === 'yes';
+        dependent: {
+          'yes': {
+            unique_key: 'refReq_yes',
+            i18n_key: 'Yes',
+            value: function(item) {
+              return item.attributes.Referral === 'yes';
+            },
           },
-        },
-        'no': {
-          unique_key: 'refReq_no',
-          i18n_key: 'No',
-          value: function(item) {
-            return item.attributes.Referral === 'no';
+          'no': {
+            unique_key: 'refReq_no',
+            i18n_key: 'No',
+            value: function(item) {
+              return item.attributes.Referral === 'no';
+            },
           },
         },
       },
       symptomatic: {
-        'yes': {
-          unique_key: 'symptomatic_yes',
-          i18n_key: 'Yes',
-          value: function(item) {
-            return item.attributes.Symptoms === 'symptom';
-          },
+        tooltip: {
+          tip: 'tooltips.symptomatic',
         },
-        'no': {
-          unique_key: 'symptomatic_no',
-          i18n_key: 'No',
-          value: function(item) {
-            return item.attributes.Symptoms === 'asymptom';
+        dependent: {
+          'yes': {
+            unique_key: 'symptomatic_yes',
+            i18n_key: 'Yes',
+            value: function(item) {
+              return item.attributes.Symptoms === 'symptom';
+            },
+          },
+          'no': {
+            unique_key: 'symptomatic_no',
+            i18n_key: 'No',
+            value: function(item) {
+              return item.attributes.Symptoms === 'asymptom';
+            },
           },
         },
       },
       process: {
-        'driveThru': {
-          unique_key: 'process_driveThru',
-          i18n_key: 'process.dt',
-          value: function(item) {
-            return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
+        dependent: {
+          'driveThru': {
+            unique_key: 'process_driveThru',
+            i18n_key: 'process.dt',
+            value: function(item) {
+              return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
+            },
           },
-        },
-        'walkUp': {
-          unique_key: 'process_walkUp',
-          i18n_key: 'process.wu',
-          value: function(item) {
-            return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
+          'walkUp': {
+            unique_key: 'process_walkUp',
+            i18n_key: 'process.wu',
+            value: function(item) {
+              return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
+            },
           },
         },
       },
       rapid: {
-        'yes': {
-          unique_key: 'rapid_yes',
-          i18n_key: 'Yes',
-          value: function(item) {
-            return item.attributes.rapid_testing === 'Yes';
+        dependent: {
+          'yes': {
+            unique_key: 'rapid_yes',
+            i18n_key: 'Yes',
+            value: function(item) {
+              return item.attributes.rapid_testing === 'Yes';
+            },
           },
-        },
-        'no': {
-          unique_key: 'rapid_no',
-          i18n_key: 'No',
-          value: function(item) {
-            return item.attributes.rapid_testing === 'No' || item.attributes.rapid_testing == null;
+          'no': {
+            unique_key: 'rapid_no',
+            i18n_key: 'No',
+            value: function(item) {
+              return item.attributes.rapid_testing === 'No' || item.attributes.rapid_testing == null;
+            },
           },
         },
       },
@@ -511,6 +534,9 @@ pinboard({
             cityHC: 'City health center',
             homelessServices: 'Homeless services',
           },
+          tooltips: {
+            symptomatic: 'For more information, see Symptoms of coronavirus (CDC)',
+          },
         },
         'es': {
           language: 'Español',
@@ -636,6 +662,9 @@ pinboard({
             urgentCare: 'Atención urgente',
             cityHC: 'Centro de salud de la ciudad',
             homelessServices: 'Servicios para personas sin hogar',
+          },
+          tooltips: {
+            symptomatic: 'Spanish For more information, see Symptoms of coronavirus (CDC)',
           },
         },
         'ch': {
