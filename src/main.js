@@ -19,11 +19,13 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons/faBuilding';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle';
 
+import { faAngleDown as farAngleDown } from '@fortawesome/pro-regular-svg-icons/faAngleDown';
+import { faAngleUp as farAngleUp } from '@fortawesome/pro-regular-svg-icons/faAngleUp';
 import { faTimes as farTimes } from '@fortawesome/pro-regular-svg-icons/faTimes';
 import { faPlus as farPlus } from '@fortawesome/pro-regular-svg-icons/faPlus';
 import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus';
 
-library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle, farTimes, farPlus, farMinus);
+library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle, farAngleDown, farAngleUp, farTimes, farPlus, farMinus);
 
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
