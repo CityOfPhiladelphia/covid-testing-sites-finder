@@ -66,15 +66,15 @@ export default {
   website: 'Trang web',
   process: {
     category: 'Quy trình',
-    dt: 'Lái xe qua',
-    wu: 'Đi bộ vào',
+    driveThru: 'Lái xe qua',
+    walkUp: 'Đi bộ vào',
     both: 'Lái xe qua & đi bộ vào',
   },
   symptomatic: {
     category: 'Phải có triệu chứng',
     null: '',
-    symptom: 'Phải có triệu chứng',
-    asymptom: 'Các triệu chứng không bắt buộc (nhưng có thể bị phơi nhiễm)',
+    yes: 'Phải có triệu chứng',
+    no: 'Các triệu chứng không bắt buộc (nhưng có thể bị phơi nhiễm)',
   },
   rapid: {
     category: 'Kiểm tra nhanh',

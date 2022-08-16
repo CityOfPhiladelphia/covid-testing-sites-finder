@@ -66,15 +66,15 @@ export default {
   website: 'Sitio web',
   process: {
     category: 'Proceso',
-    dt: 'En vehículo',
-    wu: 'A pie',
+    driveThru: 'En vehículo',
+    walkUp: 'A pie',
     both: 'En vehículo y a pie',
   },
   symptomatic: {
     category: 'Debe ser sintomático',
     null: '',
-    symptom: 'Debe ser sintomático',
-    asymptom: 'No se requieren síntomas (pero la exposición puede ser)',
+    yes: 'Debe ser sintomático',
+    no: 'No se requieren síntomas (pero la exposición puede ser)',
   },
   rapid: {
     category: 'Pruebas rápidas',

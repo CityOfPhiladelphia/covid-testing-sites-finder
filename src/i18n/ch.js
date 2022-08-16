@@ -66,15 +66,15 @@ export default {
   website: '网站',
   process: {
     category: '流程',
-    dt: '免下车',
-    wu: '步行',
+    driveThru: '免下车',
+    walkUp: '步行',
     both: '免下车和步行',
   },
   symptomatic: {
     category: '必须有症状',
     null: '',
-    symptom: '必须有症状',
-    asymptom: '不需要症状（但可能需要暴露）',
+    yes: '必须有症状',
+    no: '不需要症状（但可能需要暴露）',
   },
   rapid: {
     category: '快速测试',

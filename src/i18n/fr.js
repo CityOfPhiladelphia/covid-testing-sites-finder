@@ -89,15 +89,15 @@ export default {
   website: 'Site Web',
   process:{
     category: 'Processus',
-    dt: 'Drive',
-    wu: 'Guichet',
+    driveThru: 'Drive',
+    walkUp: 'Guichet',
     both: 'Drive et guichet',
   },
   symptomatic: {
     category: 'Sans symptômes',
     null: '',
-    symptom: 'Sans symptômes',
-    asymptom: 'Symptômes non requis (mais une exposition peut l\'être)',
+    yes: 'Sans symptômes',
+    no: 'Symptômes non requis (mais une exposition peut l\'être)',
   },
   rapid: {
     category: 'Test de diagnostic rapide',

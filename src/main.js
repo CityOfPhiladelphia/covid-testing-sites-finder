@@ -191,14 +191,14 @@ pinboard({
         dependent: {
           'driveThru': {
             unique_key: 'process_driveThru',
-            i18n_key: 'process.dt',
+            i18n_key: 'process.driveThru',
             value: function(item) {
               return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
             },
           },
           'walkUp': {
             unique_key: 'process_walkUp',
-            i18n_key: 'process.wu',
+            i18n_key: 'process.walkUp',
             value: function(item) {
               return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
             },
@@ -208,14 +208,14 @@ pinboard({
       rapid: {
         dependent: {
           'yes': {
-            unique_key: 'rapid_yes',
+            unique_key: 'rapid_Yes',
             i18n_key: 'Yes',
             value: function(item) {
               return item.attributes.rapid_testing === 'Yes';
             },
           },
           'no': {
-            unique_key: 'rapid_no',
+            unique_key: 'rapid_No',
             i18n_key: 'No',
             value: function(item) {
               return item.attributes.rapid_testing === 'No' || item.attributes.rapid_testing == null;

@@ -67,19 +67,20 @@ export default {
   website: 'Website',
   process: {
     category: 'Process',
-    dt: 'Drive-thru',
-    wu: 'Walk-up',
+    driveThru: 'Drive-thru',
+    walkUp: 'Walk-up',
     both: 'Drive-thru & walk-up',
   },
   symptomatic: {
     category: 'Must be symptomatic',
     null: '',
-    symptom: 'Must be symptomatic',
-    asymptom: 'Symptoms not required (but exposure might be)',
+    yes: 'Must be symptomatic',
+    no: 'Symptoms not required (but exposure might be)',
   },
   rapid: {
     category: 'Rapid testing',
     Yes: 'Offers rapid testing (call for details)',
+    No: 'No rapid testing',
   },
   refReq: {
     category: 'Referral required',
