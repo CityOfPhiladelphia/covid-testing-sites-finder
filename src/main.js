@@ -207,14 +207,14 @@ pinboard({
       },
       rapid: {
         dependent: {
-          'yes': {
+          'Yes': {
             unique_key: 'rapid_Yes',
             i18n_key: 'Yes',
             value: function(item) {
               return item.attributes.rapid_testing === 'Yes';
             },
           },
-          'no': {
+          'No': {
             unique_key: 'rapid_No',
             i18n_key: 'No',
             value: function(item) {
