@@ -270,7 +270,7 @@ pinboard({
     },
     {
       type: "native",
-      href: "#",
+      href: "https://www.phila.gov/covid-testing-sites/",
       text: "about",
     },
     {
