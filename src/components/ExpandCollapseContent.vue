@@ -57,7 +57,7 @@
             <div
               v-if="item.attributes.drive_thruwalk_up !== null"
             >
-              {{ $t( 'process[\'' + item.attributes.drive_thruwalk_up + '\']') }}
+              {{ $t( 'process[\'' + getDriveThruWalkUpValue(item.attributes.drive_thruwalk_up) + '\']') }}
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
 
             <!-- v-if="item.attributes.drive_thruwalk_up !== null" -->
             <div>
-              {{ $t( 'symptomatic[\'' + item.attributes.Symptoms + '\']') }}
+              {{ $t( 'symptomatic[\'' + getSymptomaticValue(item.attributes.Symptoms) + '\']') }}
             </div>
           </div>
         </div>
@@ -246,6 +246,28 @@ export default {
     parseAddress(address) {
       const formattedAddress = address.replace(/(Phila.+)/g, city => `<div>${city}</div>`).replace(/^\d+\s[A-z]+\s[A-z]+/g, lineOne => `<div>${lineOne}</div>`).replace(/,/, '');
       return formattedAddress;
+    },
+    getDriveThruWalkUpValue(dbValue) {
+      let value;
+      if (dbValue == 'wu') {
+        value = 'walkUp';
+      } else if (dbValue == 'dt') {
+        value = 'driveThru';
+      } else if (dbValue == 'both') {
+        value = 'both';
+      }
+      return value;
+    },
+    getSymptomaticValue(dbValue) {
+      let value;
+      if (dbValue == 'symptom') {
+        value = 'yes';
+      } else if (dbValue == 'asymptom') {
+        value = 'no';
+      } else {
+        value = null;
+      }
+      return value;
     },
   },
 };
