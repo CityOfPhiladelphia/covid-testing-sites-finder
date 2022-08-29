@@ -153,11 +153,11 @@
               </div>
             </div>
 
-            <div class="column is-paddingless">
+            <!-- <div class="column is-paddingless">
               <div>
                 {{ day.value }}
               </div>
-            </div>
+            </div> -->
           </div>
           <hr
             v-if="day.label != lastDay"
