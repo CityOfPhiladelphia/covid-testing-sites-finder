@@ -33,7 +33,7 @@ export default {
     },
   },
   languages: {
-    languagesSpoken: '所用语言：',
+    languagesSpoken: '所用语言',
     english: '英语',
     spanish: '西班牙语',
     chinese: '中文',

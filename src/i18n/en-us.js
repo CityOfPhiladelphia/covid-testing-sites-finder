@@ -34,7 +34,7 @@ export default {
     },
   },
   languages: {
-    languagesSpoken: 'Languages spoken:',
+    languagesSpoken: 'Languages spoken',
     english: 'English',
     spanish: 'Spanish',
     chinese: 'Chinese',

@@ -24,8 +24,9 @@ import { faAngleUp as farAngleUp } from '@fortawesome/pro-regular-svg-icons/faAn
 import { faTimes as farTimes } from '@fortawesome/pro-regular-svg-icons/faTimes';
 import { faPlus as farPlus } from '@fortawesome/pro-regular-svg-icons/faPlus';
 import { faMinus as farMinus } from '@fortawesome/pro-regular-svg-icons/faMinus';
+import { faLanguage } from '@fortawesome/free-solid-svg-icons/faLanguage';
 
-library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle, farAngleDown, farAngleUp, farTimes, farPlus, farMinus);
+library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle, farAngleDown, farAngleUp, farTimes, farPlus, farMinus, faLanguage);
 
 // import pinboard
 import pinboard from '@phila/pinboard/src/main.js';
