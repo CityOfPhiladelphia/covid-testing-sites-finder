@@ -33,7 +33,7 @@ export default {
     },
   },
   languages: {
-    languagesSpoken: 'Các ngôn ngữ được nói:',
+    languagesSpoken: 'Các ngôn ngữ được nói',
     english: 'Tiếng Anh',
     spanish: 'Tiếng Tây Ban Nha',
     chinese: 'Tiếng Trung Quốc',

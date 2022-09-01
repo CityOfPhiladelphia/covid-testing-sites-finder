@@ -56,7 +56,7 @@ export default {
   //   p4: 'Pour trouver un site mobile ou un site ponctuel de dépistage à Philadelphie',
   // },
   languages: {
-    languagesSpoken: 'Langues parlées:',
+    languagesSpoken: 'Langues parlées',
     english: 'Anglais',
     spanish: 'Espagnol',
     chinese: 'Chinois',

@@ -33,7 +33,7 @@ export default {
     },
   },
   languages: {
-    languagesSpoken: 'Idiomas que se hablan:',
+    languagesSpoken: 'Idiomas que se hablan',
     english: 'Inglés',
     spanish: 'Español',
     chinese: 'Chino',

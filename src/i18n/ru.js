@@ -33,7 +33,7 @@ export default {
     },
   },
   languages: {
-    languagesSpoken: 'Доступные языки:',
+    languagesSpoken: 'Доступные языки',
     english: 'Английский',
     spanish: 'Испанский',
     chinese: 'Китайский',
