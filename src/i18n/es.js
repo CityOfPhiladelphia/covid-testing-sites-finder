@@ -125,6 +125,6 @@ export default {
     homelessServices: 'Servicios para personas sin hogar',
   },
   tooltips: {
-    symptomatic: 'Spanish For more information, see Symptoms of coronavirus (CDC)',
+    symptomatic: 'For more information, see Symptoms of coronavirus (CDC)',
   },
 };
