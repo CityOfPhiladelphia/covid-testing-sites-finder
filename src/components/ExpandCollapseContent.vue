@@ -218,7 +218,7 @@ export default {
           return element.trim();
         });
       } else {
-        results = [];
+        results = [ 'English' ];
       }
       return results;
     },
