@@ -232,12 +232,14 @@ export default {
           i18nLabel: 'daysOfOperation',
           field: 'label',
           thClass: 'th-black-class',
+          tdClass: 'table-text',
         },
         {
           label: 'Schedule',
           i18nLabel: 'testingHours',
           field: 'value',
           thClass: 'th-black-class',
+          tdClass: 'table-text',
         },
       ];
       let rows = [];
@@ -332,11 +334,3 @@ export default {
 };
 
 </script>
-
-<style scoped>
-
-ul {
-  list-style-type: disc;
-}
-
-</style>

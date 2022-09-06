@@ -6,7 +6,7 @@
       <div class="column is-narrow">
         <font-awesome-icon
           icon="exclamation-triangle"
-          class="fa-3x fa-icon-class"
+          class="fa-3x"
         />
       </div>
       <div class="column exclamation-details">
@@ -185,94 +185,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
+@import "../../node_modules/@phila/pinboard/src/assets/scss/customGreeting.scss";
 
-  .custom-greeting {
-    padding: 2rem;
-  }
+.custom-callout {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+}
 
-  .container {
-    margin-bottom: 1rem;
-  }
-
-  .custom-callout {
-    border-style: solid;
-    border-width: 1px;
-    padding: 10px;
-  }
-
-  .open-list-button {
-    text-transform: uppercase;
-    background-color: #0f4d90;
-    color: #ffffff;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-  }
-
-  .exclamation-holder {
-    padding: 1rem;
-    margin-bottom: 0px;
-  }
-
-  .fa-icon-class {
-    margin: 0 auto;
-    display: block;
-  }
-
-  .exclamation-details {
-    margin-left: 14px;
-  }
-
-  .mb-panel-topics-greeting {
-    padding-top: 20px;
-  }
-
-  /* .greeting {
-    font-size: 20px;
-    color: #444;
-    padding: 14px;
-  } */
-
-  /* ul {
-    margin-bottom: 6px;
-  } */
-
-  /* h1 {
-    font-size: 20px;
-  }
-
-  h2 {
-    font-size: 16px;
-  } */
-
-  /* .custom-greeting {
-    padding: 1rem;
-  } */
-
-  /* .greeting-error {
-    border-left-color: #ff0000;
-  } */
-
-  /* .custom-section {
-    margin-left: 8px;
-    margin-top: 4px;
-  } */
-
-  /* .custom-ul {
-    margin-left: 4rem;
-    font-size: 14px;
-  } */
-
-  /*medium*/
-  /*make this scroll on medium screens*/
-  /*REVIEW this is a little hacky. the 120px shouldn't be hard-coded.*/
-  /* @media screen and (min-width: 750px) {
-    .mb-panel-topics-greeting {
-      height: calc(100vh - 120px);
-      overflow: auto;
-    }
-  } */
 </style>
