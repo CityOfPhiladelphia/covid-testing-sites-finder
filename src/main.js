@@ -125,7 +125,7 @@ pinboard({
     columns: false,
     multipleFieldGroups: {
       patientAge: {
-        dependent: {
+        checkbox: {
           'year18': {
             unique_key: 'patientAge_year18',
             i18n_key: 'patientAge.year18',
@@ -150,7 +150,7 @@ pinboard({
         },
       },
       refReq: {
-        dependent: {
+        checkbox: {
           'yes': {
             unique_key: 'refReq_yes',
             i18n_key: 'Yes',
@@ -171,7 +171,7 @@ pinboard({
         tooltip: {
           tip: 'tooltips.symptomatic',
         },
-        dependent: {
+        checkbox: {
           'yes': {
             unique_key: 'symptomatic_yes',
             i18n_key: 'Yes',
@@ -189,7 +189,7 @@ pinboard({
         },
       },
       process: {
-        dependent: {
+        checkbox: {
           'driveThru': {
             unique_key: 'process_driveThru',
             i18n_key: 'process.driveThru',
@@ -207,7 +207,7 @@ pinboard({
         },
       },
       rapid: {
-        dependent: {
+        checkbox: {
           'Yes': {
             unique_key: 'rapid_Yes',
             i18n_key: 'Yes',
