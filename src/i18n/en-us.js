@@ -7,7 +7,6 @@ export default {
     bannerAlert: 'Many sites are closed today. Check specific site details for more information.',
     noResults: 'No testing site was found within your search. Please call your health care provider or visit the Department of Public Health’s COVID-19 website for information about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
   },
-  viewAccessible: 'View accessible list of site locations',
   introPage: {
     p1: 'There are permanent and temporary testing sites throughout Philadelphia. <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">Find out who should get tested</a>.',
     section1Title: 'Find a pop-up testing event',
