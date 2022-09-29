@@ -124,4 +124,7 @@ export default {
     cityHC: '市健康中心',
     homelessServices: '无家可归者服务',
   },
+  tooltips: {
+    symptomatic: '如需了解更多信息，请查阅冠状病毒病的症状 (CDC)',
+  },
 };

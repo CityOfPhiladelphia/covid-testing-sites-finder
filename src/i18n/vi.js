@@ -124,4 +124,7 @@ export default {
     cityHC: 'Trung tâm y tế thành phố',
     homelessServices: 'Dịch vụ vô gia cư',
   },
+  tooltips: {
+    symptomatic: 'Để biết thêm thông tin, hãy xem Các triệu chứng bệnh khi nhiễm vi-rút corona (CDC)',
+  },
 };

@@ -32,29 +32,6 @@ export default {
       p1: '<b>Des questions ?</b> Appelez votre prestataire de soins de santé ou consultez notre FAQ sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">le dépistage à Philadelphie.</a>',
     },
   },
-  // introPage:{
-  //   introTitle: 'À propos de cet outil de recherche',
-  //   p1: 'Cet outil peut vous aider à trouver où recevoir un test de dépistage du COVID-19 à Philadelphie. (Voir notre FAQ pour toute information complémentaire sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">les personnes qui devraient se faire tester</a>.) Vous pouvez :',
-  //   ul1:{
-  //     li1: 'Rechercher un site de dépistage à partir d’une adresse.',
-  //     li2: 'Cliquer sur la carte pour obtenir des informations concernant un site particulier.',
-  //     li3: 'Filtrer la liste des sites selon les balises données.',
-  //   },
-  //   section1Title: 'Découvrir si vous pouvez en bénéficier.',
-  //   p2: 'Tous les sites de dépistage sont gratuits. On vous demandera une pièce d’identité et peut-être des informations sur votre assurance-santé. Si vous n’avez pas de pièce d’identité ou d’assurance-santé, vous pouvez tout de même vous faire dépister. En outre, certains sites peuvent :',
-  //   ul2:{
-  //     li1: 'Limiter les tests de dépistage aux personnes qui remplissent certains critères.',
-  //     li2: 'Exiger un rendez-vous.',
-  //     li3: 'Exiger une référence de votre médecin traitant.',
-  //     li4: 'Demander que vous restiez dans votre véhicule (pour les sites en drive).',
-  //   },
-  //   p3: 'Consultez les détails spécifiques à un site sur la carte. Appelez ensuite le prestataire ou consultez son site Web avant de vous déplacer.',
-  //   callout1:{
-  //     p1: '<b>Des questions ?</b> Veuillez appeler votre prestataire de soins de santé ou consulter notre FAQ sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">les tests de dépistage à Philadelphie.</a>',
-  //   },
-  //   section2Title: 'Sites mobiles et ponctuels de dépistage',
-  //   p4: 'Pour trouver un site mobile ou un site ponctuel de dépistage à Philadelphie',
-  // },
   languages: {
     languagesSpoken: 'Langues parlées',
     english: 'Anglais',
@@ -146,5 +123,8 @@ export default {
     urgentCare: 'Clinique de soins d’urgence',
     cityHC: 'Centre médical de la ville',
     homelessServices: 'Services aux sans-abri',
+  },
+  tooltips: {
+    symptomatic: 'Pour plus d\'informations, voir Symptômes du coronavirus (CDC).',
   },
 };
