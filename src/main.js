@@ -87,11 +87,14 @@ pinboard({
     logoAlt: 'City of Philadelphia',
     type: 'covidTestingSites',
   },
-  retractableRefine: false,
-  dropdownRefine: false,
   gtag: {
     category: 'rf-covid',
   },
+  allowPrint: true,
+  showBuffers: true,
+  resetDataOnGeocode: true,
+  retractableRefine: false,
+  dropdownRefine: false,
   searchBar: {
     placeholder: 'Search by address',
     searchTypes: [ 'address' ],
