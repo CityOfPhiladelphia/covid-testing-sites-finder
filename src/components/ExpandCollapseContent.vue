@@ -1,6 +1,10 @@
 <template>
   <div class="main-content">
-    <div class="columns">
+    <print-share-section
+      :item="item"
+    />
+
+    <div class="columns top-section">
       <div class="column">
         <div
           v-if="item.attributes.testing_location_address"
@@ -193,10 +197,13 @@ import SharedFunctions from './mixins/SharedFunctions.vue';
 import { VueGoodTable } from 'vue-good-table';
 // import 'vue-good-table/dist/vue-good-table.css';
 
+import PrintShareSection from '@phila/pinboard/src/components/PrintShareSection';
+
 export default {
   name: 'ExpandCollapseContent',
   components: {
     VueGoodTable,
+    PrintShareSection,
   },
   mixins: [ SharedFunctions ],
   props: {
