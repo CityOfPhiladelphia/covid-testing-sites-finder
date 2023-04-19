@@ -49,6 +49,7 @@ console.log('main.js i18n:', i18n);
 import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 pinboard({
+  publicPath: process.env.VUE_APP_PUBLICPATH,
   i18n: i18n.i18n,
   alerts: {
     modal: {
