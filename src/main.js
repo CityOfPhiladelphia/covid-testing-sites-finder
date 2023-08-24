@@ -87,20 +87,32 @@ pinboard({
     logoAlt: 'City of Philadelphia',
     type: 'covidTestingSites',
   },
-  retractableRefine: false,
+  anySearch: true,
+  allowZipcodeSearch: true,
+  allowPrint: true,
+  showBuffers: true,
+  resetDataOnGeocode: true,
+  retractableRefine: true,
   dropdownRefine: false,
   gtag: {
     category: 'rf-covid',
   },
   searchBar: {
-    placeholder: 'Search by address',
-    searchTypes: [ 'address' ],
-    labelText:  {
-      address: 'Search by address',
-    },
-    placeholderText: {
-      address: 'Search by address',
-    },
+    searchTypes: [
+      'address',
+      // 'zipcode',
+      // 'keyword',
+    ],
+    searchDistance: 3,
+    fuseThreshold: 0.4,
+    // placeholder: 'Search by address',
+    // searchTypes: [ 'address' ],
+    // labelText:  {
+    //   address: 'Search by address',
+    // },
+    // placeholderText: {
+    //   address: 'Search by address',
+    // },
   },
   locationInfo: {
     siteName: function(item) {
