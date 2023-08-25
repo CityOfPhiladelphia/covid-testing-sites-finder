@@ -81,6 +81,11 @@ export default {
     Yes: 'Offers rapid testing (call for details)',
     No: 'No rapid testing',
   },
+  pcr: {
+    category: 'PCR testing',
+    yes: 'Offers PCR testing (call for details)',
+    no: 'No PCR testing',
+  },
   refReq: {
     category: 'Referral required',
     null: '',

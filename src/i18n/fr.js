@@ -80,6 +80,11 @@ export default {
     category: 'Test de diagnostic rapide',
     Yes: 'Le site propose des tests rapides (appelez pour plus de détails)',
   },
+  pcr: {
+    category: 'Tests PCR',
+    yes: 'Propose des tests PCR (appelez pour plus de détails)',
+    // no: 'No PCR testing',
+  },
   refReq: {
     category: 'Référence du médecin exigée',
     null: '',

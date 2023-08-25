@@ -236,6 +236,24 @@ pinboard({
           },
         },
       },
+      pcr: {
+        checkbox: {
+          'Yes': {
+            unique_key: 'pcr_Yes',
+            i18n_key: 'Yes',
+            value: function(item) {
+              return item.attributes.pcr_testing === 'yes';
+            },
+          },
+          'No': {
+            unique_key: 'pcr_No',
+            i18n_key: 'No',
+            value: function(item) {
+              return item.attributes.pcr_testing === 'no' || item.attributes.pcr_testing == null;
+            },
+          },
+        },
+      },
     },
   },
   markerType: 'circle-marker',

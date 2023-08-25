@@ -80,6 +80,11 @@ export default {
     category: '快速测试',
     Yes: '网站提供快速测试（请致电获取详细信息）',
   },
+  pcr: {
+    category: '聚合酶链反应检测',
+    yes: '提供 PCR 检测（详情请致电）',
+    // no: 'No PCR testing',
+  },
   refReq: {
     category: '需要转介',
     null: '',

@@ -89,6 +89,10 @@
               {{ $t( 'rapid[\'' + item.attributes.rapid_testing + '\']') }}
             </div>
 
+            <div v-if="item.attributes.pcr_testing">
+              {{ $t( 'pcr[\'' + item.attributes.pcr_testing + '\']') }}
+            </div>
+
             <div>
               {{ $t( 'refReq[\'' + item.attributes.Referral + '\']') }}
             </div>

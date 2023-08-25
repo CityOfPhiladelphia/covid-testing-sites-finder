@@ -80,6 +80,11 @@ export default {
     category: 'Kiểm tra nhanh',
     Yes: 'Cung cấp thử nghiệm nhanh (gọi để biết chi tiết)',
   },
+  pcr: {
+    category: 'Xét nghiệm PCR',
+    yes: 'Cung cấp xét nghiệm PCR (gọi để biết chi tiết)',
+    // no: 'No PCR testing',
+  },
   refReq: {
     category: 'Phải có giấy giới thiệu',
     null: '',
