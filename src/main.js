@@ -162,7 +162,7 @@ pinboard({
         },
       },
       refReq: {
-        checkbox: {
+        radio: {
           'yes': {
             unique_key: 'refReq_yes',
             i18n_key: 'Yes',
@@ -183,7 +183,7 @@ pinboard({
         tooltip: {
           tip: 'tooltips.symptomatic',
         },
-        checkbox: {
+        radio: {
           'yes': {
             unique_key: 'symptomatic_yes',
             i18n_key: 'Yes',
@@ -219,7 +219,7 @@ pinboard({
         },
       },
       rapid: {
-        checkbox: {
+        radio: {
           'Yes': {
             unique_key: 'rapid_Yes',
             i18n_key: 'Yes',
@@ -237,7 +237,7 @@ pinboard({
         },
       },
       pcr: {
-        checkbox: {
+        radio: {
           'Yes': {
             unique_key: 'pcr_Yes',
             i18n_key: 'Yes',
