@@ -50,6 +50,7 @@ import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
 
 pinboard({
   i18n: i18n.i18n,
+  publicPath: process.env.VUE_APP_PUBLICPATH,
   alerts: {
     modal: {
       enabled: false,
