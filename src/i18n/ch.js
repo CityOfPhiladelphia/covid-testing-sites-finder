@@ -79,6 +79,14 @@ export default {
   rapid: {
     category: '快速测试',
     Yes: '网站提供快速测试（请致电获取详细信息）',
+    No: '没有快速测试',
+  },
+  pcr: {
+    category: '聚合酶链反应检测',
+    yes: '提供 PCR 检测（详情请致电）',
+    Yes: '提供 PCR 检测（详情请致电）',
+    no: '没有 PCR 检测',
+    No: '没有 PCR 检测',
   },
   refReq: {
     category: '需要转介',
