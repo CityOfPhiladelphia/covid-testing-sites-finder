@@ -6,7 +6,7 @@
     "local": "vue-cli-service serve --mode local",
     "serve": "vue-cli-service serve",
     "build:development": "vue-cli-service build --mode development",
-    "build:production": "vue-cli-service build",
+    "build:production": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint",
     "lintFix": "vue-cli-service lint --fix"
   },
