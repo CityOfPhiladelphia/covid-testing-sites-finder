@@ -87,20 +87,32 @@ pinboard({
     logoAlt: 'City of Philadelphia',
     type: 'covidTestingSites',
   },
-  retractableRefine: false,
+  anySearch: true,
+  allowZipcodeSearch: true,
+  allowPrint: true,
+  showBuffers: true,
+  resetDataOnGeocode: true,
+  retractableRefine: true,
   dropdownRefine: false,
   gtag: {
     category: 'rf-covid',
   },
   searchBar: {
-    placeholder: 'Search by address',
-    searchTypes: [ 'address' ],
-    labelText:  {
-      address: 'Search by address',
-    },
-    placeholderText: {
-      address: 'Search by address',
-    },
+    searchTypes: [
+      'address',
+      // 'zipcode',
+      // 'keyword',
+    ],
+    searchDistance: 3,
+    fuseThreshold: 0.4,
+    // placeholder: 'Search by address',
+    // searchTypes: [ 'address' ],
+    // labelText:  {
+    //   address: 'Search by address',
+    // },
+    // placeholderText: {
+    //   address: 'Search by address',
+    // },
   },
   locationInfo: {
     siteName: function(item) {
@@ -150,7 +162,7 @@ pinboard({
         },
       },
       refReq: {
-        checkbox: {
+        radio: {
           'yes': {
             unique_key: 'refReq_yes',
             i18n_key: 'Yes',
@@ -171,7 +183,7 @@ pinboard({
         tooltip: {
           tip: 'tooltips.symptomatic',
         },
-        checkbox: {
+        radio: {
           'yes': {
             unique_key: 'symptomatic_yes',
             i18n_key: 'Yes',
@@ -207,7 +219,7 @@ pinboard({
         },
       },
       rapid: {
-        checkbox: {
+        radio: {
           'Yes': {
             unique_key: 'rapid_Yes',
             i18n_key: 'Yes',
@@ -220,6 +232,24 @@ pinboard({
             i18n_key: 'No',
             value: function(item) {
               return item.attributes.rapid_testing === 'No' || item.attributes.rapid_testing == null;
+            },
+          },
+        },
+      },
+      pcr: {
+        radio: {
+          'Yes': {
+            unique_key: 'pcr_Yes',
+            i18n_key: 'Yes',
+            value: function(item) {
+              return item.attributes.pcr_testing === 'yes';
+            },
+          },
+          'No': {
+            unique_key: 'pcr_No',
+            i18n_key: 'No',
+            value: function(item) {
+              return item.attributes.pcr_testing === 'no' || item.attributes.pcr_testing == null;
             },
           },
         },

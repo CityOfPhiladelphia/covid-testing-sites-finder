@@ -79,6 +79,14 @@ export default {
   rapid: {
     category: 'Kiểm tra nhanh',
     Yes: 'Cung cấp thử nghiệm nhanh (gọi để biết chi tiết)',
+    No: 'Không có thử nghiệm nhanh',
+  },
+  pcr: {
+    category: 'Xét nghiệm PCR',
+    yes: 'Cung cấp xét nghiệm PCR (gọi để biết chi tiết)',
+    Yes: 'Cung cấp xét nghiệm PCR (gọi để biết chi tiết)',
+    no: 'Không có xét nghiệm PCR',
+    No: 'Không có xét nghiệm PCR',
   },
   refReq: {
     category: 'Phải có giấy giới thiệu',
