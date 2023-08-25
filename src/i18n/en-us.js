@@ -84,7 +84,9 @@ export default {
   pcr: {
     category: 'PCR testing',
     yes: 'Offers PCR testing (call for details)',
+    Yes: 'Offers PCR testing (call for details)',
     no: 'No PCR testing',
+    No: 'No PCR testing',
   },
   refReq: {
     category: 'Referral required',

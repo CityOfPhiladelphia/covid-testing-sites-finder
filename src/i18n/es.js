@@ -78,12 +78,15 @@ export default {
   },
   rapid: {
     category: 'Pruebas rápidas',
-    Yes: 'Ofrece pruebas rápidas (llamar para obtener detalles)',
+    yes: 'Ofrece pruebas rápidas (llamar para obtener detalles)',
+    No: 'Sin pruebas rápidas',
   },
   pcr: {
     category: 'Pruebas de PCR',
     yes: 'Ofrece pruebas de PCR (llame para obtener más información)',
-    // no: 'No PCR testing',
+    Yes: 'Ofrece pruebas de PCR (llame para obtener más información)',
+    no: 'Sin pruebas de PCR',
+    No: 'Sin pruebas de PCR',
   },
   refReq: {
     category: 'Se necesita derivación',
