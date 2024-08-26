@@ -26,11 +26,11 @@
     <div
       class="main-area"
     >
-      <p v-html="$t('introPage.p1')" />
+      <!-- <p v-html="$t('introPage.p1')" />
 
       <h3>{{ $t('introPage.section1Title') }}</h3>
 
-      <p v-html="$t('introPage.p2')" />
+      <p v-html="$t('introPage.p2')" /> -->
       <h4>{{ $t('introPage.section2Title') }}</h4>
       <p><b>{{ $t('introPage.p3') }}</b></p>
       <ol>
