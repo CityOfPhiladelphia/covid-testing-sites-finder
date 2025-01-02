@@ -43,7 +43,7 @@ const customComps = markRaw({
 });
 
 import i18n from './i18n/i18n';
-console.log('main.js i18n:', i18n);
+console.log('main.js i18n:', i18n, 'publicPath:', import.meta.env.VITE_PUBLICPATH);
 
 let $config = {
   publicPath: import.meta.env.VITE_PUBLICPATH,
