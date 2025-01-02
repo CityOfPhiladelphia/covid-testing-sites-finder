@@ -46,8 +46,8 @@ import i18n from './i18n/i18n';
 console.log('main.js i18n:', i18n);
 
 let $config = {
+  publicPath: import.meta.env.VITE_PUBLICPATH,
   i18n: i18n.i18n,
-  publicPath: import.meta.env.VUE_APP_PUBLICPATH,
   alerts: {
     modal: {
       enabled: false,
