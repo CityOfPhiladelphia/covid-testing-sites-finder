@@ -169,7 +169,7 @@ const languagesSpokenValueWithComma = (option, index) => {
 </script>
 
 <template>
-  <div class="main-content">
+  <div class="main-ec-content">
     <div class="columns">
       <div class="column">
         <div

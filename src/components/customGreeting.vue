@@ -150,31 +150,37 @@ const getCounts = () => {
     <div
       class="main-area"
     >
-      <h4>{{ $t('introPage.section2Title') }}</h4>
-      <p><b>{{ $t('introPage.p3') }}</b></p>
-      <ol>
-        <li
-          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ol1"
-          :key="index"
-        >
-          {{ $t('introPage.ol1.' + index) }}
-        </li>
-      </ol>
-      <p><b>{{ $t('introPage.p4') }}</b></p>
+      <h3>{{ $t('introPage.section2Title') }}</h3>
+      <p>{{ $t('introPage.p3') }}</p>
+      <div class="intro-list">
+        <ol>
+          <li
+            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ol1"
+            :key="index"
+          >
+            {{ $t('introPage.ol1.' + index) }}
+          </li>
+        </ol>
+      </div>
+      <h3>{{ $t('introPage.p4') }}</h3>
       <p>{{ $t('introPage.p5') }}</p>
+      <br>
       <p>{{ $t('introPage.p6') }}</p>
+      <br>
       <p>{{ $t('introPage.p7') }}</p>
-      <ul>
-        <li
-          v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
-          :key="index"
-        >
-          {{ $t('introPage.ul1.' + index) }}
-        </li>
-      </ul>
-      <div
-        class="custom-callout"
-      >
+
+      <div class="intro-list">
+        <ul>
+          <li
+            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
+            :key="index"
+          >
+            {{ $t('introPage.ul1.' + index) }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="custom-callout">
         <p
           class="no-margin"
           v-html="$t('introPage.callout1.p1')"
