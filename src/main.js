@@ -266,15 +266,6 @@ let $config = {
       'circle-stroke-color': 'white',
     },
   },
-  cyclomedia: {
-    enabled: false,
-    // measurementAllowed: false,
-    // popoutAble: true,
-    // recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
-    // username: import.meta.env.VITE_CYCLOMEDIA_USERNAME,
-    // password: import.meta.env.VITE_CYCLOMEDIA_PASSWORD,
-    // apiKey: import.meta.env.VITE_CYCLOMEDIA_API_KEY,
-  },
   dataSources: {
     covidTestingSites,
   },
@@ -322,14 +313,6 @@ let $config = {
       text: "viewAccessible",
     },
   ],
-  // infoCircles: {
-  //   'symptomatic': {
-  //     'html': '\
-  //     <div class="full-div">For more information, see <a class="white-font-link" target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">\
-  //     Symptoms of coronavirus (CDC)</a>.</div>\
-  //     ',
-  //   },
-  // },
 };
 
 console.log('$config:', $config);
