@@ -5,11 +5,10 @@
 // (we might not need to use axios with new vue async tools)
 // if that is not needed, we can move this info to main.js
 
-// turn off console logging in production
-if (process.env.NODE_ENV === 'production') {
-  console.log = console.info = console.debug = console.error = function () {};
+import isMac from './util/is-mac';
+if (isMac()) {
+  import('./assets/mac-style.scss')
 }
-console.log('main.js process.env.NODE_ENV:', process.env.NODE_ENV, 'process.env.VUE_APP_PUBLICPATH:', process.env.VUE_APP_PUBLICPATH);
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -29,28 +28,26 @@ import { faLanguage } from '@fortawesome/free-solid-svg-icons/faLanguage';
 library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle, farAngleDown, farAngleUp, farTimes, farPlus, farMinus, faLanguage);
 
 // import pinboard
-import pinboard from '@phila/pinboard/src/main.js';
+import pinboard from '@phila/pinboard';
+// import pinboard from '../node_modules/@phila/pinboard/src/main.js';
+import '../node_modules/@phila/pinboard/dist/style.css';
 
 // data-sources
 import covidTestingSites from './data-sources/covid-testing-sites';
-// import compiled from './data-sources/compiled';
-var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@6126861722cee9384694742363d1661e771493b9/config.js';
 
 import expandCollapseContent from './components/ExpandCollapseContent.vue';
 import customGreeting from './components/customGreeting.vue';
-const customComps = {
+const customComps = markRaw({
   'expandCollapseContent': expandCollapseContent,
   'customGreeting': customGreeting,
-};
+});
 
 import i18n from './i18n/i18n';
-console.log('main.js i18n:', i18n);
+console.log('main.js i18n:', i18n, 'publicPath:', import.meta.env.VITE_PUBLICPATH);
 
-import '@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css';
-
-pinboard({
+let $config = {
+  publicPath: import.meta.env.VITE_PUBLICPATH,
   i18n: i18n.i18n,
-  publicPath: process.env.VUE_APP_PUBLICPATH,
   alerts: {
     modal: {
       enabled: false,
@@ -116,21 +113,21 @@ pinboard({
     // },
   },
   locationInfo: {
+    siteNameField: 'testing_location_nameoperator',
     siteName: function(item) {
-      return item.attributes.testing_location_nameoperator;
+      return item.properties.testing_location_nameoperator;
     },
   },
   customComps,
-  baseConfig: BASE_CONFIG_URL,
   // holidays: {
   //   days: ['Monday'],
   // },
   hiddenRefine: {
     City: function(item) {
-      return item.attributes.City === 'Philadelphia';
+      return item.properties.City === 'Philadelphia';
     },
     Visibility: function(item) {
-      return item.attributes.Visibility === 'pub' || item.attributes.Visibility === 'For Public View';
+      return item.properties.Visibility === 'pub' || item.properties.Visibility === 'For Public View';
     },
   },
   refine: {
@@ -143,21 +140,21 @@ pinboard({
             unique_key: 'patientAge_year18',
             i18n_key: 'patientAge.year18',
             value: function(item) {
-              return item.attributes.Age === 'year18';
+              return item.properties.Age === 'year18';
             },
           },
           'year14': {
             unique_key: 'patientAge_year14',
             i18n_key: 'patientAge.year14',
             value: function(item) {
-              return item.attributes.Age === 'year14';
+              return item.properties.Age === 'year14';
             },
           },
           'pedCare': {
             unique_key: 'patientAge_pedCare',
             i18n_key: 'patientAge.pedCare',
             value: function(item) {
-              return item.attributes.Age === 'pedCare';
+              return item.properties.Age === 'pedCare';
             },
           },
         },
@@ -168,14 +165,14 @@ pinboard({
             unique_key: 'refReq_yes',
             i18n_key: 'Yes',
             value: function(item) {
-              return item.attributes.Referral === 'yes';
+              return item.properties.Referral === 'yes';
             },
           },
           'no': {
             unique_key: 'refReq_no',
             i18n_key: 'No',
             value: function(item) {
-              return item.attributes.Referral === 'no';
+              return item.properties.Referral === 'no';
             },
           },
         },
@@ -189,14 +186,14 @@ pinboard({
             unique_key: 'symptomatic_yes',
             i18n_key: 'Yes',
             value: function(item) {
-              return item.attributes.Symptoms === 'symptom';
+              return item.properties.Symptoms === 'symptom';
             },
           },
           'no': {
             unique_key: 'symptomatic_no',
             i18n_key: 'No',
             value: function(item) {
-              return item.attributes.Symptoms === 'asymptom';
+              return item.properties.Symptoms === 'asymptom';
             },
           },
         },
@@ -207,14 +204,14 @@ pinboard({
             unique_key: 'process_driveThru',
             i18n_key: 'process.driveThru',
             value: function(item) {
-              return [ 'dt', 'both' ].includes(item.attributes.drive_thruwalk_up);
+              return [ 'dt', 'both' ].includes(item.properties.drive_thruwalk_up);
             },
           },
           'walkUp': {
             unique_key: 'process_walkUp',
             i18n_key: 'process.walkUp',
             value: function(item) {
-              return [ 'wu', 'both' ].includes(item.attributes.drive_thruwalk_up);
+              return [ 'wu', 'both' ].includes(item.properties.drive_thruwalk_up);
             },
           },
         },
@@ -225,14 +222,14 @@ pinboard({
             unique_key: 'rapid_Yes',
             i18n_key: 'Yes',
             value: function(item) {
-              return item.attributes.rapid_testing === 'Yes';
+              return item.properties.rapid_testing === 'Yes';
             },
           },
           'No': {
             unique_key: 'rapid_No',
             i18n_key: 'No',
             value: function(item) {
-              return item.attributes.rapid_testing === 'No' || item.attributes.rapid_testing == null;
+              return item.properties.rapid_testing === 'No' || item.properties.rapid_testing == null;
             },
           },
         },
@@ -243,14 +240,14 @@ pinboard({
             unique_key: 'pcr_Yes',
             i18n_key: 'Yes',
             value: function(item) {
-              return item.attributes.pcr_testing === 'yes';
+              return item.properties.pcr_testing === 'yes';
             },
           },
           'No': {
             unique_key: 'pcr_No',
             i18n_key: 'No',
             value: function(item) {
-              return item.attributes.pcr_testing === 'no' || item.attributes.pcr_testing == null;
+              return item.properties.pcr_testing === 'no' || item.properties.pcr_testing == null;
             },
           },
         },
@@ -258,22 +255,16 @@ pinboard({
     },
   },
   markerType: 'circle-marker',
-  circleMarkers:{
-    color: '#FF9D14',
-    weight: 0,
-    radius: 8,
-    mobileRadius: 12,
-    size: 16,
-    mobileSize: 20,
-  },
-  cyclomedia: {
-    enabled: false,
-    measurementAllowed: false,
-    popoutAble: true,
-    recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
-    username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
-    password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
-    apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
+  mapLayer: {
+    id: 'resources',
+    source: 'resources',
+    type: 'circle',
+    paint: {
+      'circle-radius': 7,
+      'circle-color': '#FF9D14',
+      'circle-stroke-width': 1,
+      'circle-stroke-color': 'white',
+    },
   },
   dataSources: {
     covidTestingSites,
@@ -322,119 +313,9 @@ pinboard({
       text: "viewAccessible",
     },
   ],
-  infoCircles: {
-    'symptomatic': {
-      'html': '\
-      <div class="full-div">For more information, see <a class="white-font-link" target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">\
-      Symptoms of coronavirus (CDC)</a>.</div>\
-      ',
-    },
-  },
-  map: {
-    // type: 'leaflet',
-    type: 'mapbox',
-    // tiles: 'hosted',
-    containerClass: 'map-container',
-    defaultBasemap: 'pwd',
-    center: [ -75.163471, 39.953338 ],
-    minZoom: 11,
-    maxZoom: 25,
-    shouldInitialize: true,
+};
 
-    zoom: 12,
-    geocodeZoom: 15,
-    imagery: {
-      enabled: false,
-    },
-    basemaps: {
-      pwd: {
-        url: 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer',
-        tiledLayers: [
-          'cityBasemapLabels',
-        ],
-        type: 'featuremap',
-        attribution: 'Parcels: Philadelphia Water',
-      },
-    },
-    tiledLayers: {
-      cityBasemapLabels: {
-        url: 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer',
-        zIndex: '3',
-      },
-    },
-  },
-  // mbStyle: 'mapbox://styles/ajrothwell/ck6gz6rmk04681ir1fdmagq5h',
-  mbStyle: {
-    version: 8,
-    sources: {
-      pwd: {
-        tiles: [
-          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
-        ],
-        type: 'raster',
-        tileSize: 256,
-      },
-    },
-    layers: [
-      {
-        id: 'pwd',
-        type: 'raster',
-        source: 'pwd',
-      },
-    ],
-  },
-  basemapSources: {
-    pwd: {
-      source: {
-        tiles: [
-          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
-          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
-        ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'pwd',
-        type: 'raster',
-      },
-    },
-    imagery2019: {
-      source: {
-        tiles: [
-          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_2019_3in/MapServer/tile/{z}/{y}/{x}',
-          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
-        ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'imagery2019',
-        type: 'raster',
-      },
-    },
-  },
-  basemapLabelSources:{
-    cityBasemapLabels: {
-      source: {
-        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}' ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'cityBasemapLabels',
-        type: 'raster',
-      },
-    },
-    imageryBasemapLabels: {
-      source: {
-        tiles: [ 'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_Labels/MapServer/tile/{z}/{y}/{x}' ],
-        type: 'raster',
-        tileSize: 256,
-      },
-      layer: {
-        id: 'imageryBasemapLabels',
-        type: 'raster',
-      },
-    },
-  },
-});
+console.log('$config:', $config);
+
+pinboard($config);
+export default $config;
