@@ -289,12 +289,12 @@ let $config = {
       attrs: {
         target: "_blank",
       },
-      text: "cityOfPhiladelphia",
+      text: "app.cityOfPhiladelphia",
     },
     {
       type: "native",
       href: "https://www.phila.gov/covid-testing-sites/",
-      text: "about",
+      text: "app.about",
     },
     {
       type: "native",
@@ -302,7 +302,7 @@ let $config = {
       attrs: {
         target: "_blank",
       },
-      text: "feedback",
+      text: "app.feedback",
     },
     {
       type: "native",
@@ -310,7 +310,7 @@ let $config = {
       attrs: {
         target: "_blank",
       },
-      text: "viewAccessible",
+      text: "app.viewAccessible",
     },
   ],
 };
