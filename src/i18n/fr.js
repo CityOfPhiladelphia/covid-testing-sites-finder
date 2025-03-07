@@ -29,6 +29,7 @@ export default {
       li4: 'Demandent que vous restiez dans votre voiture (sites drive-thru)',
     },
     p8: "Il vous sera demandé de présenter une pièce d'identité et des informations sur l'assurance maladie. Une pièce d'identité sera requise pour passer un test. Si vous n'avez pas d'assurance maladie, vous pourrez peut-être tout de même vous faire tester en payant de votre poche. De plus, certains sites peuvent nécessiter un rendez-vous.",
+    p9: "Il vous sera demandé de présenter une pièce d'identité et des informations sur l'assurance maladie. Une pièce d'identité sera requise pour passer un test. Si vous n'avez pas d'assurance maladie, vous pourrez peut-être tout de même vous faire tester en payant de votre poche.",
     callout1:{
       p1: '<b>Des questions ?</b> Appelez votre prestataire de soins de santé ou consultez notre FAQ sur <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">le dépistage à Philadelphie.</a>',
     },
