@@ -28,6 +28,7 @@ export default {
       li3: 'exigir una derivación de su médico;',
       li4: 'pedirle que se quede dentro de su automóvil (en los sitios donde se realiza la prueba en vehículos).',
     },
+    p8: 'Se le pedirá una identificación y también se le pedirá información sobre el seguro médico. Se requerirá una identificación para recibir la prueba. Si no tienes seguro médico, es posible que aún puedas hacerte la prueba pagando de tu bolsillo. Además, algunos centros pueden requerir una cita.',
     callout1: {
       p1: '<b>¿Tiene preguntas?</b> Llame a su proveedor de atención médica o consulte nuestras preguntas frecuentes (FAQ) sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
     },

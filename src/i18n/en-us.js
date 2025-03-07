@@ -28,6 +28,7 @@ export default {
       li3: 'Require a referral from your doctor.',
       li4: 'Ask you to stay in your car (for drive-thru sites).',
     },
+    p8: 'You will be asked for identification and will also be asked for health insurance information. Identification will be required to receive a test. If you don’t have health insurance, you may still be able to receive a test by paying out-of-pocket. In addition, some sites may require an appointment.',
     callout1: {
       p1: '<b>Questions?</b> Call your health care provider or see our FAQ about <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">getting tested in Philadelphia</a>.',
     },
