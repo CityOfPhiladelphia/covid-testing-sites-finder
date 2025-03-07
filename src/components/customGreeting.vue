@@ -163,7 +163,9 @@ const getCounts = () => {
         </ol>
       </div>
       <h3>{{ $t('introPage.p4') }}</h3>
-      <p>{{ $t('introPage.p5') }}</p>
+      <p>{{ $t('introPage.p8') }}</p>
+      <br>
+      <!-- <p>{{ $t('introPage.p5') }}</p>
       <br>
       <p>{{ $t('introPage.p6') }}</p>
       <br>
@@ -178,7 +180,7 @@ const getCounts = () => {
             {{ $t('introPage.ul1.' + index) }}
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <div class="custom-callout">
         <p
