@@ -29,6 +29,7 @@ export default {
       li4: 'Yêu cầu bạn ngồi trong xe (đối với các địa điểm cho phép lái xe qua).',
     },
     p8: 'Bạn sẽ được yêu cầu nhận dạng và cũng sẽ được yêu cầu cung cấp thông tin bảo hiểm y tế. Giấy tờ tùy thân sẽ được yêu cầu để nhận được một bài kiểm tra. Nếu bạn không có bảo hiểm y tế, bạn vẫn có thể nhận được một bài kiểm tra bằng cách trả tiền tự trả tiền. Ngoài ra, một số trang web có thể yêu cầu một cuộc hẹn.',
+    p9: 'Bạn sẽ được yêu cầu nhận dạng và cũng sẽ được yêu cầu cung cấp thông tin bảo hiểm y tế. Giấy tờ tùy thân sẽ được yêu cầu để nhận được một bài kiểm tra. Nếu bạn không có bảo hiểm y tế, bạn vẫn có thể nhận được một bài kiểm tra bằng cách trả tiền tự trả tiền.',
     callout1: {
       p1: '<b>Có thắc mắc?</b> Gọi cho nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn hoặc xem Các Câu hỏi Thường gặp của chúng tôi về <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">đi xét nghiệm ở Philadelphia</a>.',
     },
