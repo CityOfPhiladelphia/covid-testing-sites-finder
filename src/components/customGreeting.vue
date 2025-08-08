@@ -13,7 +13,7 @@ const props = defineProps({
 
 // const sections = ref({});
 // const subsections = ref({});
-    
+
 // computed
 // const i18nEnabled = computed(() => {
 //   if (this.$config.i18n) {
@@ -155,7 +155,7 @@ const getCounts = () => {
       <div class="intro-list">
         <ol>
           <li
-            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ol1"
+            v-for="(item, index) in $config.i18n.data.messages['en'].introPage.ol1"
             :key="index"
           >
             {{ $t('introPage.ol1.' + index) }}
@@ -174,7 +174,7 @@ const getCounts = () => {
       <div class="intro-list">
         <ul>
           <li
-            v-for="(item, index) in $config.i18n.data.messages['en-US'].introPage.ul1"
+            v-for="(item, index) in $config.i18n.data.messages['en'].introPage.ul1"
             :key="index"
           >
             {{ $t('introPage.ul1.' + index) }}
