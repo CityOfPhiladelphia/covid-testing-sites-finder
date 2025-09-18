@@ -19,7 +19,7 @@ const languagesSpoken = computed(() => {
   let values = [];
   let results;
   if (props.item.properties.Language_Spoken) {
-    console.log('in languagesSpoken computed, props.item.properties.LANGUAGE:', props.item.properties.language);
+    console.log('in languagesSpoken computed, props.item.properties.LANGUAGE:', props.item.properties.Language_Spoken);
     values = props.item.properties.Language_Spoken.split(',');
     results = values.map(element => {
       return element.trim();
@@ -148,7 +148,7 @@ const languagesSpokenValueWithComma = (option, index) => {
   console.log('languagesSpokenValueWithComma, option:', option, 'index:', index);
   let languagesList = languagesSpoken.value;
   // let value = this.$i18n.messages[this.i18nLocale].languages[option.trim().toLowerCase()];
-  let value = t(option.trim().toLowerCase());
+  let value = t(`languages.${option.trim().toLowerCase()}`);
   let finalValue;
   if (value) {
     if (index !== languagesList.length-1) {

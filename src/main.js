@@ -32,7 +32,7 @@ import pinboard from '@phila/pinboard';
 import '../node_modules/@phila/pinboard/dist/style.css';
 // OR
 // use this if running off linked package
-// import pinboard from '../node_modules/@phila/pinboard/src/main.js';
+// import pinboard from '../../vue3-pinboard/';
 
 // data-sources
 import covidTestingSites from './data-sources/covid-testing-sites';
