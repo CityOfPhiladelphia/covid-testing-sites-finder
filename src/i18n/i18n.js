@@ -1,5 +1,5 @@
 
-import en from './en-us';
+import en from './en';
 import es from './es';
 import ch from './ch';
 import vi from './vi';
