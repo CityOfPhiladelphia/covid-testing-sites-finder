@@ -29,7 +29,7 @@ library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle
 
 // use these if running off unlinked package
 import pinboard from '@phila/pinboard';
-import '../node_modules/@phila/pinboard/dist/style.css';
+import '../node_modules/@phila/pinboard/dist/index.css';
 // OR
 // use this if running off linked package
 // import pinboard from '../../vue3-pinboard/';
@@ -166,14 +166,14 @@ let $config = {
         radio: {
           'yes': {
             unique_key: 'refReq_yes',
-            i18n_key: 'Yes',
+            i18n_key: 'radio.Yes',
             value: function(item) {
               return item.properties.Referral === 'yes';
             },
           },
           'no': {
             unique_key: 'refReq_no',
-            i18n_key: 'No',
+            i18n_key: 'radio.No',
             value: function(item) {
               return item.properties.Referral === 'no';
             },
@@ -187,14 +187,14 @@ let $config = {
         radio: {
           'yes': {
             unique_key: 'symptomatic_yes',
-            i18n_key: 'Yes',
+            i18n_key: 'radio.Yes',
             value: function(item) {
               return item.properties.Symptoms === 'symptom';
             },
           },
           'no': {
             unique_key: 'symptomatic_no',
-            i18n_key: 'No',
+            i18n_key: 'radio.No',
             value: function(item) {
               return item.properties.Symptoms === 'asymptom';
             },
@@ -223,14 +223,14 @@ let $config = {
         radio: {
           'Yes': {
             unique_key: 'rapid_Yes',
-            i18n_key: 'Yes',
+            i18n_key: 'radio.Yes',
             value: function(item) {
               return item.properties.rapid_testing === 'Yes';
             },
           },
           'No': {
             unique_key: 'rapid_No',
-            i18n_key: 'No',
+            i18n_key: 'radio.No',
             value: function(item) {
               return item.properties.rapid_testing === 'No' || item.properties.rapid_testing == null;
             },
@@ -241,14 +241,14 @@ let $config = {
         radio: {
           'Yes': {
             unique_key: 'pcr_Yes',
-            i18n_key: 'Yes',
+            i18n_key: 'radio.Yes',
             value: function(item) {
               return item.properties.pcr_testing === 'yes';
             },
           },
           'No': {
             unique_key: 'pcr_No',
-            i18n_key: 'No',
+            i18n_key: 'radio.No',
             value: function(item) {
               return item.properties.pcr_testing === 'no' || item.properties.pcr_testing == null;
             },

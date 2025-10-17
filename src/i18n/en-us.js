@@ -62,8 +62,6 @@ export default {
   Saturday: 'Saturday',
   Sunday: 'Sunday',
   // access: 'Process',
-  Yes: 'Yes',
-  No: 'No',
   Unknown: 'Unknown',
   website: 'Website',
   process: {
@@ -71,6 +69,10 @@ export default {
     driveThru: 'Drive-thru',
     walkUp: 'Walk-up',
     both: 'Drive-thru & walk-up',
+  },
+  radio: {
+    Yes: 'Yes',
+    No: 'No'
   },
   symptomatic: {
     category: 'Must be symptomatic',
@@ -103,7 +105,7 @@ export default {
     year18: '+18 years old',
     pedCare: 'Offers pediatric testing',
   },
-  panelText:{
+  panelText: {
     p1: 'If you are unable to get a COVID-19 test through your health care provider, this tool can help you find a test within the City of Philadelphia.',
   },
   restrictions: {
@@ -116,7 +118,7 @@ export default {
     telemed: 'A telemedicine visit is required before testing at this site.',
     onlineQuest: 'An online questionnaire must be completed before visiting this site.',
   },
-  notes:{
+  notes: {
     schedApp: 'Appointments are required for testing.',
     refReq: 'Referral required.',
     schedAppRefReq: 'Appointment and referral required.',
