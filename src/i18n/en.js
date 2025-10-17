@@ -1,5 +1,4 @@
-
-export default {
+export default{
   "app": {
     "title": "COVID-19 testing sites",
     "subtitle": "Find a COVID-19 test near you",

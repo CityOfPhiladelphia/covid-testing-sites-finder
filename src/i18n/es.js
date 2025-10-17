@@ -1,139 +1,138 @@
-
-export default {
-  app: {
-    title: 'Lugares donde se realizan pruebas de COVID-19',
-    subtitle: 'Encuentre un lugar cercano para hacerse la prueba de COVID-19.',
-    bannerAlert: 'Muchos lugares están cerrados hoy. Consulte los detalles específicos del lugar para obtener más información.',
-    noResults: 'No se encontró un lugar donde se realicen pruebas que coincida con su búsqueda. Llame a su proveedor de atención médica o visite el sitio web sobre COVID-19 del Departamento de Salud Pública para obtener información sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
+export default{
+  "app": {
+    "title": "Sitios de pruebas de COVID-19",
+    "subtitle": "Encuentre una prueba de COVID-19 cerca de usted",
+    "bannerAlert": "Muchos sitios están cerrados hoy. Consulte los detalles específicos del sitio para obtener más información.",
+    "noResults": "No se encontró ningún sitio de prueba en su búsqueda. Llame a su proveedor de atención médica o visite el sitio web sobre la COVID-19 del Departamento de Salud Pública para obtener información sobre cómo <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>hacerse la prueba en Filadelfia</a>."
   },
-  introPage: {
-    p1: 'Hay sitios de pruebas permanentes y temporales en toda Filadelfia. <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">Averigüe quién debe hacerse la prueba</a>.',
-    section1Title: 'Encuentre un evento emergente de pruebas',
-    p2: 'Los eventos emergentes se realizan en lugares temporales y no se muestran en el mapa. <a href="https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19" target="_blank">Revise el evento en el calendario para obtener más detalles</a>.',
-    section2Title: 'Encuentre un centro de pruebas',
-    p3: 'Utilice este buscador para:',
-    ol1: {
-      li1: 'localizar un sitio de pruebas de COVID-19 en Filadelfia;',
-      li2: 'seleccionar la ubicación en el mapa para obtener detalles;',
-      li3: 'ponerse en contacto con el proveedor antes de ir a hacer la prueba.',
+  "introPage": {
+    "p1": "Hay centros de pruebas permanentes y temporales en toda Filadelfia. <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>Averigüe quién debe hacerse la prueba</a>.",
+    "section1Title": "Encuentra un evento de prueba emergente",
+    "p2": "Los eventos emergentes se organizan en ubicaciones temporales y no se muestran en el mapa. <a href='https://www.phila.gov/the-latest/all-events/?category=Mobile%20testing%20sites%20for%20COVID-19' target='_blank'>Consulta el evento del calendario para obtener más información</a>.",
+    "section2Title": "Encuentre un sitio de prueba",
+    "p3": "Usa este buscador para:",
+    "ol1": {
+      "li1": "Busque un centro de pruebas de COVID-19 en Filadelfia.",
+      "li2": "Selecciona la ubicación en el mapa para obtener más información.",
+      "li3": "Comuníquese con el proveedor antes de hacerse una prueba."
     },
-    p4: 'Qué esperar en un sitio de pruebas',
-    p5: 'No tendrá que pagar de su bolsillo para hacerse una prueba. Sin embargo, algunos sitios pueden facturar a su seguro un cargo por visita.',
-    p6: 'En el sitio de pruebas, se le pedirá que se identifique y es posible que también se le soliciten los datos de su seguro médico. Si no tiene la información, igual puede hacerse la prueba.',
-    p7: 'Algunos sitios pueden:',
-    ul1: {
-      li1: 'limitar las pruebas a las personas que cumplan ciertos criterios;',
-      li2: 'exigir una cita;',
-      li3: 'exigir una derivación de su médico;',
-      li4: 'pedirle que se quede dentro de su automóvil (en los sitios donde se realiza la prueba en vehículos).',
+    "p4": "Qué esperar en un sitio de prueba",
+    "p5": "No tendrá que pagar de su bolsillo para hacerse la prueba. Sin embargo, algunos centros pueden cobrarle a su seguro una tarifa de visita.",
+    "p6": "En el sitio, se le pedirá una identificación y es posible que también se le pida información sobre el seguro médico. Si no los tiene, aún puede hacerse una prueba.",
+    "p7": "Algunos sitios pueden:",
+    "ul1": {
+      "li1": "Limite las pruebas a las personas que cumplan con ciertos criterios.",
+      "li2": "Requerir una cita.",
+      "li3": "Exija una remisión de su médico."
     },
-    p8: 'Se le pedirá una identificación y también se le pedirá información sobre el seguro médico. Se requerirá una identificación para recibir la prueba. Si no tienes seguro médico, es posible que aún puedas hacerte la prueba pagando de tu bolsillo. Además, algunos centros pueden requerir una cita.',
-    p9: 'Se le pedirá una identificación y también se le pedirá información sobre el seguro médico. Se requerirá una identificación para recibir la prueba. Si no tienes seguro médico, es posible que aún puedas hacerte la prueba pagando de tu bolsillo.',
-    callout1: {
-      p1: '<b>¿Tiene preguntas?</b> Llame a su proveedor de atención médica o consulte nuestras preguntas frecuentes (FAQ) sobre <a href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested" target="_blank">cómo hacerse la prueba en Filadelfia</a>.',
-    },
+    "p8": "Se le pedirá una identificación y también se le pedirá información sobre el seguro médico. Se requerirá una identificación para recibir la prueba. Si no tienes seguro médico, es posible que aún puedas hacerte la prueba pagando de tu bolsillo. Además, algunos centros pueden requerir una cita.",
+    "p9": "Se le pedirá una identificación y también se le pedirá información sobre el seguro médico. Se requerirá una identificación para recibir la prueba. Si no tienes seguro médico, es posible que aún puedas hacerte la prueba pagando de tu bolsillo.",
+    "callout1": {
+      "p1": "<b>¿Preguntas?</b> Llame a su proveedor de atención médica o consulte nuestras preguntas frecuentes sobre cómo <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>hacerse la prueba en Filadelfia</a>."
+    }
   },
-  languages: {
-    languagesSpoken: 'Idiomas que se hablan',
-    english: 'Inglés',
-    spanish: 'Español',
-    chinese: 'Chino',
-    french: 'Francés',
-    arabic: 'Arábe',
-    hindi: 'Hindi',
-    algerian: 'Argelino',
-    russian: 'Ruso',
-    translationServices: 'Servicios telefónicos de interpretación:',
+  "languages": {
+    "languagesSpoken": "Idiomas hablados",
+    "english": "Inglés",
+    "spanish": "española",
+    "chinese": "chino",
+    "french": "francesa",
+    "arabic": "árabe",
+    "hindi": "hindi",
+    "algerian": "argelino",
+    "russian": "rusa",
+    "translationServices": "Servicios de interpretación telefónica:"
   },
-  address: 'spanish address',
-  keyword: 'spanish keyword',
-  beforeYouGo: 'Antes de ir',
-  checkSite: 'Verifique la información específica del lugar. Los horarios pueden cambiar.',
-  hoursVary: 'Los horarios y la disponibilidad pueden variar.',
-  eligibility: 'Detalles',
-  testingHours: 'Horario para las pruebas',
-  daysOfOperation: 'Días de servicio',
-  Monday: 'Lunes',
-  Tuesday: 'Martes',
-  Wednesday: 'Miércoles',
-  Thursday: 'Jueves',
-  Friday: 'Viernes',
-  Saturday: 'Sábado',
-  Sunday: 'Domingo',
-  // access: 'Acceso',
-  Yes: 'Sí',
-  No: 'No',
-  Unknown: 'Desconocido',
-  website: 'Sitio web',
-  process: {
-    category: 'Proceso',
-    driveThru: 'En vehículo',
-    walkUp: 'A pie',
-    both: 'En vehículo y a pie',
+  "address": "dirección",
+  "keyword": "palabra clave",
+  "beforeYouGo": "Antes de que te vayas",
+  "checkSite": "Consulta la información específica del sitio. Los horarios están sujetos a cambios.",
+  "hoursVary": "Los horarios y la disponibilidad varían.",
+  "eligibility": "Detalles",
+  "testingHours": "Horas de prueba",
+  "daysOfOperation": "Días de operación",
+  "Monday": "lunes",
+  "Tuesday": "martes",
+  "Wednesday": "miércoles",
+  "Thursday": "jueves",
+  "Friday": "viernes",
+  "Saturday": "sábado",
+  "Sunday": "domingo",
+  "Unknown": "Desconocido",
+  "website": "Sitio web",
+  "process": {
+    "category": "Proceso",
+    "driveThru": "Drive-thru",
+    "walkUp": "Sin cita previa",
+    "both": "Servicio de autoservicio y sin cita previa"
   },
-  symptomatic: {
-    category: 'Debe ser sintomático',
-    null: '',
-    yes: 'Debe ser sintomático',
-    no: 'No se requieren síntomas (pero la exposición puede ser)',
+  "radio": {
+    "Yes": "Sí",
+    "No": "No"
   },
-  rapid: {
-    category: 'Pruebas rápidas',
-    yes: 'Ofrece pruebas rápidas (llamar para obtener detalles)',
-    No: 'Sin pruebas rápidas',
+  "symptomatic": {
+    "category": "Debe ser sintomático",
+    "null": "",
+    "yes": "Debe ser sintomático",
+    "no": "No se requieren síntomas (pero la exposición puede serlo)"
   },
-  pcr: {
-    category: 'Pruebas de PCR',
-    yes: 'Ofrece pruebas de PCR (llame para obtener más información)',
-    Yes: 'Ofrece pruebas de PCR (llame para obtener más información)',
-    no: 'Sin pruebas de PCR',
-    No: 'Sin pruebas de PCR',
+  "rapid": {
+    "category": "Pruebas rápidas",
+    "Yes": "Ofrece pruebas rápidas (llame para obtener más información)",
+    "No": "Sin pruebas rápidas"
   },
-  refReq: {
-    category: 'Se necesita derivación',
-    null: '',
-    yes: 'Se necesita derivación',
-    no: 'No se necesita derivación',
+  "pcr": {
+    "category": "Prueba de PCR",
+    "yes": "Ofrece pruebas de PCR (llame para obtener más información)",
+    "Yes": "Ofrece pruebas de PCR (llame para obtener más información)",
+    "no": "Sin pruebas de PCR",
+    "No": "Sin pruebas de PCR"
   },
-  patientAge: {
-    category: 'Edad del paciente',
-    null: '',
-    year14: 'Más de 14 años',
-    year18: 'Más de 18 años',
-    pedCare: 'Ofrece pruebas pediátricas',
+  "refReq": {
+    "category": "Se requiere remisión",
+    "null": "",
+    "yes": "Se requiere remisión",
+    "no": "No se requiere remisión"
   },
-  panelText: {
-    p1: 'Si no puede obtener una prueba de COVID-19 a través de su proveedor de atención médica, esta herramienta puede ayudarlo a encontrar una prueba gratuita en la ciudad de Filadelfia.',
+  "patientAge": {
+    "category": "Edad del paciente",
+    "null": "",
+    "year14": "+14 años",
+    "year18": "+18 años",
+    "pedCare": "Ofrece pruebas pediátricas"
   },
-  restrictions: {
-    lowInc: 'Este sitio está dirigido a las familias y las personas de bajos ingresos. ',
-    year14: 'Debe tener 14 años de edad o más.',
-    year18: 'Debe tener 18 años de edad o más.',
-    netPat: 'El paciente debe pertenecer a la red del proveedor para recibir una prueba en este lugar.',
-    medPrior: 'En este lugar, se dará prioridad a los trabajadores de salud y las personas en la primera línea de respuesta.',
-    homeless: 'Este lugar está dirigido a las personas sin hogar.',
-    telemed: 'Se requiere una consulta de telemedicina antes de realizar pruebas en este lugar.',
-    onlineQuest: 'Se debe completar un cuestionario en línea antes de acudir a este sitio.',
+  "panelText": {
+    "p1": "Si no puede hacerse la prueba de la COVID-19 a través de su proveedor de atención médica, esta herramienta puede ayudarle a encontrar una prueba en la ciudad de Filadelfia."
   },
-  notes: {
-    schedApp: 'Se requiere cita para las pruebas.',
-    refReq: 'Se necesita derivación.',
-    schedAppRefReq: 'Se necesita cita y derivación.',
-    noApp: 'No se requiere cita para las pruebas.',
-    testAll: 'Se realiza la prueba aunque no tenga síntomas.',
+  "restrictions": {
+    "lowInc": "Este sitio está destinado a familias e individuos de bajos ingresos.",
+    "year14": "Debe tener 14 años o más.",
+    "year18": "Debe tener 18 años o más.",
+    "netPat": "El paciente debe estar en la red del proveedor para recibir una prueba en este sitio.",
+    "medPrior": "Se dará prioridad a los trabajadores de la salud y al personal de primera respuesta en este sitio.",
+    "homeless": "Este sitio está destinado a personas sin hogar.",
+    "telemed": "Se requiere una visita de telemedicina antes de realizar las pruebas en este sitio.",
+    "onlineQuest": "Se debe completar un cuestionario en línea antes de visitar este sitio."
   },
-  facilityType: {
-    drugstore: 'Farmacia',
-    fieldSite: 'Sitio de campo',
-    clinic: 'Clínica',
-    hospital: 'Hospital',
-    other: 'Otro',
-    phmcHC: 'Centro de salud PHMC',
-    urgentCare: 'Atención urgente',
-    cityHC: 'Centro de salud de la ciudad',
-    homelessServices: 'Servicios para personas sin hogar',
+  "notes": {
+    "schedApp": "Se requieren citas para las pruebas.",
+    "refReq": "Se requiere una remisión.",
+    "schedAppRefReq": "Se requiere cita previa y remisión.",
+    "noApp": "No es necesaria una cita para la prueba.",
+    "testAll": "Se realizan pruebas incluso si no hay síntomas."
   },
-  tooltips: {
-    symptomatic: 'Para obtener más información, consulte Síntomas del coronavirus (CDC)',
+  "facilityType": {
+    "drugstore": "Farmacia",
+    "fieldSite": "Sitio de campo",
+    "clinic": "Clínica",
+    "hospital": "Hospital",
+    "other": "Otros",
+    "phmcHC": "Centro de salud PHMC",
+    "urgentCare": "Atención de urgencia",
+    "cityHC": "Centro de salud de la ciudad",
+    "homelessServices": "Servicios para personas sin hogar"
   },
-};
+  "tooltips": {
+    "symptomatic": "Para obtener más información, consulte Síntomas del coronavirus (CDC)"
+  }
+}
