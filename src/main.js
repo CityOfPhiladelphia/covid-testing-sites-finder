@@ -33,6 +33,7 @@ import '../node_modules/@phila/pinboard/dist/index.css';
 // OR
 // use this if running off linked package
 // import pinboard from '../../vue3-pinboard/';
+// import pinboard from '../node_modules/@phila/pinboard/src/main.js';
 
 // data-sources
 import covidTestingSites from './data-sources/covid-testing-sites';
@@ -181,9 +182,6 @@ let $config = {
         },
       },
       symptomatic: {
-        tooltip: {
-          tip: 'tooltips.symptomatic',
-        },
         radio: {
           'yes': {
             unique_key: 'symptomatic_yes',
@@ -199,6 +197,9 @@ let $config = {
               return item.properties.Symptoms === 'asymptom';
             },
           },
+        },
+        tooltip: {
+          tip: 'tooltips.symptomatic',
         },
       },
       process: {

@@ -1,6 +1,5 @@
 
 export default {
-  language: '中文',
   app: {
     title: 'COVID-19 检测地点',
     subtitle: '搜索您附近的 COVID-19 检测地点',

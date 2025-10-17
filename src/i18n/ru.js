@@ -1,6 +1,5 @@
 
 export default {
-  language: 'Pусский',
   app: {
     title: 'Пункты тестирования на COVID-19',
     subtitle: 'Найдите тест на COVID-19 поблизости',

@@ -1,6 +1,5 @@
 
 export default {
-  language: 'Français',
   app: {
     title: 'Sites de dépistage du COVID-19',
     subtitle: 'Trouver où recevoir un test de dépistage du COVID-19 à proximité de chez vous',

@@ -1,6 +1,5 @@
 
 export default {
-  language: 'Español',
   app: {
     title: 'Lugares donde se realizan pruebas de COVID-19',
     subtitle: 'Encuentre un lugar cercano para hacerse la prueba de COVID-19.',

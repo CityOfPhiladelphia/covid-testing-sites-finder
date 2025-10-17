@@ -1,6 +1,5 @@
 
 export default {
-  language: 'Tiếng Việt',
   app: {
     title: 'Các cơ sở xét nghiệm COVID-19',
     subtitle: 'Tìm cơ sở xét nghiệm COVID-19 gần quý vị',
