@@ -3,7 +3,8 @@
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
-import $config from '../main.js';
+import { useConfigStore } from '@pinboard';
+const $config = useConfigStore().config;
 
 const props = defineProps({
   item: {
