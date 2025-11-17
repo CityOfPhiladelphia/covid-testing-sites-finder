@@ -27,13 +27,8 @@ import { faLanguage } from '@fortawesome/free-solid-svg-icons/faLanguage';
 
 library.add(faExclamationTriangle, faCalendarAlt, faBuilding, faUserMd, faCircle, farAngleDown, farAngleUp, farTimes, farPlus, farMinus, faLanguage);
 
-// use these if running off unlinked package
-import pinboard from '@phila/pinboard';
 import '../node_modules/@phila/pinboard/dist/index.css';
-// OR
-// use this if running off linked package
-// import pinboard from '../../vue3-pinboard/';
-// import pinboard from '../node_modules/@phila/pinboard/src/main.js';
+import pinboard from '@pinboard';
 
 // data-sources
 import covidTestingSites from './data-sources/covid-testing-sites';
