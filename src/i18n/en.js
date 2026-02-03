@@ -28,7 +28,7 @@ export default{
     "p8": "You will be asked for identification and will also be asked for health insurance information. Identification will be required to receive a test. If you don’t have health insurance, you may still be able to receive a test by paying out-of-pocket. In addition, some sites may require an appointment.",
     "p9": "You will be asked for identification and will also be asked for health insurance information. Identification will be required to receive a test. If you don’t have health insurance, you may still be able to receive a test by paying out-of-pocket.",
     "callout1": {
-      "p1": "<b>Questions?</b> Call your health care provider or see our FAQ about <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>getting tested in Philadelphia</a>."
+      "p1": "<b>Questions?</b> Call 215-685-5488 or your health care provider, email <a href='mailto:COVIDTesting{'@'}phila.gov'>COVIDTesting{'@'}phila.gov</a>, or see our FAQ about <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>getting tested in Philadelphia</a>."
     }
   },
   "languages": {

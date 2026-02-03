@@ -28,7 +28,7 @@ export default{
     "p8": "Il vous sera demandé de présenter une pièce d'identité et des informations sur l'assurance maladie. Une pièce d'identité sera requise pour passer un test. Si vous n'avez pas d'assurance maladie, vous pourrez peut-être tout de même vous faire tester en payant de votre poche. De plus, certains sites peuvent nécessiter un rendez-vous.",
     "p9": "Il vous sera demandé de présenter une pièce d'identité et des informations sur l'assurance maladie. Une pièce d'identité sera requise pour passer un test. Si vous n'avez pas d'assurance maladie, vous pourrez peut-être tout de même vous faire tester en payant de votre poche.",
     "callout1": {
-      "p1": "<b>Des questions ?</b> Appelez votre fournisseur de soins de santé ou consultez notre FAQ sur les <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>tests de dépistage à Philadelphie</a>."
+      "p1": "<b>Des questions ?</b> <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>Appelez le 215-685-5488 ou votre fournisseur de soins de santé, envoyez un e-mail à COVIDTesting <a href='mailto:COVIDTesting {'@'} phila.gov'> {'@'} phila.gov,</a> ou consultez notre FAQ sur les tests de dépistage à Philadelphie.</a>"
     }
   },
   "languages": {

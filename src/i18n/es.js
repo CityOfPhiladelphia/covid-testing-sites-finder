@@ -28,7 +28,7 @@ export default{
     "p8": "Se le pedirá una identificación y también se le pedirá información sobre el seguro médico. Se requerirá una identificación para recibir la prueba. Si no tienes seguro médico, es posible que aún puedas hacerte la prueba pagando de tu bolsillo. Además, algunos centros pueden requerir una cita.",
     "p9": "Se le pedirá una identificación y también se le pedirá información sobre el seguro médico. Se requerirá una identificación para recibir la prueba. Si no tienes seguro médico, es posible que aún puedas hacerte la prueba pagando de tu bolsillo.",
     "callout1": {
-      "p1": "<b>¿Preguntas?</b> Llame a su proveedor de atención médica o consulte nuestras preguntas frecuentes sobre cómo <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>hacerse la prueba en Filadelfia</a>."
+      "p1": "<b>¿Preguntas?</b> <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>Llame al 215-685-5488 o a su proveedor de atención médica, envíe un correo electrónico a CovidTesting <a href='mailto:COVIDTesting {'@'} phila.gov'> {'@'} phila.gov,</a> o consulte nuestras preguntas frecuentes sobre cómo hacerse la prueba en Filadelfia.</a>"
     }
   },
   "languages": {

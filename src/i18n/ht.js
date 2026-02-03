@@ -28,7 +28,7 @@ export default{
     "p8": "Yo pral mande ou pou idantifikasyon epi yo pral mande tou pou enfòmasyon asirans sante. Idantifikasyon yo pral oblije resevwa yon tès. Si ou pa gen asirans sante, ou ka toujou kapab resevwa yon tès pa peye soti-of-pòch. Anplis de sa, kèk sit ka mande pou yon randevou.",
     "p9": "Yo pral mande ou pou idantifikasyon epi yo pral mande tou pou enfòmasyon asirans sante. Idantifikasyon yo pral oblije resevwa yon tès. Si ou pa gen asirans sante, ou ka toujou kapab resevwa yon tès pa peye soti-of-pòch.",
     "callout1": {
-      "p1": "<b>Kesyon?</b> Rele founisè swen sante ou oswa wè FAQ nou an sou ap <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>resevwa teste nan Philadelphia</a>."
+      "p1": "<b>Kesyon?</b> <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>Rele 215-685-5488 oswa founisè swen sante ou, EmailCovidTesting <a href='mailto:COVIDTesting {'@'} phila.gov'> {'@'} phila.gov, oswa wè FAQ nou an sou ap resevwa teste nan Philadelphia</a>.</a>"
     }
   },
   "languages": {

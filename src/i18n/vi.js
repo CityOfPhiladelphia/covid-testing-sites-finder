@@ -28,7 +28,7 @@ export default{
     "p8": "Bạn sẽ được yêu cầu nhận dạng và cũng sẽ được yêu cầu cung cấp thông tin bảo hiểm y tế. Giấy tờ tùy thân sẽ được yêu cầu để nhận được một bài kiểm tra. Nếu bạn không có bảo hiểm y tế, bạn vẫn có thể nhận được một bài kiểm tra bằng cách trả tiền tự trả tiền. Ngoài ra, một số trang web có thể yêu cầu một cuộc hẹn.",
     "p9": "Bạn sẽ được yêu cầu nhận dạng và cũng sẽ được yêu cầu cung cấp thông tin bảo hiểm y tế. Giấy tờ tùy thân sẽ được yêu cầu để nhận được một bài kiểm tra. Nếu bạn không có bảo hiểm y tế, bạn vẫn có thể nhận được một bài kiểm tra bằng cách trả tiền tự trả tiền.",
     "callout1": {
-      "p1": "<b>Câu hỏi?</b> Gọi cho nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn hoặc xem Câu hỏi thường gặp của chúng <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>tôi về việc đi xét nghiệm ở Philadelphia</a>."
+      "p1": "<b>Câu hỏi?</b> <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>Gọi số 215-685-5488 hoặc nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn, email COVIDtesting <a href='mailto:COVIDTesting {'@'} phila.gov'> {'@'} phila.gov</a>, hoặc xem Câu hỏi thường gặp của chúng tôi về việc làm xét nghiệm ở Philadelphia.</a>"
     }
   },
   "languages": {

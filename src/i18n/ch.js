@@ -28,7 +28,7 @@ export default{
     "p8": "您将被要求提供身份证明，还将要求您提供健康保险信息。需要身份证明才能接受测试。如果你没有健康保险，你仍然可以通过自付费用来接受检查。此外，某些网站可能需要预约。",
     "p9": "您将被要求提供身份证明，还将要求您提供健康保险信息。需要身份证明才能接受测试。如果你没有健康保险，你仍然可以通过自付费用来接受检查。",
     "callout1": {
-      "p1": "<b>有问题吗？</b>致电您的医疗保健提供者或查看我们在<a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>费城接受检测的</a>常见问题解答。"
+      "p1": "<b>有问题吗？</b><a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>致电 215-685-5488 或您的医疗保健提供者，发送电子邮件至 covidTesting <a href='mailto:COVIDTesting {'@'} phila.gov'> {'@'} phila.gov，或查看我们在费城</a>接受检测的常见问题解答。</a>"
     }
   },
   "languages": {
