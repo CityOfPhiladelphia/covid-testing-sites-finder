@@ -28,7 +28,7 @@ export default{
     "p8": "Você deverá fornecer uma identificação e também informações sobre o seguro saúde. A identificação será necessária para receber um teste. Se você não tiver plano de saúde, ainda poderá fazer um teste pagando do próprio bolso. Além disso, alguns sites podem exigir uma consulta.",
     "p9": "Você deverá fornecer uma identificação e também informações sobre o seguro saúde. A identificação será necessária para receber um teste. Se você não tiver plano de saúde, ainda poderá fazer um teste pagando do próprio bolso.",
     "callout1": {
-      "p1": "<b>Perguntas?</b> Ligue para seu médico ou consulte nossas perguntas frequentes sobre como <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>fazer o teste na Filadélfia</a>."
+      "p1": "<b>Perguntas?</b> <a href='https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/guidance/faq/#getting-tested' target='_blank'>Ligue para 215-685-5488 ou seu profissional de saúde, envie um e-mail para CovidTesting <a href='mailto:COVIDTesting {'@'} phila.gov'> {'@'} phila.gov, ou consulte nossas perguntas frequentes sobre como fazer o teste na Filadélfia.</a></a>"
     }
   },
   "languages": {
